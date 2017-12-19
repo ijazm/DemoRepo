@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "To check whether you have business at home"
 when
-HomeBusiness("bussinessInHome"=="yes")
+HomeBusiness(bussinessInHome=="yes")
 then
 System.out.println("Has business in home");
 end
