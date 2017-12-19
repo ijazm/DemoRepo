@@ -9,25 +9,25 @@ public class HomeBusiness implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.String bussinesInHome;
+   private java.lang.String bussinessInHome;
 
    public HomeBusiness()
    {
    }
 
-   public java.lang.String getBussinesInHome()
+   public java.lang.String getBussinessInHome()
    {
-      return this.bussinesInHome;
+      return this.bussinessInHome;
    }
 
-   public void setBussinesInHome(java.lang.String bussinesInHome)
+   public void setBussinessInHome(java.lang.String bussinessInHome)
    {
-      this.bussinesInHome = bussinesInHome;
+      this.bussinessInHome = bussinessInHome;
    }
 
-   public HomeBusiness(java.lang.String bussinesInHome)
+   public HomeBusiness(java.lang.String bussinessInHome)
    {
-      this.bussinesInHome = bussinesInHome;
+      this.bussinessInHome = bussinessInHome;
    }
 
 }
