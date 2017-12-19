@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "Had any bankruptcy"
+when
+Bankruptcy(hadBankruptcy=="yes")
+then
+System.out.println("asd");
+end
