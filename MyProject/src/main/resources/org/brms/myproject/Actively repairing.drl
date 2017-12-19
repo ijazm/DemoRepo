@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "are you actively repairing"
+when
+Page2(activelyRepairing=="yes")
+then
+System.out.println("asd");
+end
