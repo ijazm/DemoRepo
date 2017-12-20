@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "check whether it is a row house or residential"
 when
-StructureType((houseType=="Residential")||(houseType=="Row"))
+StructureType((houseType=="residential")||(houseType=="row"))
 then
 System.out.println("how many stories");
 end
