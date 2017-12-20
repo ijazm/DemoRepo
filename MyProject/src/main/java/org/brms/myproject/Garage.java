@@ -9,8 +9,25 @@ public class Garage implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
+   private java.lang.String garageType;
+
    public Garage()
    {
+   }
+
+   public java.lang.String getGarageType()
+   {
+      return this.garageType;
+   }
+
+   public void setGarageType(java.lang.String garageType)
+   {
+      this.garageType = garageType;
+   }
+
+   public Garage(java.lang.String garageType)
+   {
+      this.garageType = garageType;
    }
 
 }
