@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "check wether the house type is condominium"
 when
-StructureType(houseType == "condominium")
+StructureType((houseType == "condominium")&&(houseType!="residential")&&(houseType!="row"))
 then
-System.out.println("The structure is condominium");
+System.out.println("How many stories is the building?");
 end
