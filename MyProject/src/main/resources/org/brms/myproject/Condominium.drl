@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "check wether the house type is condominium"
+when
+StructureType(houseType == "condominium")
+then
+System.out.println("The structure is condominium");
+end
