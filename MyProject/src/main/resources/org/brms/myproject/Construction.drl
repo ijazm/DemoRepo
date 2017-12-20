@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "Check wether the structure is Mixed-masonary"
+when
+Construction(constructionType=="mixedMasonary")
+then
+System.out.println("Display the ratio of masonary frame");
+end
