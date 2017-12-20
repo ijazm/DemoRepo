@@ -9,8 +9,25 @@ public class Construction implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
+   private java.lang.String constructionType;
+
    public Construction()
    {
+   }
+
+   public java.lang.String getConstructionType()
+   {
+      return this.constructionType;
+   }
+
+   public void setConstructionType(java.lang.String constructionType)
+   {
+      this.constructionType = constructionType;
+   }
+
+   public Construction(java.lang.String constructionType)
+   {
+      this.constructionType = constructionType;
    }
 
 }
