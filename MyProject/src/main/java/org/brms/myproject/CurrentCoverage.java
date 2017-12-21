@@ -9,26 +9,25 @@ public class CurrentCoverage implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.String currentCoverageHomeowner;
+   private java.lang.String currentCoverage;
 
    public CurrentCoverage()
    {
    }
 
-   public java.lang.String getCurrentCoverageHomeowner()
+   public java.lang.String getCurrentCoverage()
    {
-      return this.currentCoverageHomeowner;
+      return this.currentCoverage;
    }
 
-   public void setCurrentCoverageHomeowner(
-         java.lang.String currentCoverageHomeowner)
+   public void setCurrentCoverage(java.lang.String currentCoverage)
    {
-      this.currentCoverageHomeowner = currentCoverageHomeowner;
+      this.currentCoverage = currentCoverage;
    }
 
-   public CurrentCoverage(java.lang.String currentCoverageHomeowner)
+   public CurrentCoverage(java.lang.String currentCoverage)
    {
-      this.currentCoverageHomeowner = currentCoverageHomeowner;
+      this.currentCoverage = currentCoverage;
    }
 
 }
