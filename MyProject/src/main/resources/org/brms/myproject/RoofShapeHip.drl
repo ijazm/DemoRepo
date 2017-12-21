@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "Check whether roof shape is hip"
+when
+RoofShape((roofShape=="hip")&&(roofShape!="flat"))
+then
+System.out.println("roof shape is hip");
+end
