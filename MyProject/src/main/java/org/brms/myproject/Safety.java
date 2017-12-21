@@ -11,6 +11,8 @@ public class Safety implements java.io.Serializable
 
    private java.lang.String alarm;
 
+   private java.lang.String securedCommunity;
+
    public Safety()
    {
    }
@@ -25,9 +27,20 @@ public class Safety implements java.io.Serializable
       this.alarm = alarm;
    }
 
-   public Safety(java.lang.String alarm)
+   public java.lang.String getSecuredCommunity()
+   {
+      return this.securedCommunity;
+   }
+
+   public void setSecuredCommunity(java.lang.String securedCommunity)
+   {
+      this.securedCommunity = securedCommunity;
+   }
+
+   public Safety(java.lang.String alarm, java.lang.String securedCommunity)
    {
       this.alarm = alarm;
+      this.securedCommunity = securedCommunity;
    }
 
 }
