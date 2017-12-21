@@ -1,7 +1,0 @@
-package org.brms.myproject;
-rule "check you have burglar alarm"
-when
-Alarm((burglar=="yes")&&(fire!="yes"))
-then
-System.out.println("you have burglar alarm");
-end
