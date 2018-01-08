@@ -1,7 +1,15 @@
 package org.brms.myproject;
 rule "Check the number of prior claims if any"
 when
-PriorClaims((numberOfClaims>0)&&(numberOfClaims<4))
+PriorClaims(0<numberOfClaims&&numberOfClaims<5)
+then
+System.out.println("have prior claims");
+drools.setFocus("Constructiontype");
+end
+rule "check if claims less than 5"
+ruleflow-group "Constructiontype"
+when
+PriorClaims(numberOfClaims<5)
 then
 System.out.println("have prior claims");
 end
