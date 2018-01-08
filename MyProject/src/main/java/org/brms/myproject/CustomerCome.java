@@ -9,25 +9,25 @@ public class CustomerCome implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.String customerCome;
+   private java.lang.String customerInHome;
 
    public CustomerCome()
    {
    }
 
-   public java.lang.String getCustomerCome()
+   public java.lang.String getCustomerInHome()
    {
-      return this.customerCome;
+      return this.customerInHome;
    }
 
-   public void setCustomerCome(java.lang.String customerCome)
+   public void setCustomerInHome(java.lang.String customerInHome)
    {
-      this.customerCome = customerCome;
+      this.customerInHome = customerInHome;
    }
 
-   public CustomerCome(java.lang.String customerCome)
+   public CustomerCome(java.lang.String customerInHome)
    {
-      this.customerCome = customerCome;
+      this.customerInHome = customerInHome;
    }
 
 }
