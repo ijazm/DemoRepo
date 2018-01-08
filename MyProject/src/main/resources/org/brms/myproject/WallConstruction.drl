@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "Check the type of Construction"
 when
-WallConstruction((wallConstruction=="masonary")||(wallConstruction=="frame")||(wallConstruction=="mixedMasonary"))
+WallConstruction((wallConstruction=="Masonary")||(wallConstruction=="Frame")||(wallConstruction=="MixedMasonary"))
 then
 System.out.println("display the tab");
 end
