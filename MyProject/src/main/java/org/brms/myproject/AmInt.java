@@ -26,8 +26,6 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer metal;
 
-   private java.lang.Integer title;
-
    private java.lang.Integer flatRoof;
 
    private java.lang.Integer hvacUpdate;
@@ -47,6 +45,8 @@ public class AmInt implements java.io.Serializable
    private java.lang.Integer noPriorCoverage;
 
    private java.lang.String dogBreeds;
+
+   private java.lang.Integer tile;
 
    public AmInt()
    {
@@ -152,16 +152,6 @@ public class AmInt implements java.io.Serializable
       this.metal = metal;
    }
 
-   public java.lang.Integer getTitle()
-   {
-      return this.title;
-   }
-
-   public void setTitle(java.lang.Integer title)
-   {
-      this.title = title;
-   }
-
    public java.lang.Integer getFlatRoof()
    {
       return this.flatRoof;
@@ -262,18 +252,28 @@ public class AmInt implements java.io.Serializable
       this.dogBreeds = dogBreeds;
    }
 
+   public java.lang.Integer getTile()
+   {
+      return this.tile;
+   }
+
+   public void setTile(java.lang.Integer tile)
+   {
+      this.tile = tile;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
          java.lang.Integer otherStructureLimit, java.lang.Integer acres,
          java.lang.String protectedSubdivision,
          java.lang.Integer propertyClaims, java.lang.String protection,
          java.lang.Integer compositeShingle,
          java.lang.Integer architectualShingle, java.lang.Integer metal,
-         java.lang.Integer title, java.lang.Integer flatRoof,
-         java.lang.Integer hvacUpdate, java.lang.Integer electricalUpdate,
-         java.lang.String electricAluminum, java.lang.String electricBrand,
-         java.lang.Integer electricAmps, java.lang.Integer plumbingUpdate,
-         java.lang.String plumbingType, java.lang.Integer noPriorCoverage,
-         java.lang.String dogBreeds)
+         java.lang.Integer flatRoof, java.lang.Integer hvacUpdate,
+         java.lang.Integer electricalUpdate, java.lang.String electricAluminum,
+         java.lang.String electricBrand, java.lang.Integer electricAmps,
+         java.lang.Integer plumbingUpdate, java.lang.String plumbingType,
+         java.lang.Integer noPriorCoverage, java.lang.String dogBreeds,
+         java.lang.Integer tile)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
@@ -285,7 +285,6 @@ public class AmInt implements java.io.Serializable
       this.compositeShingle = compositeShingle;
       this.architectualShingle = architectualShingle;
       this.metal = metal;
-      this.title = title;
       this.flatRoof = flatRoof;
       this.hvacUpdate = hvacUpdate;
       this.electricalUpdate = electricalUpdate;
@@ -296,6 +295,7 @@ public class AmInt implements java.io.Serializable
       this.plumbingType = plumbingType;
       this.noPriorCoverage = noPriorCoverage;
       this.dogBreeds = dogBreeds;
+      this.tile = tile;
    }
 
 }
