@@ -1,2 +1,307 @@
 package org.brms.myproject;
+rule "check age of construction"
+when
+AmInt((Age>0)&&(Age<76))
+then
+drools.setFocus("Carrier1");
+end
+
+rule "Check the dwelling coverage" 
+ruleflow-group "Carrier1"
+when
+AmInt((DwellingCoverage>149999)&&(DwellingCoverage<1500001))
+then
+System.out.println("eligible")
+drools.setFocus("Carrier2");
+end
+
+rule "Check the percentage of other structures"
+ruleflow-group "Carrier2"
+when
+AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
+then
+drools.setFocus("Carrier3");
+end
+
+rule "Protection Class 9 is eligible"
+ruleflow-group "Carrier3"
+when
+AmInt((Acres>-1)&&(Acres<5))
+then
+System.out.println("Protection Class 9 is eligible");
+drools.setFocus("Carrier4");
+end
+
+rule "Protected Subdivision is present"
+ruleflow-group "Carrier4"	
+when	
+AmInt(ProtectedSubdivision=="yes")	
+then
+System.out.println("Rates as PC 6");
+drools.setFocus("Carrier5");
+end
+
+rule "Number of property claims"
+ruleflow-group "Carrier5"
+when	
+AmInt(PropertyClaims<1)
+then
+drools.setFocus("Carrier6");
+end
+
+rule "Check for Secondary/Seasonal Occupancy(Central Station Fire and Burglar or Limited Access (security guard or gate)"
+ruleflow-group "Carrier6"
+when	
+AmInt((Protection=="security")||(Protection=="gate"))
+then
+drools.setFocus("Carrier7");
+end
+
+rule "Check quantity of Composition Shingle"
+ruleflow-group "Carrier7"	
+when
+AmInt((CompositionShingle>-1)&&(CompositionShingle<16))	
+then
+drools.setFocus("Carrier8");
+end
+
+rule "Check quantity of Architectual Shingle"
+ruleflow-group "Carrier8"	
+when
+Amint((ArchitectualShingle>-1)&&(Architectual Shingle<21))
+then
+drools.setFocus("Carrier9");
+end
+
+rule "Check quantity of Metal"
+ruleflow-group "Carrier9"	
+when
+Amint((Metal>-1)&&(Metal<41))
+then
+drools.setFocus("Carrier10");
+end
+
+rule "Check quantity of Title"
+ruleflow-group "Carrier10"	
+when
+Amint((Tile>-1)&&(Tile<41))
+then
+drools.setFocus("Carrier11");
+end
+
+rule "Check the Flat roof percentage"
+ruleflow-group "Carrier"	
+when
+Amint((FlatRoof>-1)&&(FlatRoof<21))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check quantity of HVAC Update"
+ruleflow-group "Carrier"	
+when
+AmInt((HvacUpdate>-1)&&(HvacUpdate>21))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check quantity of Electrical Update"
+ruleflow-group "Carrier"	
+when	
+AmInt((ElectricalUpdate>-1)&&(ElectricalUpdate>))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check Aluminium type"
+ruleflow-group "Carrier"	
+when	
+AmInt((ElectricAluminum==copalum)||(ElectricAluminum=="alumiconn"))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check Electric Brand"
+ruleflow-group "Carrier"	
+when		
+AmInt((ElectricBrand!=Federal-Pacific)&&(ElectricBrand!=Stab-Loc)&&(ElectricBrand!=Zinsco)&&(ElectricBrand!=Challenger)&&(ElectricBrand!=Sylvania))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Electrical Amperes"
+ruleflow-group "Carrier"	
+when		
+AmInt(ElectricAmps>100)
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Plumbing update"
+ruleflow-group "Carrier"	
+when	
+AmInt((PlumbingUpdate>-1)&&(PlumbingUpdate<21))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Plumbing type"
+ruleflow-group "Carrier"	
+when	
+AmInt((PlumbingType!="Polybutylene")||(PlumbingType!=PEX))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the No Prior Coverage years"
+ruleflow-group "Carrier"	
+when
+AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Dog Policy eligibily for dog breeds"
+ruleflow-group "Carrier"	
+when
+AmInt(DogBreeds!=Pit Bull)&&((DogBreeds!=Staffordshire Terrier")&&(DogBreeds!=Wolf)
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Endorsement Eligibility	for dog breeds"
+ruleflow-group "Carrier"	
+when
+AmInt(DogBreeds!=Pit Bull)&&((DogBreeds!=Staffordshire Terrier")&&(DogBreeds!=Wolf)Endorsement Eligibility	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Flood insurance Required in Flood Zone?"
+ruleflow-group "Carrier"	
+when
+AmInt(FloodZone=="yes")
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether have farm animals"
+ruleflow-group "Carrier"	
+when
+AmInt((FarmAnimals=="yes")||FarmAnimals=="no"))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether LLC or Corporate Ownership"
+ruleflow-group "Carrier"	
+when	
+AmInt((LLC=="yes")||(LLC=="no"))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether you have an open foundation"
+ruleflow-group "Carrier"	
+when
+AmInt((OpenFoundation=="yes")||(OpenFoundation=="no"))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether you have Diving Board"
+ruleflow-group "Carrier"	
+when	
+AmInt((DivingBoard=="yes")||(DivingBoard=="no"))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether have pool slide"
+ruleflow-group "Carrier"	
+when
+AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether have trampoline and is it fenced"
+ruleflow-group "Carrier"	
+when	
+AmInt((Trampoline=="yes")&&(Trampolinefence=="yes"))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the four point requirement"
+ruleflow-group "Carrier"	
+when
+AmInt((FourPointRequirement>-1)&&(FourPointRequirement<40))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the water coverage"
+ruleflow-group "Carrier"	
+when
+AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the roof over"
+ruleflow-group "Carrier"	
+when
+AmInt(Shingles==2)	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the insurance score"
+ruleflow-group "Carrier"	
+when
+AmInt(InsuranceScore="yes")	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether duplex"
+ruleflow-group "Carrier"	
+when
+AmInt(Duplex=="yes")	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether more than 2 floors"
+ruleflow-group "Carrier"	
+when
+AmInt(ThreeUnits=="no")	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the effective year built"
+ruleflow-group "Carrier"	
+when
+AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check whether have pool slide"
+ruleflow-group "Carrier"	
+when
+AmInt(Hardiplank=="frame")
+then
+drools.setFocus("Carrier");
+end
+
+rule "Check the Masonry to Frame Ratio"
+ruleflow-group "Carrier"	
+when			
+AmInt(FrameRate==33.3)
+then
+System.out.println("Approved");
+end
 
