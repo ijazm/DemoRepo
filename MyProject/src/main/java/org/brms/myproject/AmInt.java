@@ -20,8 +20,6 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String protection;
 
-   private java.lang.Integer compositeShingle;
-
    private java.lang.Integer architectualShingle;
 
    private java.lang.Integer metal;
@@ -79,6 +77,8 @@ public class AmInt implements java.io.Serializable
    private java.lang.String hardiplank;
 
    private java.lang.Integer frameRate;
+
+   private java.lang.Integer compositionShingle;
 
    public AmInt()
    {
@@ -152,16 +152,6 @@ public class AmInt implements java.io.Serializable
    public void setProtection(java.lang.String protection)
    {
       this.protection = protection;
-   }
-
-   public java.lang.Integer getCompositeShingle()
-   {
-      return this.compositeShingle;
-   }
-
-   public void setCompositeShingle(java.lang.Integer compositeShingle)
-   {
-      this.compositeShingle = compositeShingle;
    }
 
    public java.lang.Integer getArchitectualShingle()
@@ -454,11 +444,20 @@ public class AmInt implements java.io.Serializable
       this.frameRate = frameRate;
    }
 
+   public java.lang.Integer getCompositionShingle()
+   {
+      return this.compositionShingle;
+   }
+
+   public void setCompositionShingle(java.lang.Integer compositionShingle)
+   {
+      this.compositionShingle = compositionShingle;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
          java.lang.Integer otherStructureLimit, java.lang.Integer acres,
          java.lang.String protectedSubdivision,
          java.lang.Integer propertyClaims, java.lang.String protection,
-         java.lang.Integer compositeShingle,
          java.lang.Integer architectualShingle, java.lang.Integer metal,
          java.lang.Integer flatRoof, java.lang.Integer hvacUpdate,
          java.lang.Integer electricalUpdate, java.lang.String electricAluminum,
@@ -474,7 +473,7 @@ public class AmInt implements java.io.Serializable
          java.lang.Integer waterCoverage, java.lang.Integer shingles,
          java.lang.String insuranceScore, java.lang.String duplex,
          java.lang.String threeUnits, java.lang.String hardiplank,
-         java.lang.Integer frameRate)
+         java.lang.Integer frameRate, java.lang.Integer compositionShingle)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
@@ -483,7 +482,6 @@ public class AmInt implements java.io.Serializable
       this.protectedSubdivision = protectedSubdivision;
       this.propertyClaims = propertyClaims;
       this.protection = protection;
-      this.compositeShingle = compositeShingle;
       this.architectualShingle = architectualShingle;
       this.metal = metal;
       this.flatRoof = flatRoof;
@@ -513,6 +511,7 @@ public class AmInt implements java.io.Serializable
       this.threeUnits = threeUnits;
       this.hardiplank = hardiplank;
       this.frameRate = frameRate;
+      this.compositionShingle = compositionShingle;
    }
 
 }
