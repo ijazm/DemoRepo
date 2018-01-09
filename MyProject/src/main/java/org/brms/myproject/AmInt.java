@@ -48,6 +48,20 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer tile;
 
+   private java.lang.String floodZone;
+
+   private java.lang.String farmAnimals;
+
+   private java.lang.String LLC;
+
+   private java.lang.String openFoundation;
+
+   private java.lang.String divingBoard;
+
+   private java.lang.String poolSlide;
+
+   private java.lang.String trampoline;
+
    public AmInt()
    {
    }
@@ -262,6 +276,76 @@ public class AmInt implements java.io.Serializable
       this.tile = tile;
    }
 
+   public java.lang.String getFloodZone()
+   {
+      return this.floodZone;
+   }
+
+   public void setFloodZone(java.lang.String floodZone)
+   {
+      this.floodZone = floodZone;
+   }
+
+   public java.lang.String getFarmAnimals()
+   {
+      return this.farmAnimals;
+   }
+
+   public void setFarmAnimals(java.lang.String farmAnimals)
+   {
+      this.farmAnimals = farmAnimals;
+   }
+
+   public java.lang.String getLLC()
+   {
+      return this.LLC;
+   }
+
+   public void setLLC(java.lang.String LLC)
+   {
+      this.LLC = LLC;
+   }
+
+   public java.lang.String getOpenFoundation()
+   {
+      return this.openFoundation;
+   }
+
+   public void setOpenFoundation(java.lang.String openFoundation)
+   {
+      this.openFoundation = openFoundation;
+   }
+
+   public java.lang.String getDivingBoard()
+   {
+      return this.divingBoard;
+   }
+
+   public void setDivingBoard(java.lang.String divingBoard)
+   {
+      this.divingBoard = divingBoard;
+   }
+
+   public java.lang.String getPoolSlide()
+   {
+      return this.poolSlide;
+   }
+
+   public void setPoolSlide(java.lang.String poolSlide)
+   {
+      this.poolSlide = poolSlide;
+   }
+
+   public java.lang.String getTrampoline()
+   {
+      return this.trampoline;
+   }
+
+   public void setTrampoline(java.lang.String trampoline)
+   {
+      this.trampoline = trampoline;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
          java.lang.Integer otherStructureLimit, java.lang.Integer acres,
          java.lang.String protectedSubdivision,
@@ -273,7 +357,10 @@ public class AmInt implements java.io.Serializable
          java.lang.String electricBrand, java.lang.Integer electricAmps,
          java.lang.Integer plumbingUpdate, java.lang.String plumbingType,
          java.lang.Integer noPriorCoverage, java.lang.String dogBreeds,
-         java.lang.Integer tile)
+         java.lang.Integer tile, java.lang.String floodZone,
+         java.lang.String farmAnimals, java.lang.String LLC,
+         java.lang.String openFoundation, java.lang.String divingBoard,
+         java.lang.String poolSlide, java.lang.String trampoline)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
@@ -296,6 +383,13 @@ public class AmInt implements java.io.Serializable
       this.noPriorCoverage = noPriorCoverage;
       this.dogBreeds = dogBreeds;
       this.tile = tile;
+      this.floodZone = floodZone;
+      this.farmAnimals = farmAnimals;
+      this.LLC = LLC;
+      this.openFoundation = openFoundation;
+      this.divingBoard = divingBoard;
+      this.poolSlide = poolSlide;
+      this.trampoline = trampoline;
    }
 
 }
