@@ -3,96 +3,96 @@ rule "check age of construction"
 when
 AmInt((Age>0)&&(Age<76))
 then
-drools.setFocus("Carrier1");
+drools.setFocus("Carrier");
 end
 
 rule "Check the dwelling coverage" 
-ruleflow-group "Carrier1"
+ruleflow-group "Carrier"
 when
 AmInt((DwellingCoverage>149999)&&(DwellingCoverage<1500001))
 then
-System.out.println("eligible")
-drools.setFocus("Carrier2");
+System.out.println("eligible");
+drools.setFocus("Carrier");
 end
 
 rule "Check the percentage of other structures"
-ruleflow-group "Carrier2"
+ruleflow-group "Carrier"
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
-drools.setFocus("Carrier3");
+drools.setFocus("Carrier");
 end
 
 rule "Protection Class 9 is eligible"
-ruleflow-group "Carrier3"
+ruleflow-group "Carrier"
 when
 AmInt((Acres>-1)&&(Acres<5))
 then
 System.out.println("Protection Class 9 is eligible");
-drools.setFocus("Carrier4");
+drools.setFocus("Carrier");
 end
 
 rule "Protected Subdivision is present"
-ruleflow-group "Carrier4"	
+ruleflow-group "Carrier"	
 when	
 AmInt(ProtectedSubdivision=="yes")	
 then
 System.out.println("Rates as PC 6");
-drools.setFocus("Carrier5");
+drools.setFocus("Carrier");
 end
 
 rule "Number of property claims"
-ruleflow-group "Carrier5"
+ruleflow-group "Carrier"
 when	
 AmInt(PropertyClaims<1)
 then
-drools.setFocus("Carrier6");
+drools.setFocus("Carrier");
 end
 
 rule "Check for Secondary/Seasonal Occupancy(Central Station Fire and Burglar or Limited Access (security guard or gate)"
-ruleflow-group "Carrier6"
+ruleflow-group "Carrier"
 when	
 AmInt((Protection=="security")||(Protection=="gate"))
 then
-drools.setFocus("Carrier7");
+drools.setFocus("Carrier");
 end
 
 rule "Check quantity of Composition Shingle"
-ruleflow-group "Carrier7"	
+ruleflow-group "Carrier"	
 when
 AmInt((CompositionShingle>-1)&&(CompositionShingle<16))	
 then
-drools.setFocus("Carrier8");
+drools.setFocus("Carrier");
 end
 
 rule "Check quantity of Architectual Shingle"
-ruleflow-group "Carrier8"	
+ruleflow-group "Carrier"	
 when
-Amint((ArchitectualShingle>-1)&&(Architectual Shingle<21))
+AmInt((ArchitectualShingle>-1)&&(ArchitectualShingle<21))
 then
-drools.setFocus("Carrier9");
+drools.setFocus("Carrier");
 end
 
 rule "Check quantity of Metal"
-ruleflow-group "Carrier9"	
+ruleflow-group "Carrier"	
 when
-Amint((Metal>-1)&&(Metal<41))
+AmInt((Metal>-1)&&(Metal<41))
 then
-drools.setFocus("Carrier10");
+drools.setFocus("Carrier");
 end
 
 rule "Check quantity of Title"
-ruleflow-group "Carrier10"	
+ruleflow-group "Carrier"	
 when
-Amint((Tile>-1)&&(Tile<41))
+AmInt((Tile>-1)&&(Tile<41))
 then
-drools.setFocus("Carrier11");
+drools.setFocus("Carrier");
 end
 
 rule "Check the Flat roof percentage"
 ruleflow-group "Carrier"	
 when
-Amint((FlatRoof>-1)&&(FlatRoof<21))
+AmInt((FlatRoof>-1)&&(FlatRoof<21))
 then
 drools.setFocus("Carrier");
 end
@@ -108,7 +108,7 @@ end
 rule "Check quantity of Electrical Update"
 ruleflow-group "Carrier"	
 when	
-AmInt((ElectricalUpdate>-1)&&(ElectricalUpdate>))	
+AmInt((ElectricalUpdate>-1)&&(ElectricalUpdate<21))	
 then
 drools.setFocus("Carrier");
 end
@@ -116,7 +116,7 @@ end
 rule "Check Aluminium type"
 ruleflow-group "Carrier"	
 when	
-AmInt((ElectricAluminum==copalum)||(ElectricAluminum=="alumiconn"))
+AmInt((ElectricAluminum=="copalum")||(ElectricAluminum=="alumiconn"))
 then
 drools.setFocus("Carrier");
 end
@@ -124,7 +124,7 @@ end
 rule "Check Electric Brand"
 ruleflow-group "Carrier"	
 when		
-AmInt((ElectricBrand!=Federal-Pacific)&&(ElectricBrand!=Stab-Loc)&&(ElectricBrand!=Zinsco)&&(ElectricBrand!=Challenger)&&(ElectricBrand!=Sylvania))
+AmInt((ElectricBrand!="Federal-Pacific")&&(ElectricBrand!="Stab-Loc")&&(ElectricBrand!="Zinsco")&&(ElectricBrand!="Challenger")&&(ElectricBrand!="Sylvania"))
 then
 drools.setFocus("Carrier");
 end
@@ -148,7 +148,7 @@ end
 rule "Check the Plumbing type"
 ruleflow-group "Carrier"	
 when	
-AmInt((PlumbingType!="Polybutylene")||(PlumbingType!=PEX))	
+AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="PEX"))	
 then
 drools.setFocus("Carrier");
 end
@@ -164,7 +164,7 @@ end
 rule "Check the Dog Policy eligibily for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt(DogBreeds!=Pit Bull)&&((DogBreeds!=Staffordshire Terrier")&&(DogBreeds!=Wolf)
+AmInt((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Wolf"))
 then
 drools.setFocus("Carrier");
 end
@@ -172,7 +172,7 @@ end
 rule "Check the Endorsement Eligibility	for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt(DogBreeds!=Pit Bull)&&((DogBreeds!=Staffordshire Terrier")&&(DogBreeds!=Wolf)Endorsement Eligibility	
+AmInt((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Wolf"))
 then
 drools.setFocus("Carrier");
 end
@@ -188,7 +188,7 @@ end
 rule "Check whether have farm animals"
 ruleflow-group "Carrier"	
 when
-AmInt((FarmAnimals=="yes")||FarmAnimals=="no"))
+AmInt((FarmAnimals=="yes")||(FarmAnimals=="no"))
 then
 drools.setFocus("Carrier");
 end
@@ -217,7 +217,7 @@ then
 drools.setFocus("Carrier");
 end
 
-rule "Check whether have pool slide"
+rule "Check whether have any pool slide"
 ruleflow-group "Carrier"	
 when
 AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
@@ -260,7 +260,7 @@ end
 rule "Check the insurance score"
 ruleflow-group "Carrier"	
 when
-AmInt(InsuranceScore="yes")	
+AmInt(InsuranceScore=="yes")	
 then
 drools.setFocus("Carrier");
 end
@@ -277,14 +277,6 @@ rule "Check whether more than 2 floors"
 ruleflow-group "Carrier"	
 when
 AmInt(ThreeUnits=="no")	
-then
-drools.setFocus("Carrier");
-end
-
-rule "Check the effective year built"
-ruleflow-group "Carrier"	
-when
-AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
 then
 drools.setFocus("Carrier");
 end
