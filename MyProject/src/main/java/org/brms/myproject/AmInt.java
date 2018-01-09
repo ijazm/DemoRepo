@@ -62,6 +62,24 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String trampoline;
 
+   private java.lang.String trampolinefence;
+
+   private java.lang.Integer fourPointRequirement;
+
+   private java.lang.Integer waterCoverage;
+
+   private java.lang.Integer shingles;
+
+   private java.lang.String insuranceScore;
+
+   private java.lang.String duplex;
+
+   private java.lang.String threeUnits;
+
+   private java.lang.String hardiplank;
+
+   private java.lang.Integer frameRate;
+
    public AmInt()
    {
    }
@@ -346,6 +364,96 @@ public class AmInt implements java.io.Serializable
       this.trampoline = trampoline;
    }
 
+   public java.lang.String getTrampolinefence()
+   {
+      return this.trampolinefence;
+   }
+
+   public void setTrampolinefence(java.lang.String trampolinefence)
+   {
+      this.trampolinefence = trampolinefence;
+   }
+
+   public java.lang.Integer getFourPointRequirement()
+   {
+      return this.fourPointRequirement;
+   }
+
+   public void setFourPointRequirement(java.lang.Integer fourPointRequirement)
+   {
+      this.fourPointRequirement = fourPointRequirement;
+   }
+
+   public java.lang.Integer getWaterCoverage()
+   {
+      return this.waterCoverage;
+   }
+
+   public void setWaterCoverage(java.lang.Integer waterCoverage)
+   {
+      this.waterCoverage = waterCoverage;
+   }
+
+   public java.lang.Integer getShingles()
+   {
+      return this.shingles;
+   }
+
+   public void setShingles(java.lang.Integer shingles)
+   {
+      this.shingles = shingles;
+   }
+
+   public java.lang.String getInsuranceScore()
+   {
+      return this.insuranceScore;
+   }
+
+   public void setInsuranceScore(java.lang.String insuranceScore)
+   {
+      this.insuranceScore = insuranceScore;
+   }
+
+   public java.lang.String getDuplex()
+   {
+      return this.duplex;
+   }
+
+   public void setDuplex(java.lang.String duplex)
+   {
+      this.duplex = duplex;
+   }
+
+   public java.lang.String getThreeUnits()
+   {
+      return this.threeUnits;
+   }
+
+   public void setThreeUnits(java.lang.String threeUnits)
+   {
+      this.threeUnits = threeUnits;
+   }
+
+   public java.lang.String getHardiplank()
+   {
+      return this.hardiplank;
+   }
+
+   public void setHardiplank(java.lang.String hardiplank)
+   {
+      this.hardiplank = hardiplank;
+   }
+
+   public java.lang.Integer getFrameRate()
+   {
+      return this.frameRate;
+   }
+
+   public void setFrameRate(java.lang.Integer frameRate)
+   {
+      this.frameRate = frameRate;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
          java.lang.Integer otherStructureLimit, java.lang.Integer acres,
          java.lang.String protectedSubdivision,
@@ -360,7 +468,13 @@ public class AmInt implements java.io.Serializable
          java.lang.Integer tile, java.lang.String floodZone,
          java.lang.String farmAnimals, java.lang.String LLC,
          java.lang.String openFoundation, java.lang.String divingBoard,
-         java.lang.String poolSlide, java.lang.String trampoline)
+         java.lang.String poolSlide, java.lang.String trampoline,
+         java.lang.String trampolinefence,
+         java.lang.Integer fourPointRequirement,
+         java.lang.Integer waterCoverage, java.lang.Integer shingles,
+         java.lang.String insuranceScore, java.lang.String duplex,
+         java.lang.String threeUnits, java.lang.String hardiplank,
+         java.lang.Integer frameRate)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
@@ -390,6 +504,15 @@ public class AmInt implements java.io.Serializable
       this.divingBoard = divingBoard;
       this.poolSlide = poolSlide;
       this.trampoline = trampoline;
+      this.trampolinefence = trampolinefence;
+      this.fourPointRequirement = fourPointRequirement;
+      this.waterCoverage = waterCoverage;
+      this.shingles = shingles;
+      this.insuranceScore = insuranceScore;
+      this.duplex = duplex;
+      this.threeUnits = threeUnits;
+      this.hardiplank = hardiplank;
+      this.frameRate = frameRate;
    }
 
 }
