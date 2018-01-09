@@ -14,6 +14,40 @@ public class AmInt implements java.io.Serializable
    private java.lang.Integer otherStructureLimit;
    private java.lang.Integer acres;
 
+   private java.lang.String protectedSubdivision;
+
+   private java.lang.Integer propertyClaims;
+
+   private java.lang.String protection;
+
+   private java.lang.Integer compositeShingle;
+
+   private java.lang.Integer architectualShingle;
+
+   private java.lang.Integer metal;
+
+   private java.lang.Integer title;
+
+   private java.lang.Integer flatRoof;
+
+   private java.lang.Integer hvacUpdate;
+
+   private java.lang.Integer electricalUpdate;
+
+   private java.lang.String electricAluminum;
+
+   private java.lang.String electricBrand;
+
+   private java.lang.Integer electricAmps;
+
+   private java.lang.Integer plumbingUpdate;
+
+   private java.lang.String plumbingType;
+
+   private java.lang.Integer noPriorCoverage;
+
+   private java.lang.String dogBreeds;
+
    public AmInt()
    {
    }
@@ -58,13 +92,210 @@ public class AmInt implements java.io.Serializable
       this.acres = acres;
    }
 
+   public java.lang.String getProtectedSubdivision()
+   {
+      return this.protectedSubdivision;
+   }
+
+   public void setProtectedSubdivision(java.lang.String protectedSubdivision)
+   {
+      this.protectedSubdivision = protectedSubdivision;
+   }
+
+   public java.lang.Integer getPropertyClaims()
+   {
+      return this.propertyClaims;
+   }
+
+   public void setPropertyClaims(java.lang.Integer propertyClaims)
+   {
+      this.propertyClaims = propertyClaims;
+   }
+
+   public java.lang.String getProtection()
+   {
+      return this.protection;
+   }
+
+   public void setProtection(java.lang.String protection)
+   {
+      this.protection = protection;
+   }
+
+   public java.lang.Integer getCompositeShingle()
+   {
+      return this.compositeShingle;
+   }
+
+   public void setCompositeShingle(java.lang.Integer compositeShingle)
+   {
+      this.compositeShingle = compositeShingle;
+   }
+
+   public java.lang.Integer getArchitectualShingle()
+   {
+      return this.architectualShingle;
+   }
+
+   public void setArchitectualShingle(java.lang.Integer architectualShingle)
+   {
+      this.architectualShingle = architectualShingle;
+   }
+
+   public java.lang.Integer getMetal()
+   {
+      return this.metal;
+   }
+
+   public void setMetal(java.lang.Integer metal)
+   {
+      this.metal = metal;
+   }
+
+   public java.lang.Integer getTitle()
+   {
+      return this.title;
+   }
+
+   public void setTitle(java.lang.Integer title)
+   {
+      this.title = title;
+   }
+
+   public java.lang.Integer getFlatRoof()
+   {
+      return this.flatRoof;
+   }
+
+   public void setFlatRoof(java.lang.Integer flatRoof)
+   {
+      this.flatRoof = flatRoof;
+   }
+
+   public java.lang.Integer getHvacUpdate()
+   {
+      return this.hvacUpdate;
+   }
+
+   public void setHvacUpdate(java.lang.Integer hvacUpdate)
+   {
+      this.hvacUpdate = hvacUpdate;
+   }
+
+   public java.lang.Integer getElectricalUpdate()
+   {
+      return this.electricalUpdate;
+   }
+
+   public void setElectricalUpdate(java.lang.Integer electricalUpdate)
+   {
+      this.electricalUpdate = electricalUpdate;
+   }
+
+   public java.lang.String getElectricAluminum()
+   {
+      return this.electricAluminum;
+   }
+
+   public void setElectricAluminum(java.lang.String electricAluminum)
+   {
+      this.electricAluminum = electricAluminum;
+   }
+
+   public java.lang.String getElectricBrand()
+   {
+      return this.electricBrand;
+   }
+
+   public void setElectricBrand(java.lang.String electricBrand)
+   {
+      this.electricBrand = electricBrand;
+   }
+
+   public java.lang.Integer getElectricAmps()
+   {
+      return this.electricAmps;
+   }
+
+   public void setElectricAmps(java.lang.Integer electricAmps)
+   {
+      this.electricAmps = electricAmps;
+   }
+
+   public java.lang.Integer getPlumbingUpdate()
+   {
+      return this.plumbingUpdate;
+   }
+
+   public void setPlumbingUpdate(java.lang.Integer plumbingUpdate)
+   {
+      this.plumbingUpdate = plumbingUpdate;
+   }
+
+   public java.lang.String getPlumbingType()
+   {
+      return this.plumbingType;
+   }
+
+   public void setPlumbingType(java.lang.String plumbingType)
+   {
+      this.plumbingType = plumbingType;
+   }
+
+   public java.lang.Integer getNoPriorCoverage()
+   {
+      return this.noPriorCoverage;
+   }
+
+   public void setNoPriorCoverage(java.lang.Integer noPriorCoverage)
+   {
+      this.noPriorCoverage = noPriorCoverage;
+   }
+
+   public java.lang.String getDogBreeds()
+   {
+      return this.dogBreeds;
+   }
+
+   public void setDogBreeds(java.lang.String dogBreeds)
+   {
+      this.dogBreeds = dogBreeds;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
-         java.lang.Integer otherStructureLimit, java.lang.Integer acres)
+         java.lang.Integer otherStructureLimit, java.lang.Integer acres,
+         java.lang.String protectedSubdivision,
+         java.lang.Integer propertyClaims, java.lang.String protection,
+         java.lang.Integer compositeShingle,
+         java.lang.Integer architectualShingle, java.lang.Integer metal,
+         java.lang.Integer title, java.lang.Integer flatRoof,
+         java.lang.Integer hvacUpdate, java.lang.Integer electricalUpdate,
+         java.lang.String electricAluminum, java.lang.String electricBrand,
+         java.lang.Integer electricAmps, java.lang.Integer plumbingUpdate,
+         java.lang.String plumbingType, java.lang.Integer noPriorCoverage,
+         java.lang.String dogBreeds)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
       this.otherStructureLimit = otherStructureLimit;
       this.acres = acres;
+      this.protectedSubdivision = protectedSubdivision;
+      this.propertyClaims = propertyClaims;
+      this.protection = protection;
+      this.compositeShingle = compositeShingle;
+      this.architectualShingle = architectualShingle;
+      this.metal = metal;
+      this.title = title;
+      this.flatRoof = flatRoof;
+      this.hvacUpdate = hvacUpdate;
+      this.electricalUpdate = electricalUpdate;
+      this.electricAluminum = electricAluminum;
+      this.electricBrand = electricBrand;
+      this.electricAmps = electricAmps;
+      this.plumbingUpdate = plumbingUpdate;
+      this.plumbingType = plumbingType;
+      this.noPriorCoverage = noPriorCoverage;
+      this.dogBreeds = dogBreeds;
    }
 
 }
