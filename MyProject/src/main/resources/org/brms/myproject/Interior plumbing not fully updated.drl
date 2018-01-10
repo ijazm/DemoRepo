@@ -1,5 +1,5 @@
 package org.brms.myproject;
-rule "To check whether fully replumbed"
+rule "To check whether not fully interior replumbed"
 when
 Replumb((fullyReplumb!="yes")&&(interiorReplumb=="no"))
 then
