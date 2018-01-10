@@ -11,6 +11,8 @@ public class Replumb implements java.io.Serializable
 
    private java.lang.String fullyReplumb;
 
+   private java.lang.String interiorReplumb;
+
    public Replumb()
    {
    }
@@ -25,9 +27,20 @@ public class Replumb implements java.io.Serializable
       this.fullyReplumb = fullyReplumb;
    }
 
-   public Replumb(java.lang.String fullyReplumb)
+   public java.lang.String getInteriorReplumb()
+   {
+      return this.interiorReplumb;
+   }
+
+   public void setInteriorReplumb(java.lang.String interiorReplumb)
+   {
+      this.interiorReplumb = interiorReplumb;
+   }
+
+   public Replumb(java.lang.String fullyReplumb, java.lang.String interiorReplumb)
    {
       this.fullyReplumb = fullyReplumb;
+      this.interiorReplumb = interiorReplumb;
    }
 
 }
