@@ -11,6 +11,8 @@ public class NewPurchase implements java.io.Serializable
 
    private java.lang.String fourPoint;
 
+   private java.lang.String windMitigation;
+
    public NewPurchase()
    {
    }
@@ -25,9 +27,20 @@ public class NewPurchase implements java.io.Serializable
       this.fourPoint = fourPoint;
    }
 
-   public NewPurchase(java.lang.String fourPoint)
+   public java.lang.String getWindMitigation()
+   {
+      return this.windMitigation;
+   }
+
+   public void setWindMitigation(java.lang.String windMitigation)
+   {
+      this.windMitigation = windMitigation;
+   }
+
+   public NewPurchase(java.lang.String fourPoint, java.lang.String windMitigation)
    {
       this.fourPoint = fourPoint;
+      this.windMitigation = windMitigation;
    }
 
 }
