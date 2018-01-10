@@ -1,2 +1,7 @@
 package org.brms.myproject;
-
+rule "Do you know the plumbing system?"
+when
+Plumbing(knowSystem=="yes")
+then
+System.out.println("Ask whether fully replumbed");
+end
