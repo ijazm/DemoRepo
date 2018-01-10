@@ -1,7 +1,0 @@
-package org.brms.myproject;
-rule "To check whether not fully interior replumbed"
-when
-Replumb((fullyReplumb!="yes")&&(interiorReplumb=="no"))
-then
-System.out.println("Display the year of update of a plumbing fixture");
-end
