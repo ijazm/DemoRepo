@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "To check whether interior fully replumbed"
 when
-Replumb((fullyReplumb!="yes")&&(interiorReplumb=="yes"))
+InteriorReplumb((interiorReplumb=="yes")&&(interiorReplumb!="no"))
 then
 System.out.println("Display the year of interior update");
 end
