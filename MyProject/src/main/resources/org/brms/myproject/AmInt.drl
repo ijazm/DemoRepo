@@ -201,7 +201,7 @@ ruleflow-group "Carrier"
 when	
 AmInt((LLC=="yes")||(LLC=="no"))	
 then
-System.out.println("ahgsfdjgafsd")
+System.out.println("ahgsfdjgafsd");
 drools.setFocus("Carrier");
 end
 
