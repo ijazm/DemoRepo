@@ -3,6 +3,7 @@ rule "check age of construction"
 when
 AmInt((Age>0)&&(Age<76))
 then
+System.out.println("Age is eligible");
 drools.setFocus("Carrier");
 end
 
@@ -11,7 +12,7 @@ ruleflow-group "Carrier"
 when
 AmInt((DwellingCoverage>149999)&&(DwellingCoverage<1500001))
 then
-System.out.println("eligible");
+System.out.println("Dwelling coverage eligible");
 drools.setFocus("Carrier");
 end
 
@@ -20,6 +21,7 @@ ruleflow-group "Carrier"
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
+System.out.println("Other Structure limit is eligible" );
 drools.setFocus("Carrier");
 end
 
@@ -37,7 +39,7 @@ ruleflow-group "Carrier"
 when	
 AmInt(ProtectedSubdivision=="yes")	
 then
-System.out.println("Rates as PC 6");
+System.out.println("Properties Subdivision eligible");
 drools.setFocus("Carrier");
 end
 
@@ -46,6 +48,7 @@ ruleflow-group "Carrier"
 when	
 AmInt(PropertyClaims<1)
 then
+System.out.println();
 drools.setFocus("Carrier");
 end
 
