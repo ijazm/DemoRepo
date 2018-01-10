@@ -1,7 +1,0 @@
-package org.brms.myproject;
-rule "To check whether not fully replumbed"
-when
-Replumb((fullyReplumb=="no")&&(interiorReplumb!="yes"))
-then
-System.out.println("Interior fully replumbed yes/no");
-end
