@@ -10,7 +10,6 @@ public class FourPoint implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String fourPoint;
-   private java.lang.String windMitigation;
 
    public FourPoint()
    {
@@ -26,20 +25,9 @@ public class FourPoint implements java.io.Serializable
       this.fourPoint = fourPoint;
    }
 
-   public java.lang.String getWindMitigation()
-   {
-      return this.windMitigation;
-   }
-
-   public void setWindMitigation(java.lang.String windMitigation)
-   {
-      this.windMitigation = windMitigation;
-   }
-
-   public FourPoint(java.lang.String fourPoint, java.lang.String windMitigation)
+   public FourPoint(java.lang.String fourPoint)
    {
       this.fourPoint = fourPoint;
-      this.windMitigation = windMitigation;
    }
 
 }
