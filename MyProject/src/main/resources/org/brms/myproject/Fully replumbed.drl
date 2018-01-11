@@ -1,7 +1,7 @@
 package org.brms.myproject;
 rule "To check whether fully replumbed"
 when
-FullyReplumb((fullyReplumb=="yes")&&(fullyReplumb!="no"))
+FullyReplumb(fullyReplumb=="yes")
 then
 System.out.println("Display the year of update");
 end
