@@ -1,8 +1,0 @@
-package org.brms.myproject;
-rule "Check whether it is new purchase"
-		when
-			Ownership(TimeOwnership==0);
-		then
-			System.out.println("Display prior address tab");
-		end
-
