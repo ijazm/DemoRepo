@@ -3,12 +3,14 @@ rule "Check whether Constructed before 30 years"
 when
 YearOfConstruction(yearOfConstruction!=2001)
 then
-System.out.println("Constructed 30 years before");
+System.out.println("check whether construct before 30 years");
 drools.setFocus("Year of construction");
 end
 rule "check whether construsted after 2001"
+ruleflow-group "Year of construction"
 when
 YearOfConstruction((2018-yearOfConstruction)>=30)
 then
 System.out.println("Display the options");
+drools.setFocus("Year of construction");
 end
