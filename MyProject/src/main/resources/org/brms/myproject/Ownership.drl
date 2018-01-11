@@ -1,16 +1,16 @@
 package org.brms.myproject;
-	rule "Time of Ownership"
-		when
-			Ownership(TimeOwnership<3)
-		then
-			System.out.println("Display prior address tab");
-		drools.setFocus("New purchase");
-		end
-		rule "Check whether new purchase"
-		ruleflow-group "New purchase"
-		when
-		   Ownership(TimeOwnership==0)
-		   then
-		   System.out.println("The house is a new purchase");
-		   end
+rule "Time of Ownership"
+when
+Ownership(TimeOwnership<3)
+then
+System.out.println("Display prior address tab");
+drools.setFocus("New purchase");
+end
+rule "Check whether new purchase"
+ruleflow-group "New purchase"
+when
+Ownership(TimeOwnership==0)
+then
+System.out.println("The house is a new purchase");
+end
 		   
