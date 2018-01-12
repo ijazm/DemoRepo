@@ -9,7 +9,7 @@ end
 rule "check whether year of construction is 2018"
 ruleflow-group "Year of construction"
 when
-YearOfConstruction(yearOfConstruction==2018)
+YearOfConstruction((yearOfConstruction==2018)&&(yearOfConstruction<2001))
 then
 System.out.println("Display the options");
 drools.setFocus("Year of construction");
