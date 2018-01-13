@@ -11,6 +11,8 @@ public class StructureType implements java.io.Serializable
 
    private java.lang.String houseType;
 
+   private java.lang.Integer stories;
+
    public StructureType()
    {
    }
@@ -25,9 +27,20 @@ public class StructureType implements java.io.Serializable
       this.houseType = houseType;
    }
 
-   public StructureType(java.lang.String houseType)
+   public java.lang.Integer getStories()
+   {
+      return this.stories;
+   }
+
+   public void setStories(java.lang.Integer stories)
+   {
+      this.stories = stories;
+   }
+
+   public StructureType(java.lang.String houseType, java.lang.Integer stories)
    {
       this.houseType = houseType;
+      this.stories = stories;
    }
 
 }
