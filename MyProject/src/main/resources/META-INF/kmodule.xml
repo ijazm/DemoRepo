@@ -1,8 +1,8 @@
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <kbase name="Basemy" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+  <kbase name="Basemy" default="false" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="session2" type="stateful" default="true" clockType="realtime"/>
   </kbase>
-  <kbase name="myBase" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="*">
+  <kbase name="myBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="*">
     <ksession name="mySession" type="stateless" default="true" clockType="realtime"/>
   </kbase>
 </kmodule>
