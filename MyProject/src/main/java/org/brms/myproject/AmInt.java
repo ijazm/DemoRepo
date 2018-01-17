@@ -9,101 +9,25 @@ public class AmInt implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Integer age;
-   private java.lang.Integer dwellingCoverage;
    private java.lang.Integer otherStructureLimit;
-   private java.lang.Integer acres;
-
-   private java.lang.String protectedSubdivision;
-
    private java.lang.Integer propertyClaims;
-
-   private java.lang.String protection;
-
-   private java.lang.Integer architectualShingle;
-
-   private java.lang.Integer metal;
-
-   private java.lang.Integer flatRoof;
-
-   private java.lang.Integer hvacUpdate;
 
    private java.lang.Integer electricalUpdate;
 
-   private java.lang.String electricAluminum;
-
-   private java.lang.String electricBrand;
-
-   private java.lang.Integer electricAmps;
-
-   private java.lang.Integer plumbingUpdate;
-
-   private java.lang.String plumbingType;
-
-   private java.lang.Integer noPriorCoverage;
-
-   private java.lang.String dogBreeds;
-
-   private java.lang.Integer tile;
-
-   private java.lang.String floodZone;
-
-   private java.lang.String farmAnimals;
-
-   private java.lang.String LLC;
-
-   private java.lang.String openFoundation;
-
-   private java.lang.String divingBoard;
-
-   private java.lang.String poolSlide;
-
-   private java.lang.String trampoline;
-
-   private java.lang.String trampolinefence;
-
-   private java.lang.Integer fourPointRequirement;
-
-   private java.lang.Integer waterCoverage;
-
-   private java.lang.Integer shingles;
-
-   private java.lang.String insuranceScore;
-
-   private java.lang.String duplex;
-
-   private java.lang.String threeUnits;
-
-   private java.lang.String hardiplank;
-
-   private java.lang.Integer frameRate;
-
-   private java.lang.Integer compositionShingle;
-
    private java.lang.Integer yearBuilt;
+
+   private java.lang.Integer per_of_flat_roof;
+
+   private java.lang.Integer garageCarportType;
+
+   private java.lang.Integer priorClaims;
+
+   private java.lang.String alarm;
+
+   private java.lang.String secured_community;
 
    public AmInt()
    {
-   }
-
-   public java.lang.Integer getAge()
-   {
-      return this.age;
-   }
-
-   public void setAge(java.lang.Integer age)
-   {
-      this.age = age;
-   }
-
-   public java.lang.Integer getDwellingCoverage()
-   {
-      return this.dwellingCoverage;
-   }
-
-   public void setDwellingCoverage(java.lang.Integer dwellingCoverage)
-   {
-      this.dwellingCoverage = dwellingCoverage;
    }
 
    public java.lang.Integer getOtherStructureLimit()
@@ -116,26 +40,6 @@ public class AmInt implements java.io.Serializable
       this.otherStructureLimit = otherStructureLimit;
    }
 
-   public java.lang.Integer getAcres()
-   {
-      return this.acres;
-   }
-
-   public void setAcres(java.lang.Integer acres)
-   {
-      this.acres = acres;
-   }
-
-   public java.lang.String getProtectedSubdivision()
-   {
-      return this.protectedSubdivision;
-   }
-
-   public void setProtectedSubdivision(java.lang.String protectedSubdivision)
-   {
-      this.protectedSubdivision = protectedSubdivision;
-   }
-
    public java.lang.Integer getPropertyClaims()
    {
       return this.propertyClaims;
@@ -144,56 +48,6 @@ public class AmInt implements java.io.Serializable
    public void setPropertyClaims(java.lang.Integer propertyClaims)
    {
       this.propertyClaims = propertyClaims;
-   }
-
-   public java.lang.String getProtection()
-   {
-      return this.protection;
-   }
-
-   public void setProtection(java.lang.String protection)
-   {
-      this.protection = protection;
-   }
-
-   public java.lang.Integer getArchitectualShingle()
-   {
-      return this.architectualShingle;
-   }
-
-   public void setArchitectualShingle(java.lang.Integer architectualShingle)
-   {
-      this.architectualShingle = architectualShingle;
-   }
-
-   public java.lang.Integer getMetal()
-   {
-      return this.metal;
-   }
-
-   public void setMetal(java.lang.Integer metal)
-   {
-      this.metal = metal;
-   }
-
-   public java.lang.Integer getFlatRoof()
-   {
-      return this.flatRoof;
-   }
-
-   public void setFlatRoof(java.lang.Integer flatRoof)
-   {
-      this.flatRoof = flatRoof;
-   }
-
-   public java.lang.Integer getHvacUpdate()
-   {
-      return this.hvacUpdate;
-   }
-
-   public void setHvacUpdate(java.lang.Integer hvacUpdate)
-   {
-      this.hvacUpdate = hvacUpdate;
    }
 
    public java.lang.Integer getElectricalUpdate()
@@ -206,256 +60,6 @@ public class AmInt implements java.io.Serializable
       this.electricalUpdate = electricalUpdate;
    }
 
-   public java.lang.String getElectricAluminum()
-   {
-      return this.electricAluminum;
-   }
-
-   public void setElectricAluminum(java.lang.String electricAluminum)
-   {
-      this.electricAluminum = electricAluminum;
-   }
-
-   public java.lang.String getElectricBrand()
-   {
-      return this.electricBrand;
-   }
-
-   public void setElectricBrand(java.lang.String electricBrand)
-   {
-      this.electricBrand = electricBrand;
-   }
-
-   public java.lang.Integer getElectricAmps()
-   {
-      return this.electricAmps;
-   }
-
-   public void setElectricAmps(java.lang.Integer electricAmps)
-   {
-      this.electricAmps = electricAmps;
-   }
-
-   public java.lang.Integer getPlumbingUpdate()
-   {
-      return this.plumbingUpdate;
-   }
-
-   public void setPlumbingUpdate(java.lang.Integer plumbingUpdate)
-   {
-      this.plumbingUpdate = plumbingUpdate;
-   }
-
-   public java.lang.String getPlumbingType()
-   {
-      return this.plumbingType;
-   }
-
-   public void setPlumbingType(java.lang.String plumbingType)
-   {
-      this.plumbingType = plumbingType;
-   }
-
-   public java.lang.Integer getNoPriorCoverage()
-   {
-      return this.noPriorCoverage;
-   }
-
-   public void setNoPriorCoverage(java.lang.Integer noPriorCoverage)
-   {
-      this.noPriorCoverage = noPriorCoverage;
-   }
-
-   public java.lang.String getDogBreeds()
-   {
-      return this.dogBreeds;
-   }
-
-   public void setDogBreeds(java.lang.String dogBreeds)
-   {
-      this.dogBreeds = dogBreeds;
-   }
-
-   public java.lang.Integer getTile()
-   {
-      return this.tile;
-   }
-
-   public void setTile(java.lang.Integer tile)
-   {
-      this.tile = tile;
-   }
-
-   public java.lang.String getFloodZone()
-   {
-      return this.floodZone;
-   }
-
-   public void setFloodZone(java.lang.String floodZone)
-   {
-      this.floodZone = floodZone;
-   }
-
-   public java.lang.String getFarmAnimals()
-   {
-      return this.farmAnimals;
-   }
-
-   public void setFarmAnimals(java.lang.String farmAnimals)
-   {
-      this.farmAnimals = farmAnimals;
-   }
-
-   public java.lang.String getLLC()
-   {
-      return this.LLC;
-   }
-
-   public void setLLC(java.lang.String LLC)
-   {
-      this.LLC = LLC;
-   }
-
-   public java.lang.String getOpenFoundation()
-   {
-      return this.openFoundation;
-   }
-
-   public void setOpenFoundation(java.lang.String openFoundation)
-   {
-      this.openFoundation = openFoundation;
-   }
-
-   public java.lang.String getDivingBoard()
-   {
-      return this.divingBoard;
-   }
-
-   public void setDivingBoard(java.lang.String divingBoard)
-   {
-      this.divingBoard = divingBoard;
-   }
-
-   public java.lang.String getPoolSlide()
-   {
-      return this.poolSlide;
-   }
-
-   public void setPoolSlide(java.lang.String poolSlide)
-   {
-      this.poolSlide = poolSlide;
-   }
-
-   public java.lang.String getTrampoline()
-   {
-      return this.trampoline;
-   }
-
-   public void setTrampoline(java.lang.String trampoline)
-   {
-      this.trampoline = trampoline;
-   }
-
-   public java.lang.String getTrampolinefence()
-   {
-      return this.trampolinefence;
-   }
-
-   public void setTrampolinefence(java.lang.String trampolinefence)
-   {
-      this.trampolinefence = trampolinefence;
-   }
-
-   public java.lang.Integer getFourPointRequirement()
-   {
-      return this.fourPointRequirement;
-   }
-
-   public void setFourPointRequirement(java.lang.Integer fourPointRequirement)
-   {
-      this.fourPointRequirement = fourPointRequirement;
-   }
-
-   public java.lang.Integer getWaterCoverage()
-   {
-      return this.waterCoverage;
-   }
-
-   public void setWaterCoverage(java.lang.Integer waterCoverage)
-   {
-      this.waterCoverage = waterCoverage;
-   }
-
-   public java.lang.Integer getShingles()
-   {
-      return this.shingles;
-   }
-
-   public void setShingles(java.lang.Integer shingles)
-   {
-      this.shingles = shingles;
-   }
-
-   public java.lang.String getInsuranceScore()
-   {
-      return this.insuranceScore;
-   }
-
-   public void setInsuranceScore(java.lang.String insuranceScore)
-   {
-      this.insuranceScore = insuranceScore;
-   }
-
-   public java.lang.String getDuplex()
-   {
-      return this.duplex;
-   }
-
-   public void setDuplex(java.lang.String duplex)
-   {
-      this.duplex = duplex;
-   }
-
-   public java.lang.String getThreeUnits()
-   {
-      return this.threeUnits;
-   }
-
-   public void setThreeUnits(java.lang.String threeUnits)
-   {
-      this.threeUnits = threeUnits;
-   }
-
-   public java.lang.String getHardiplank()
-   {
-      return this.hardiplank;
-   }
-
-   public void setHardiplank(java.lang.String hardiplank)
-   {
-      this.hardiplank = hardiplank;
-   }
-
-   public java.lang.Integer getFrameRate()
-   {
-      return this.frameRate;
-   }
-
-   public void setFrameRate(java.lang.Integer frameRate)
-   {
-      this.frameRate = frameRate;
-   }
-
-   public java.lang.Integer getCompositionShingle()
-   {
-      return this.compositionShingle;
-   }
-
-   public void setCompositionShingle(java.lang.Integer compositionShingle)
-   {
-      this.compositionShingle = compositionShingle;
-   }
-
    public java.lang.Integer getYearBuilt()
    {
       return this.yearBuilt;
@@ -466,66 +70,71 @@ public class AmInt implements java.io.Serializable
       this.yearBuilt = yearBuilt;
    }
 
-   public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
-         java.lang.Integer otherStructureLimit, java.lang.Integer acres,
-         java.lang.String protectedSubdivision,
-         java.lang.Integer propertyClaims, java.lang.String protection,
-         java.lang.Integer architectualShingle, java.lang.Integer metal,
-         java.lang.Integer flatRoof, java.lang.Integer hvacUpdate,
-         java.lang.Integer electricalUpdate, java.lang.String electricAluminum,
-         java.lang.String electricBrand, java.lang.Integer electricAmps,
-         java.lang.Integer plumbingUpdate, java.lang.String plumbingType,
-         java.lang.Integer noPriorCoverage, java.lang.String dogBreeds,
-         java.lang.Integer tile, java.lang.String floodZone,
-         java.lang.String farmAnimals, java.lang.String LLC,
-         java.lang.String openFoundation, java.lang.String divingBoard,
-         java.lang.String poolSlide, java.lang.String trampoline,
-         java.lang.String trampolinefence,
-         java.lang.Integer fourPointRequirement,
-         java.lang.Integer waterCoverage, java.lang.Integer shingles,
-         java.lang.String insuranceScore, java.lang.String duplex,
-         java.lang.String threeUnits, java.lang.String hardiplank,
-         java.lang.Integer frameRate, java.lang.Integer compositionShingle,
-         java.lang.Integer yearBuilt)
+   public java.lang.Integer getPer_of_flat_roof()
    {
-      this.age = age;
-      this.dwellingCoverage = dwellingCoverage;
+      return this.per_of_flat_roof;
+   }
+
+   public void setPer_of_flat_roof(java.lang.Integer per_of_flat_roof)
+   {
+      this.per_of_flat_roof = per_of_flat_roof;
+   }
+
+   public java.lang.Integer getGarageCarportType()
+   {
+      return this.garageCarportType;
+   }
+
+   public void setGarageCarportType(java.lang.Integer garageCarportType)
+   {
+      this.garageCarportType = garageCarportType;
+   }
+
+   public java.lang.Integer getPriorClaims()
+   {
+      return this.priorClaims;
+   }
+
+   public void setPriorClaims(java.lang.Integer priorClaims)
+   {
+      this.priorClaims = priorClaims;
+   }
+
+   public java.lang.String getAlarm()
+   {
+      return this.alarm;
+   }
+
+   public void setAlarm(java.lang.String alarm)
+   {
+      this.alarm = alarm;
+   }
+
+   public java.lang.String getSecured_community()
+   {
+      return this.secured_community;
+   }
+
+   public void setSecured_community(java.lang.String secured_community)
+   {
+      this.secured_community = secured_community;
+   }
+
+   public AmInt(java.lang.Integer otherStructureLimit,
+         java.lang.Integer propertyClaims, java.lang.Integer electricalUpdate,
+         java.lang.Integer yearBuilt, java.lang.Integer per_of_flat_roof,
+         java.lang.Integer garageCarportType, java.lang.Integer priorClaims,
+         java.lang.String alarm, java.lang.String secured_community)
+   {
       this.otherStructureLimit = otherStructureLimit;
-      this.acres = acres;
-      this.protectedSubdivision = protectedSubdivision;
       this.propertyClaims = propertyClaims;
-      this.protection = protection;
-      this.architectualShingle = architectualShingle;
-      this.metal = metal;
-      this.flatRoof = flatRoof;
-      this.hvacUpdate = hvacUpdate;
       this.electricalUpdate = electricalUpdate;
-      this.electricAluminum = electricAluminum;
-      this.electricBrand = electricBrand;
-      this.electricAmps = electricAmps;
-      this.plumbingUpdate = plumbingUpdate;
-      this.plumbingType = plumbingType;
-      this.noPriorCoverage = noPriorCoverage;
-      this.dogBreeds = dogBreeds;
-      this.tile = tile;
-      this.floodZone = floodZone;
-      this.farmAnimals = farmAnimals;
-      this.LLC = LLC;
-      this.openFoundation = openFoundation;
-      this.divingBoard = divingBoard;
-      this.poolSlide = poolSlide;
-      this.trampoline = trampoline;
-      this.trampolinefence = trampolinefence;
-      this.fourPointRequirement = fourPointRequirement;
-      this.waterCoverage = waterCoverage;
-      this.shingles = shingles;
-      this.insuranceScore = insuranceScore;
-      this.duplex = duplex;
-      this.threeUnits = threeUnits;
-      this.hardiplank = hardiplank;
-      this.frameRate = frameRate;
-      this.compositionShingle = compositionShingle;
       this.yearBuilt = yearBuilt;
+      this.per_of_flat_roof = per_of_flat_roof;
+      this.garageCarportType = garageCarportType;
+      this.priorClaims = priorClaims;
+      this.alarm = alarm;
+      this.secured_community = secured_community;
    }
 
 }
