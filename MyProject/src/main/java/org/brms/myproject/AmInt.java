@@ -9,16 +9,9 @@ public class AmInt implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Integer otherStructureLimit;
-   private java.lang.Integer propertyClaims;
-
-   private java.lang.Integer electricalUpdate;
-
    private java.lang.Integer yearBuilt;
 
    private java.lang.Integer per_of_flat_roof;
-
-   private java.lang.Integer garageCarportType;
 
    private java.lang.Integer priorClaims;
 
@@ -28,36 +21,6 @@ public class AmInt implements java.io.Serializable
 
    public AmInt()
    {
-   }
-
-   public java.lang.Integer getOtherStructureLimit()
-   {
-      return this.otherStructureLimit;
-   }
-
-   public void setOtherStructureLimit(java.lang.Integer otherStructureLimit)
-   {
-      this.otherStructureLimit = otherStructureLimit;
-   }
-
-   public java.lang.Integer getPropertyClaims()
-   {
-      return this.propertyClaims;
-   }
-
-   public void setPropertyClaims(java.lang.Integer propertyClaims)
-   {
-      this.propertyClaims = propertyClaims;
-   }
-
-   public java.lang.Integer getElectricalUpdate()
-   {
-      return this.electricalUpdate;
-   }
-
-   public void setElectricalUpdate(java.lang.Integer electricalUpdate)
-   {
-      this.electricalUpdate = electricalUpdate;
    }
 
    public java.lang.Integer getYearBuilt()
@@ -78,16 +41,6 @@ public class AmInt implements java.io.Serializable
    public void setPer_of_flat_roof(java.lang.Integer per_of_flat_roof)
    {
       this.per_of_flat_roof = per_of_flat_roof;
-   }
-
-   public java.lang.Integer getGarageCarportType()
-   {
-      return this.garageCarportType;
-   }
-
-   public void setGarageCarportType(java.lang.Integer garageCarportType)
-   {
-      this.garageCarportType = garageCarportType;
    }
 
    public java.lang.Integer getPriorClaims()
@@ -120,18 +73,12 @@ public class AmInt implements java.io.Serializable
       this.secured_community = secured_community;
    }
 
-   public AmInt(java.lang.Integer otherStructureLimit,
-         java.lang.Integer propertyClaims, java.lang.Integer electricalUpdate,
-         java.lang.Integer yearBuilt, java.lang.Integer per_of_flat_roof,
-         java.lang.Integer garageCarportType, java.lang.Integer priorClaims,
-         java.lang.String alarm, java.lang.String secured_community)
+   public AmInt(java.lang.Integer yearBuilt, java.lang.Integer per_of_flat_roof,
+         java.lang.Integer priorClaims, java.lang.String alarm,
+         java.lang.String secured_community)
    {
-      this.otherStructureLimit = otherStructureLimit;
-      this.propertyClaims = propertyClaims;
-      this.electricalUpdate = electricalUpdate;
       this.yearBuilt = yearBuilt;
       this.per_of_flat_roof = per_of_flat_roof;
-      this.garageCarportType = garageCarportType;
       this.priorClaims = priorClaims;
       this.alarm = alarm;
       this.secured_community = secured_community;
