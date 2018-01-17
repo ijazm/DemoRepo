@@ -2,7 +2,7 @@ package org.brms.myproject;
 rule "check age of construction"
 when
 AmInt(Age:(2018-yearBuilt))
-AmInt((Age>0)&&(Age<76))
+AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
 System.out.println("Age is eligible");
 drools.setFocus("Carrier");
