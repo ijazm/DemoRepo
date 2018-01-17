@@ -80,6 +80,8 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer compositionShingle;
 
+   private java.lang.Integer yearBuilt;
+
    public AmInt()
    {
    }
@@ -454,6 +456,16 @@ public class AmInt implements java.io.Serializable
       this.compositionShingle = compositionShingle;
    }
 
+   public java.lang.Integer getYearBuilt()
+   {
+      return this.yearBuilt;
+   }
+
+   public void setYearBuilt(java.lang.Integer yearBuilt)
+   {
+      this.yearBuilt = yearBuilt;
+   }
+
    public AmInt(java.lang.Integer age, java.lang.Integer dwellingCoverage,
          java.lang.Integer otherStructureLimit, java.lang.Integer acres,
          java.lang.String protectedSubdivision,
@@ -473,7 +485,8 @@ public class AmInt implements java.io.Serializable
          java.lang.Integer waterCoverage, java.lang.Integer shingles,
          java.lang.String insuranceScore, java.lang.String duplex,
          java.lang.String threeUnits, java.lang.String hardiplank,
-         java.lang.Integer frameRate, java.lang.Integer compositionShingle)
+         java.lang.Integer frameRate, java.lang.Integer compositionShingle,
+         java.lang.Integer yearBuilt)
    {
       this.age = age;
       this.dwellingCoverage = dwellingCoverage;
@@ -512,6 +525,7 @@ public class AmInt implements java.io.Serializable
       this.hardiplank = hardiplank;
       this.frameRate = frameRate;
       this.compositionShingle = compositionShingle;
+      this.yearBuilt = yearBuilt;
    }
 
 }
