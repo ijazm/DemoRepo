@@ -10,7 +10,7 @@ end
  rule "Number of property claims"
 ruleflow-group "Carrier"
 when	
-AmInt(priorClaims<1)
+AmInt(prior_Claims<1)
 then
 System.out.println("Number of property claims eligible");
 drools.setFocus("Carrier");
