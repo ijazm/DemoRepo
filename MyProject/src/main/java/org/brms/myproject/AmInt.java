@@ -13,11 +13,11 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer per_of_flat_roof;
 
-   private java.lang.Integer priorClaims;
-
    private java.lang.String alarm;
 
    private java.lang.String secured_community;
+
+   private java.lang.Integer prior_Claims;
 
    public AmInt()
    {
@@ -43,16 +43,6 @@ public class AmInt implements java.io.Serializable
       this.per_of_flat_roof = per_of_flat_roof;
    }
 
-   public java.lang.Integer getPriorClaims()
-   {
-      return this.priorClaims;
-   }
-
-   public void setPriorClaims(java.lang.Integer priorClaims)
-   {
-      this.priorClaims = priorClaims;
-   }
-
    public java.lang.String getAlarm()
    {
       return this.alarm;
@@ -73,15 +63,25 @@ public class AmInt implements java.io.Serializable
       this.secured_community = secured_community;
    }
 
+   public java.lang.Integer getPrior_Claims()
+   {
+      return this.prior_Claims;
+   }
+
+   public void setPrior_Claims(java.lang.Integer prior_Claims)
+   {
+      this.prior_Claims = prior_Claims;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.Integer per_of_flat_roof,
-         java.lang.Integer priorClaims, java.lang.String alarm,
-         java.lang.String secured_community)
+         java.lang.String alarm, java.lang.String secured_community,
+         java.lang.Integer prior_Claims)
    {
       this.yearBuilt = yearBuilt;
       this.per_of_flat_roof = per_of_flat_roof;
-      this.priorClaims = priorClaims;
       this.alarm = alarm;
       this.secured_community = secured_community;
+      this.prior_Claims = prior_Claims;
    }
 
 }
