@@ -11,13 +11,11 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer yearBuilt;
 
-   private java.lang.String alarm;
-
    private java.lang.String secured_community;
 
    private java.lang.Integer prior_Claims;
 
-   private java.lang.String dogBreeds;
+   private java.lang.String trampolinefence;
 
    public AmInt()
    {
@@ -31,16 +29,6 @@ public class AmInt implements java.io.Serializable
    public void setYearBuilt(java.lang.Integer yearBuilt)
    {
       this.yearBuilt = yearBuilt;
-   }
-
-   public java.lang.String getAlarm()
-   {
-      return this.alarm;
-   }
-
-   public void setAlarm(java.lang.String alarm)
-   {
-      this.alarm = alarm;
    }
 
    public java.lang.String getSecured_community()
@@ -63,25 +51,23 @@ public class AmInt implements java.io.Serializable
       this.prior_Claims = prior_Claims;
    }
 
-   public java.lang.String getDogBreeds()
+   public java.lang.String getTrampolinefence()
    {
-      return this.dogBreeds;
+      return this.trampolinefence;
    }
 
-   public void setDogBreeds(java.lang.String dogBreeds)
+   public void setTrampolinefence(java.lang.String trampolinefence)
    {
-      this.dogBreeds = dogBreeds;
+      this.trampolinefence = trampolinefence;
    }
 
-   public AmInt(java.lang.Integer yearBuilt, java.lang.String alarm,
-         java.lang.String secured_community, java.lang.Integer prior_Claims,
-         java.lang.String dogBreeds)
+   public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
+         java.lang.Integer prior_Claims, java.lang.String trampolinefence)
    {
       this.yearBuilt = yearBuilt;
-      this.alarm = alarm;
       this.secured_community = secured_community;
       this.prior_Claims = prior_Claims;
-      this.dogBreeds = dogBreeds;
+      this.trampolinefence = trampolinefence;
    }
 
 }
