@@ -6,12 +6,12 @@ then
 System.out.println("Age is eligible");
 drools.setFocus("Carrier");
 end
-rule "Check the Dog Policy eligibily for dog breeds"
+rule "Check whether have trampoline and is it fenced"
 ruleflow-group "Carrier"	
-when
-AmInt((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Wolf"))
+when	
+AmInt(Trampolinefence=="yes")	
 then
-System.out.println(" Dog breeds are eligible");
+System.out.println(" Trampoline eligible");
 drools.setFocus("Carrier");
 end
  rule "Number of property claims"
@@ -27,7 +27,7 @@ end
 rule "Security for seasonal occupany"
 ruleflow-group "Carrier"	
 when
-AmInt((alarm=="yes")||(secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
 then
 System.out.println("Flat roof percentage eligible");
 drools.setFocus("Carrier");
