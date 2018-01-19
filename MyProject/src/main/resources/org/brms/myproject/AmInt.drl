@@ -6,7 +6,14 @@ then
 System.out.println("Age is eligible");
 drools.setFocus("Carrier");
 end
-
+rule "Check the Dog Policy eligibily for dog breeds"
+ruleflow-group "Carrier"	
+when
+AmInt((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Wolf"))
+then
+System.out.println(" Dog breeds are eligible");
+drools.setFocus("Carrier");
+end
  rule "Number of property claims"
 ruleflow-group "Carrier"
 when	
@@ -16,14 +23,6 @@ System.out.println("Number of property claims eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check the Flat roof percentage"
-ruleflow-group "Carrier"	
-when
-AmInt((per_of_flat_roof>-1)&&(per_of_flat_roof<21))
-then
-System.out.println("Flat roof percentage eligible");
-drools.setFocus("Carrier");
-end
 
 rule "Security for seasonal occupany"
 ruleflow-group "Carrier"	
