@@ -14,7 +14,7 @@ then
 System.out.println(" Trampoline eligible");
 drools.setFocus("Carrier");
 end
-rule "Number of property claims"
+rule "Number of prior claims"
 ruleflow-group "Carrier"
 when	
 AmInt(prior_Claims<1)
@@ -23,7 +23,7 @@ System.out.println("Number of property claims eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Security for seasonal occupany"
+rule "Eligibilty for seasonal occupany"
 ruleflow-group "Carrier"	
 when
 AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
@@ -32,7 +32,7 @@ System.out.println("Flat roof percentage eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check percentage of flat roof"
+rule "Check flat roof percentage"
 ruleflow-group "Carrier"
 when
 AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
@@ -41,7 +41,7 @@ System.out.println("Flat roof percentage eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check masonary frame ratio"
+rule "Check masonary to frame ratio"
 ruleflow-group "Carrier"
 when	
 AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
@@ -50,7 +50,7 @@ System.out.println("Number of property claims eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check the Plumbing update"
+rule "Check in which year the Plumbing was updated"
 ruleflow-group "Carrier"	
 when	
 AmInt(((2018-plumbingUpdate)>-1)&&((2018-plumbingUpdate)<21))
@@ -59,7 +59,7 @@ System.out.println(" Plumbing update is eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check the Plumbing type"
+rule "Check the type of Plumbing"
 ruleflow-group "Carrier"	
 when	
 AmInt((plumbingType!="Polybutylene")||(plumbingType!="PEX"))	
@@ -68,7 +68,7 @@ System.out.println(" Plumbing type is eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check the Dog Policy eligibily for dog breeds"
+rule "Dog Policy eligibility for dog breeds"
 ruleflow-group "Carrier"	
 when
 AmInt((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
@@ -77,11 +77,10 @@ System.out.println(" Dog breeds are eligible");
 drools.setFocus("Carrier");
 end
 
-rule "Check the Endorsement Eligibility	for dog breeds"
+rule "Endorsement Eligibility	for dog breeds"
 ruleflow-group "Carrier"	
 when
 AmInt((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
 System.out.println(" Dog breeds are eligible fro endorsement");
-//drools.setFocus("Carrier");
 end
