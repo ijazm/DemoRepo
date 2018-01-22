@@ -32,3 +32,11 @@ then
 System.out.println("Flat roof percentage eligible");
 drools.setFocus("Carrier");
 end
+
+rule "Check percentage of flat roof"
+ruleflow-group "Carrier"
+when
+AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
+then
+System.out.println("Flat roof percentage eligible");
+end
