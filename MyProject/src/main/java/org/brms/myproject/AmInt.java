@@ -19,6 +19,8 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String flatRoofPercent;
 
+   private java.lang.String masonryFrame;
+
    public AmInt()
    {
    }
@@ -73,15 +75,26 @@ public class AmInt implements java.io.Serializable
       this.flatRoofPercent = flatRoofPercent;
    }
 
+   public java.lang.String getMasonryFrame()
+   {
+      return this.masonryFrame;
+   }
+
+   public void setMasonryFrame(java.lang.String masonryFrame)
+   {
+      this.masonryFrame = masonryFrame;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
-         java.lang.String flatRoofPercent)
+         java.lang.String flatRoofPercent, java.lang.String masonryFrame)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
       this.prior_Claims = prior_Claims;
       this.trampolinefence = trampolinefence;
       this.flatRoofPercent = flatRoofPercent;
+      this.masonryFrame = masonryFrame;
    }
 
 }
