@@ -23,6 +23,10 @@ public class AmTrad implements java.io.Serializable
 
    private java.lang.String dogBreeds;
 
+   private java.lang.Integer plumbingUpdate;
+
+   private java.lang.String plumbingType;
+
    public AmTrad()
    {
    }
@@ -97,10 +101,31 @@ public class AmTrad implements java.io.Serializable
       this.dogBreeds = dogBreeds;
    }
 
+   public java.lang.Integer getPlumbingUpdate()
+   {
+      return this.plumbingUpdate;
+   }
+
+   public void setPlumbingUpdate(java.lang.Integer plumbingUpdate)
+   {
+      this.plumbingUpdate = plumbingUpdate;
+   }
+
+   public java.lang.String getPlumbingType()
+   {
+      return this.plumbingType;
+   }
+
+   public void setPlumbingType(java.lang.String plumbingType)
+   {
+      this.plumbingType = plumbingType;
+   }
+
    public AmTrad(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
-         java.lang.String dogBreeds)
+         java.lang.String dogBreeds, java.lang.Integer plumbingUpdate,
+         java.lang.String plumbingType)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -109,6 +134,8 @@ public class AmTrad implements java.io.Serializable
       this.flatRoofPercent = flatRoofPercent;
       this.masonryFrame = masonryFrame;
       this.dogBreeds = dogBreeds;
+      this.plumbingUpdate = plumbingUpdate;
+      this.plumbingType = plumbingType;
    }
 
 }
