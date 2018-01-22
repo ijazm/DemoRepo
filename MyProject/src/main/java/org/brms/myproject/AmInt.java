@@ -21,6 +21,12 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String masonryFrame;
 
+   private java.lang.String dogBreeds;
+
+   private java.lang.String plumbingType;
+
+   private java.lang.Integer plumbingUpdate;
+
    public AmInt()
    {
    }
@@ -85,9 +91,41 @@ public class AmInt implements java.io.Serializable
       this.masonryFrame = masonryFrame;
    }
 
+   public java.lang.String getDogBreeds()
+   {
+      return this.dogBreeds;
+   }
+
+   public void setDogBreeds(java.lang.String dogBreeds)
+   {
+      this.dogBreeds = dogBreeds;
+   }
+
+   public java.lang.String getPlumbingType()
+   {
+      return this.plumbingType;
+   }
+
+   public void setPlumbingType(java.lang.String plumbingType)
+   {
+      this.plumbingType = plumbingType;
+   }
+
+   public java.lang.Integer getPlumbingUpdate()
+   {
+      return this.plumbingUpdate;
+   }
+
+   public void setPlumbingUpdate(java.lang.Integer plumbingUpdate)
+   {
+      this.plumbingUpdate = plumbingUpdate;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
-         java.lang.String flatRoofPercent, java.lang.String masonryFrame)
+         java.lang.String flatRoofPercent, java.lang.String masonryFrame,
+         java.lang.String dogBreeds, java.lang.String plumbingType,
+         java.lang.Integer plumbingUpdate)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -95,6 +133,9 @@ public class AmInt implements java.io.Serializable
       this.trampolinefence = trampolinefence;
       this.flatRoofPercent = flatRoofPercent;
       this.masonryFrame = masonryFrame;
+      this.dogBreeds = dogBreeds;
+      this.plumbingType = plumbingType;
+      this.plumbingUpdate = plumbingUpdate;
    }
 
 }
