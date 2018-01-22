@@ -14,7 +14,7 @@ then
 System.out.println(" Trampoline eligible");
 drools.setFocus("Carrier");
 end
- rule "Number of property claims"
+rule "Number of property claims"
 ruleflow-group "Carrier"
 when	
 AmInt(prior_Claims<1)
