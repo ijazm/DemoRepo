@@ -1,2 +1,66 @@
 package org.brms.myproject;
 
+rule "Check for Secondary/Seasonal Occupancy(Central Station Fire and Burglar or Limited Access (security guard or gate)"
+ruleflow-group "Carrier"
+when
+AmTrad((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+then
+System.out.println("Secondary/seasonal occupancy eligible");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Flat roof percentage"
+ruleflow-group "Carrier"	
+when
+AmTrad(flatRoofPercent=="0%")
+then
+System.out.println(" Flat Roof percentage is eligible");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Plumbing update"
+ruleflow-group "Carrier"	
+when	
+AmTrad(((2018-plumbingUpdate)>-1)&&((2018-plumbingUpdate)<26))
+then
+System.out.println(" Plumbing update is eligible");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Plumbing type"
+ruleflow-group "Carrier"	
+when	
+AmTrad(plumbingType!="Polybutylene")	
+then
+System.out.println(" Plumbing type is eligible");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Dog Policy eligibily for dog breeds"
+ruleflow-group "Carrier"	
+when
+AmTrad((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Akita")&&(dogBreeds!="Chow Chow")&&(dogBreeds!="Doberman Pinscher")&&(dogBreeds!="German Shepherd")&&(dogBreeds!="Presa Canario")&&(dogBreeds!="Rottweiler")&&(dogBreeds!="Rhodesian Ridgeback"))
+then
+System.out.println(" Dog breeds are eligible");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Endorsement Eligibility	for dog breeds"
+ruleflow-group "Carrier"	
+when
+AmTrad((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Akita")&&(dogBreeds!="Chow Chow")&&(dogBreeds!="Doberman Pinscher")&&(dogBreeds!="German Shepherd")&&(dogBreeds!="Presa Canario")&&(dogBreeds!="Rottweiler")&&(dogBreeds!="Rhodesian Ridgeback"))
+then
+System.out.println(" Dog breeds are eligible for endorsement");
+drools.setFocus("Carrier");
+end
+
+rule "Check the Masonry to Frame Ratio percentage"
+ruleflow-group "Carrier"	
+when			
+//AmTrad(masonaryFrame==25)
+AmTrad(masonryFrame=="Masonry 75% - Frame 25%")
+then
+System.out.println("Frame rate eligible");
+System.out.println("Approved");
+end
+
