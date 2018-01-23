@@ -9,7 +9,7 @@ end
 rule "Check whether have trampoline and is it fenced"
 ruleflow-group "Carrier"	
 when	
-AmInt((Trampolinefence=="yes")&&(Trampolinefence!=null))	
+AmInt((Trampolinefence=="yes")&&(Trampolinefence!= null || Trampolinefence.trim().isEmpty()))	
 then
 System.out.println(" Trampoline eligible");
 drools.setFocus("Carrier");
@@ -62,7 +62,7 @@ end
 rule "Check the type of Plumbing"
 ruleflow-group "Carrier"	
 when	
-AmInt((plumbingType!=null)&&(plumbingType!="Polybutylene")&&(plumbingType!="PEX"))	
+AmInt((plumbingType!= null || plumbingType.trim().isEmpty())&&(plumbingType!="Polybutylene")&&(plumbingType!="PEX"))	
 then
 System.out.println(" Plumbing type is eligible");
 drools.setFocus("Carrier");
@@ -71,7 +71,7 @@ end
 rule "Dog Policy eligibility for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
+AmInt((dogBreeds!= null || dogBreeds.trim().isEmpty())&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
 then
 System.out.println(" Dog breeds are eligible");
 drools.setFocus("Carrier");
@@ -80,7 +80,7 @@ end
 rule "Endorsement Eligibility	for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
+AmInt((dogBreeds!= null || dogBreeds.trim().isEmpty())&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
 System.out.println(" Dog breeds are eligible fro endorsement");
 end
