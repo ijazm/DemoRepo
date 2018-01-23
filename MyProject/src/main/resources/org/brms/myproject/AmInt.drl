@@ -22,7 +22,7 @@ then
 System.out.println("Number of property claims eligible");
 drools.setFocus("Carrier");
 end
-/*
+
 rule "Eligibilty for seasonal occupany"
 ruleflow-group "Carrier"	
 when
@@ -83,4 +83,4 @@ when
 AmInt((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
 System.out.println(" Dog breeds are eligible fro endorsement");
-end*/
+end
