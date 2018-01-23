@@ -14,7 +14,7 @@ then
 System.out.println(" Trampoline eligible");
 drools.setFocus("Carrier");
 end
-/*
+
 rule "Number of prior claims"
 ruleflow-group "Carrier"
 when	
