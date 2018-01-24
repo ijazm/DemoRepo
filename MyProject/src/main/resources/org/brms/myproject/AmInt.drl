@@ -49,7 +49,7 @@ when
 AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
 then
 System.out.println("Number of property claims eligible");
-drools.setFocus("Carrier");
+
 end
 /*
 rule "Check in which year the Plumbing was updated"
