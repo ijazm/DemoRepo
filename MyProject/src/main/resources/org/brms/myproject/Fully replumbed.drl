@@ -3,5 +3,5 @@ rule "To check whether fully replumbed"
 when
 FullyReplumb(fullyReplumb=="yes")
 then
-System.out.println("Display the year of update");
+System.out.println("The building was fully replumbed");
 end
