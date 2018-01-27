@@ -3,5 +3,5 @@ rule "are you actively repairing"
 when
 ActivelyRepairing(activelyRepairing=="yes")
 then
-System.out.println("asd");
+System.out.println("The damage is being actively repaired");
 end
