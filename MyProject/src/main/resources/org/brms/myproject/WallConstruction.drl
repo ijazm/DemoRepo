@@ -11,9 +11,9 @@ WallConstruction(wallConstruction=="Frame")
 then
 System.out.println("Wall construction is Frame");
 end
-rule "Check the type of Construction"
+rule "Check the type of Construction of Mixed-masonary"
 when
 WallConstruction(wallConstruction=="Mixed-Masonary")
 then
-System.out.println("display the tab");
+System.out.println("Wall construction is Mixed-masonary");
 end
