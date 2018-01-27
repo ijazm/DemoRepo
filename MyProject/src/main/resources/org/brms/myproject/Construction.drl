@@ -3,5 +3,5 @@ rule "Check wether the structure is Mixed-masonary"
 when
 Construction(constructionType=="Mixed-Masonary")
 then
-System.out.println("Display the ratio of masonary frame");
+System.out.println("The construction type is Mixed masonry frame");
 end
