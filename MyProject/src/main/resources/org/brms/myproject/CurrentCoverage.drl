@@ -3,5 +3,5 @@ rule "check whether there is a current policy coverage"
 when
 CurrentCoverage(currentCoverage=="yes")
 then 
-System.out.println("have current policy coverage");
+System.out.println("Have a current policy coverage");
 end
