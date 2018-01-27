@@ -3,5 +3,5 @@ rule "Check whether you have an alarm"
 when
 Safety((securedCommunity!="yes")&&(alarm=="yes"))
 then
-System.out.println("have alarm installed");
+System.out.println("The building has an alarm installed");
 end
