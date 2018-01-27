@@ -3,5 +3,5 @@ rule "Check if he has a garage"
 when
 AdditionalStructures((pool!="yes")&&(garage=="yes")&&(trampoline!="yes"))
 then
-System.out.println("he has garage");
+System.out.println("Have a garage");
 end
