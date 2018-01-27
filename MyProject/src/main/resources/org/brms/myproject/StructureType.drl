@@ -3,5 +3,5 @@ rule "check whether it is a row house or residential"
 when
 StructureType(((houseType!="Residential")||(houseType=="Row"))&&(houseType!="Condominium"))
 then
-System.out.println("how many stories");
+System.out.println("The structure type is Row house");
 end
