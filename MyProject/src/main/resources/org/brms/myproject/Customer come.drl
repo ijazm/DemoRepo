@@ -3,5 +3,5 @@ rule "To check whether customers come to house"
 when
 CustomerCome(customerInHome=="yes")
 then
-System.out.println("Has customers coming to house");
+System.out.println("Have customers coming to house for business");
 end
