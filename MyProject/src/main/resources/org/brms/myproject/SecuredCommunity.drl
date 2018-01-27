@@ -3,5 +3,5 @@ rule "Check whether you have a secured community"
 when
 Safety((securedCommunity=="yes")&&(alarm!="yes"))
 then
-System.out.println("have a secured community");
+System.out.println("Have a secured community");
 end
