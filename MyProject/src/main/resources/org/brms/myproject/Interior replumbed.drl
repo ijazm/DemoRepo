@@ -3,5 +3,5 @@ rule "To check whether interior fully replumbed"
 when
 InteriorReplumb((interiorReplumb=="yes")&&(interiorReplumb!="no"))
 then
-System.out.println("Display the year of interior update");
+System.out.println("Only the interior was fully replumbed");
 end
