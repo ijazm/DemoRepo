@@ -61,6 +61,6 @@ when
 AmTrad(masonryFrame=="Masonry 75% - Frame 25%")
 then
 System.out.println("Frame rate eligible");
-System.out.println("Approved");
+//System.out.println("Approved");
 end
 
