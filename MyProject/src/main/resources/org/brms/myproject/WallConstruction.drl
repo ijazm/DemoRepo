@@ -1,7 +1,19 @@
 package org.brms.myproject;
+rule "Check whether the type of Construction is masonary"
+when
+WallConstruction(wallConstruction=="Masonary")
+then
+System.out.println("Wall construction is masonary");
+end
+rule "Check whether the type of Construction is Frame"
+when
+WallConstruction(wallConstruction=="Frame")
+then
+System.out.println("Wall construction is Frame");
+end
 rule "Check the type of Construction"
 when
-WallConstruction((wallConstruction=="Masonary")||(wallConstruction=="Frame")||(wallConstruction=="Mixed-Masonary"))
+WallConstruction(wallConstruction=="Mixed-Masonary")
 then
 System.out.println("display the tab");
 end
