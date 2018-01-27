@@ -67,11 +67,11 @@ then
 System.out.println(" Plumbing type is eligible");
 drools.setFocus("Carrier");
 end
-/*
+
 rule "Dog Policy eligibility for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt((dogBreeds!="")&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
+AmInt((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
 then
 System.out.println(" Dog breeds are eligible");
 drools.setFocus("Carrier");
@@ -80,7 +80,7 @@ end
 rule "Endorsement Eligibility	for dog breeds"
 ruleflow-group "Carrier"	
 when
-AmInt((dogBreeds!="")&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
+AmInt((dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
 System.out.println(" Dog breeds are eligible fro endorsement");
-end*/
+end
