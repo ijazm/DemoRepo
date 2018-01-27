@@ -3,5 +3,5 @@ rule "to check wether the building is under major rennovations"
 when
 UnderMajorRenovation(underRennovation=="yes")
 then
-System.out.println("under major rennovation");
+System.out.println("The house is under major rennovation");
 end
