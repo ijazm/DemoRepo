@@ -3,5 +3,5 @@ rule "Do you have any unrepaired damage?"
 when
 UnrepairedDamage(unrepairedDamage=="yes")
 then
-System.out.println("you have unrepaired damage");
+System.out.println("Have damages that need to be repaired");
 end
