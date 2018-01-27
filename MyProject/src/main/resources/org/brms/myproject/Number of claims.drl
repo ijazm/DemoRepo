@@ -3,5 +3,5 @@ rule "Check the number of prior claims if any"
 when
 PriorClaims((numberOfClaims>0)&&(numberOfClaims<5))
 then
-System.out.println("have prior claims");
+System.out.println("Had prior claims");
 end
