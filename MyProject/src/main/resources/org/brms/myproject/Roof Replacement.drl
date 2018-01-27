@@ -3,5 +3,5 @@ rule "Check whether the roof was replaced"
 when
 RoofReplacement((roofReplacement=="yes")&&(roofReplacement!="no"))
 then
-System.out.println("Display the roof replacement year");
+System.out.println("The roof was replaced");
 end
