@@ -3,7 +3,7 @@ rule "Time of Ownership"
 when
 Ownership(TimeOwnership<3)
 then
-System.out.println("Display prior address tab");
+System.out.println("Have a prior address");
 drools.setFocus("New purchase");
 end
 rule "Check whether new purchase"
