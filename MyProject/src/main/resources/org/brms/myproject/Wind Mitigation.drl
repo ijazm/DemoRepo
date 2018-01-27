@@ -3,5 +3,5 @@ rule "Check for wind mitigation"
 when
 NewPurchase((windMitigation=="yes")&&(fourPoint!="yes"))
 then
-System.out.println("Upload the wind mitigation file");
+System.out.println("Wind mitigation was done");
 end
