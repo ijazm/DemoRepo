@@ -3,5 +3,5 @@ rule "Do you know the plumbing system?"
 when
 Plumbing(knowSystem=="yes")
 then
-System.out.println("Ask whether fully replumbed");
+System.out.println("The owner knows about the plumbing system ");
 end
