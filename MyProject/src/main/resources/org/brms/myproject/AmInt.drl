@@ -84,7 +84,7 @@ end
 
 rule "Check whether have farm animals"
 when
-AmInt((FarmAnimals=="yes")||(FarmAnimals=="no"))
+AmInt((FarmAnimals==true)||(FarmAnimals==false))
 then
 System.out.println(" Farm animals are eligible");
 end
