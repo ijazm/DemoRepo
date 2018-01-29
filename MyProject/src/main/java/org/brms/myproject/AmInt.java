@@ -41,7 +41,7 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer noPriorCoverage;
 
-   private java.lang.String farmAnimals;
+   private Boolean farmAnimals;
 
    private java.lang.String LLC;
 
@@ -225,16 +225,6 @@ public class AmInt implements java.io.Serializable
       this.noPriorCoverage = noPriorCoverage;
    }
 
-   public java.lang.String getFarmAnimals()
-   {
-      return this.farmAnimals;
-   }
-
-   public void setFarmAnimals(java.lang.String farmAnimals)
-   {
-      this.farmAnimals = farmAnimals;
-   }
-
    public java.lang.String getLLC()
    {
       return this.LLC;
@@ -325,6 +315,16 @@ public class AmInt implements java.io.Serializable
       this.effectiveYearBuilt = effectiveYearBuilt;
    }
 
+   public java.lang.Boolean getFarmAnimals()
+   {
+      return this.farmAnimals;
+   }
+
+   public void setFarmAnimals(java.lang.Boolean farmAnimals)
+   {
+      this.farmAnimals = farmAnimals;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -334,7 +334,7 @@ public class AmInt implements java.io.Serializable
          java.lang.String liabilityClaims, java.lang.Integer compositionShingle,
          java.lang.Integer architectualShingle, java.lang.Integer metal,
          java.lang.Integer tile, java.lang.Integer noPriorCoverage,
-         java.lang.String farmAnimals, java.lang.String LLC,
+         java.lang.Boolean farmAnimals, java.lang.String LLC,
          java.lang.String divingBoard, java.lang.String poolSlide,
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
          java.lang.String insuranceScore, java.lang.String duplex,
