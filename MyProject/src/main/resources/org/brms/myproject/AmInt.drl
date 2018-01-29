@@ -145,21 +145,18 @@ then
 System.out.println(" Effective year built eligible");
 end
 rule "Check the Plumbing update year"
-ruleflow-group "Carrier"	
 when	
-AmInt((PlumbingUpdate>-1)&&(PlumbingUpdate<21))
+AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
 then
 System.out.println(" Plumbing update is eligible");
 drools.setFocus("Carrier");
 end
 
 rule "Check what is the Plumbing type"
-ruleflow-group "Carrier"	
 when	
 AmInt((PlumbingType!=null)&&((PlumbingType!="Polybutylene")||(PlumbingType!="PEX")))	
 then
 System.out.println(" Plumbing type is eligible");
-drools.setFocus("Carrier");
 end
 rule "Dog Policy eligibility for dog breeds"
 when
