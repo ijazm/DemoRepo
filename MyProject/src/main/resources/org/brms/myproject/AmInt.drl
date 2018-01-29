@@ -144,7 +144,23 @@ AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))
 then
 System.out.println(" Effective year built eligible");
 end
+rule "Check the Plumbing update year"
+ruleflow-group "Carrier"	
+when	
+AmInt((PlumbingUpdate>-1)&&(PlumbingUpdate<21))
+then
+System.out.println(" Plumbing update is eligible");
+drools.setFocus("Carrier");
+end
 
+rule "Check what is the Plumbing type"
+ruleflow-group "Carrier"	
+when	
+AmInt((PlumbingType!=null)&&((PlumbingType!="Polybutylene")||(PlumbingType!="PEX")))	
+then
+System.out.println(" Plumbing type is eligible");
+drools.setFocus("Carrier");
+end
 rule "Dog Policy eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
