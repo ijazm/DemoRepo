@@ -23,7 +23,7 @@ rule "Eligibilty for seasonal occupany"
 when
 AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
 then
-System.out.println("Flat roof percentage eligible");
+System.out.println("Secondary/Seasonal Occupancy eligible");
 end
 
 rule "Check flat roof percentage"
@@ -172,5 +172,5 @@ rule "Endorsement Eligibility	for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
-System.out.println(" Dog breeds are eligible fro endorsement");
+System.out.println(" Dog breeds are eligible for endorsement");
 end
