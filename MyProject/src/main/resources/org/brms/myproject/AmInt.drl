@@ -149,7 +149,6 @@ when
 AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
 then
 System.out.println(" Plumbing update is eligible");
-drools.setFocus("Carrier");
 end
 
 rule "Check what is the Plumbing type"
