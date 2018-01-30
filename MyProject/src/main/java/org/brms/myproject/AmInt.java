@@ -55,8 +55,6 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String insuranceScore;
 
-   private java.lang.String threeUnits;
-
    private java.lang.String effectiveYearBuilt;
 
    private java.lang.String structureType;
@@ -285,16 +283,6 @@ public class AmInt implements java.io.Serializable
       this.insuranceScore = insuranceScore;
    }
 
-   public java.lang.String getThreeUnits()
-   {
-      return this.threeUnits;
-   }
-
-   public void setThreeUnits(java.lang.String threeUnits)
-   {
-      this.threeUnits = threeUnits;
-   }
-
    public java.lang.String getEffectiveYearBuilt()
    {
       return this.effectiveYearBuilt;
@@ -337,8 +325,8 @@ public class AmInt implements java.io.Serializable
          java.lang.Boolean farmAnimals, java.lang.String LLC,
          java.lang.String divingBoard, java.lang.String poolSlide,
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
-         java.lang.String insuranceScore, java.lang.String threeUnits,
-         java.lang.String effectiveYearBuilt, java.lang.String structureType)
+         java.lang.String insuranceScore, java.lang.String effectiveYearBuilt,
+         java.lang.String structureType)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -363,7 +351,6 @@ public class AmInt implements java.io.Serializable
       this.trampoline = trampoline;
       this.waterCoverage = waterCoverage;
       this.insuranceScore = insuranceScore;
-      this.threeUnits = threeUnits;
       this.effectiveYearBuilt = effectiveYearBuilt;
       this.structureType = structureType;
    }
