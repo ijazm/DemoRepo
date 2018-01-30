@@ -112,7 +112,7 @@ end
 
 rule "Check whether duplex"
 when
-AmInt(StructureType=="Duplex")	
+AmInt(structureType=="Duplex")	
 then
 System.out.println("Duplex is eligible");
 end
