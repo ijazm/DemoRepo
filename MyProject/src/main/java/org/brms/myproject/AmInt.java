@@ -55,11 +55,11 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String insuranceScore;
 
-   private java.lang.String duplex;
-
    private java.lang.String threeUnits;
 
    private java.lang.String effectiveYearBuilt;
+
+   private java.lang.String structureType;
 
    public AmInt()
    {
@@ -285,16 +285,6 @@ public class AmInt implements java.io.Serializable
       this.insuranceScore = insuranceScore;
    }
 
-   public java.lang.String getDuplex()
-   {
-      return this.duplex;
-   }
-
-   public void setDuplex(java.lang.String duplex)
-   {
-      this.duplex = duplex;
-   }
-
    public java.lang.String getThreeUnits()
    {
       return this.threeUnits;
@@ -325,6 +315,16 @@ public class AmInt implements java.io.Serializable
       this.farmAnimals = farmAnimals;
    }
 
+   public java.lang.String getStructureType()
+   {
+      return this.structureType;
+   }
+
+   public void setStructureType(java.lang.String structureType)
+   {
+      this.structureType = structureType;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -337,8 +337,8 @@ public class AmInt implements java.io.Serializable
          java.lang.Boolean farmAnimals, java.lang.String LLC,
          java.lang.String divingBoard, java.lang.String poolSlide,
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
-         java.lang.String insuranceScore, java.lang.String duplex,
-         java.lang.String threeUnits, java.lang.String effectiveYearBuilt)
+         java.lang.String insuranceScore, java.lang.String threeUnits,
+         java.lang.String effectiveYearBuilt, java.lang.String structureType)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -363,9 +363,9 @@ public class AmInt implements java.io.Serializable
       this.trampoline = trampoline;
       this.waterCoverage = waterCoverage;
       this.insuranceScore = insuranceScore;
-      this.duplex = duplex;
       this.threeUnits = threeUnits;
       this.effectiveYearBuilt = effectiveYearBuilt;
+      this.structureType = structureType;
    }
 
 }
