@@ -84,7 +84,7 @@ end
 
 rule "Check whether have farm animals"
 when
-AmInt((FarmAnimals==true)||(FarmAnimals==false))
+AmInt(FarmAnimals==true)
 then
 System.out.println(" Farm animals are eligible");
 end
@@ -144,6 +144,7 @@ AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))
 then
 System.out.println(" Effective year built eligible");
 end
+
 rule "Check the Plumbing update year"
 when	
 AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
@@ -157,6 +158,7 @@ AmInt((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"
 then
 System.out.println(" Plumbing type is eligible");
 end
+
 rule "Dog Policy eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
