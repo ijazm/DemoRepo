@@ -126,18 +126,18 @@ end
 
 rule "Check whether duplex"
 when
-AmInt(Duplex=="yes")	
+AmInt(StructureType == "Duplex")	
 then
 System.out.println("Duplex eligible");
 end
 
-rule "Check whether more than 2 floors"
+/*rule "Check whether more than 2 floors"
 when
-AmInt(ThreeUnits=="no")	
+AmInt((StructureType!=null)&&(StructureType!="ThreeUnits"))	
 then
 System.out.println(" Three units eligible");
 end
-
+*/
 rule "Check the effective year built"
 when
 AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
