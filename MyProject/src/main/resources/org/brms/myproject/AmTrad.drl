@@ -1,20 +1,15 @@
 package org.brms.myproject;
-rule "AmTrad:check age of construction"
-when
-AmTrad(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
-then
-System.out.println("Age is eligible");
-end
+
 rule "AmTrad:Check whether have trampoline and is it fenced"
 when	
-AmTrad((Trampoline==true)&&(Trampolinefence=="yes"))	
+AmTrad((Trampoline==true)&&(Trampoline==false))	
 then
 System.out.println(" Trampoline eligible");
 end
 
 rule "AmTrad:Number of prior claims"
 when	
-AmTrad(prior_Claims<1)
+AmTrad(prior_Claims<2)
 then
 System.out.println("Number of property claims eligible");
 end
