@@ -117,6 +117,20 @@ then
 System.out.println("Duplex is eligible");
 end
 
+rule "Check the Plumbing update year"
+when	
+AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
+then
+System.out.println(" Plumbing update is eligible");
+end
+
+rule "Check what is the Plumbing type"
+when	
+AmInt((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"))	
+then
+System.out.println(" Plumbing type is eligible");
+end
+
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
@@ -131,15 +145,13 @@ then
 System.out.println(" Insurance score eligible");
 end
 
-
-
-/*rule "Check whether more than 2 floors"
+rule "Check whether more than 2 floors"
 when
-AmInt((StructureType!=null)&&(StructureType!="ThreeUnits"))	
+AmInt((structureType!=null)&&(structureType!="ThreeUnits"))	
 then
-System.out.println(" Three units eligible");
+System.out.println(" Not more than 2 units eligible");
 end
-*/
+
 rule "Check the effective year built"
 when
 AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
@@ -147,19 +159,7 @@ then
 System.out.println(" Effective year built eligible");
 end
 
-rule "Check the Plumbing update year"
-when	
-AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
-then
-System.out.println(" Plumbing update is eligible");
-end
 
-rule "Check what is the Plumbing type"
-when	
-AmInt((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"))	
-then
-System.out.println(" Plumbing type is eligible");
-end
 
 rule "Dog Policy eligibility for dog breeds"
 when
