@@ -37,7 +37,7 @@ rule "Check masonary to frame ratio"
 when	
 AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
 then
-System.out.println("Number of property claims eligible");
+System.out.println("Masonary frame ratio eligible");
 end
 
 rule "Check the percentage of other structures"
