@@ -110,6 +110,13 @@ then
 System.out.println(" PoolSlide eligible");
 end
 
+rule "Check whether duplex"
+when
+AmInt(StructureType=="Duplex")	
+then
+System.out.println("Duplex is eligible");
+end
+
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
@@ -124,12 +131,7 @@ then
 System.out.println(" Insurance score eligible");
 end
 
-rule "Check whether duplex"
-when
-AmInt(StructureType == "Duplex")	
-then
-System.out.println("Duplex eligible");
-end
+
 
 /*rule "Check whether more than 2 floors"
 when
