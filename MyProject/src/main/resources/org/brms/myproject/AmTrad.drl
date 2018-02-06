@@ -114,14 +114,14 @@ end
 
 rule "AmTrad:Check the Plumbing update year"
 when	
-AmTrad(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
+AmTrad(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<26))
 then
 System.out.println(" Plumbing update is eligible");
 end
 
 rule "AmTrad:Check what is the Plumbing type"
 when	
-AmTrad((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"))	
+AmTrad((PlumbingType!=null)&&(PlumbingType!="Polybutylene"))	
 then
 System.out.println(" Plumbing type is eligible");
 end
