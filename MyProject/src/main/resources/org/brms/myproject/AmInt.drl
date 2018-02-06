@@ -112,7 +112,7 @@ end
 
 rule "Check whether duplex"
 when
-AmInt(structureType=="Duplex")	
+AmInt((structureType=="Duplex")&&(structureType!=null))	
 then
 System.out.println("Duplex is eligible");
 end
@@ -147,7 +147,7 @@ end
 
 rule "Check whether more than 2 floors"
 when
-AmInt((structureType!=null)&&(structureType!="ThreeUnits"))	
+AmInt((structureType!=null)&&(structureType!="ThreeUnits")&&(structureType!="Duplex"))	
 then
 System.out.println(" Not more than 2 units eligible");
 end
