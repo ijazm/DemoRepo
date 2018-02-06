@@ -145,13 +145,13 @@ then
 System.out.println(" Insurance score eligible");
 end
 
-rule "Check whether more than 2 floors"
+/*rule "Check whether more than 2 floors"
 when
 AmInt((structureType!=null)&&(structureType!="ThreeUnits")&&(structureType!="Duplex"))	
 then
 System.out.println(" Not more than 2 units eligible");
 end
-
+*/
 rule "Check the effective year built"
 when
 AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
