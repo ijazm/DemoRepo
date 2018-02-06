@@ -105,13 +105,6 @@ then
 System.out.println(" PoolSlide eligible");
 end
 
-rule "AmTrad:Check whether duplex"
-when
-AmTrad(structureType=="Duplex")	
-then
-System.out.println("Duplex is eligible");
-end
-
 rule "AmTrad:Check the Plumbing update year"
 when	
 AmTrad(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<26))
@@ -138,13 +131,6 @@ when
 AmTrad(InsuranceScore=="yes")	
 then
 System.out.println(" Insurance score eligible");
-end
-
-rule "AmTrad:Check whether more than 2 floors"
-when
-AmTrad((structureType!=null)&&(structureType!="ThreeUnits"))	
-then
-System.out.println(" Not more than 2 units eligible");
 end
 
 rule "AmTrad:Check the effective year built"
