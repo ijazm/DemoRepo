@@ -142,14 +142,13 @@ end
 
 rule "AmTrad:Dog Policy eligibility for dog breeds"
 when
-AmTrad((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
+AmTrad((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Akita")&&(DogBreeds!="Chow Chow")&&(DogBreeds!="Doberman Pinscher")&&(DogBreeds!="German Shepherd")&&(DogBreeds!="Presa Canario")&&(DogBreeds!="Rottweiler")&&(DogBreeds!="Rhodesian Ridgeback"))
 then
 System.out.println(" Dog breeds are eligible");
 end
 
 rule "AmTrad:Endorsement Eligibility	for dog breeds"
 when
-AmTrad((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
-then
+AmTrad((DogBreeds!="Pit Bull")&&(DogBreeds!="Staffordshire Terrier")&&(DogBreeds!="Akita")&&(DogBreeds!="Chow Chow")&&(DogBreeds!="Doberman Pinscher")&&(DogBreeds!="German Shepherd")&&(DogBreeds!="Presa Canario")&&(DogBreeds!="Rottweiler")&&(DogBreeds!="Rhodesian Ridgeback"))then
 System.out.println(" Dog breeds are eligible for endorsement");
 end
