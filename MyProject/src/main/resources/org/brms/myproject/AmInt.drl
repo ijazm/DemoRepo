@@ -3,160 +3,160 @@ rule "check age of construction"
 when
 AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
-System.out.println("Age is eligible");
+System.out.println("@ Age is eligible");
 end
 rule "Check whether have trampoline and is it fenced"
 when	
 AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
 then
-System.out.println(" Trampoline eligible");
+System.out.println(" @ Trampoline eligible");
 end
 
 rule "Number of prior claims"
 when	
 AmInt(prior_Claims<1)
 then
-System.out.println("Number of property claims eligible");
+System.out.println("@ Number of property claims eligible");
 end
 
 rule "Eligibilty for seasonal occupany"
 when
 AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
 then
-System.out.println("Secondary/Seasonal Occupancy eligible");
+System.out.println("@ Secondary/Seasonal Occupancy eligible");
 end
 
 rule "Check flat roof percentage"
 when
 AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
 then
-System.out.println("Flat roof percentage eligible");
+System.out.println("@ Flat roof percentage eligible");
 end
 
 rule "Check masonary to frame ratio"
 when	
 AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
 then
-System.out.println("Masonary frame ratio eligible");
+System.out.println("@ Masonary frame ratio eligible");
 end
 
 rule "Check the percentage of other structures"
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
-System.out.println("Other Structure Limit is eleigible");
+System.out.println("@ Other Structure Limit is eleigible");
 end
 
 rule "Check quantity of Composition Shingle"
 when
 AmInt((CompositionShingle>-1)&&(CompositionShingle<16))	
 then
-System.out.println(" eligible Composition Shingle");
+System.out.println("@ eligible Composition Shingle");
 end
 
 rule "Check quantity of Architectual Shingle"
 when
 AmInt((ArchitectualShingle>-1)&&(ArchitectualShingle<21))
 then
-System.out.println(" eligible Architectual Shingle");
+System.out.println("@ eligible Architectual Shingle");
 end
 
 rule "Check quantity of Metal"
 when
 AmInt((Metal>-1)&&(Metal<41))
 then
-System.out.println(" eligible metal");
+System.out.println("@ eligible metal");
 end
 
 rule "Check quantity of Tile"
 when
 AmInt((Tile>-1)&&(Tile<41))
 then
-System.out.println(" eligible tile");
+System.out.println("@ eligible tile");
 end
 
 rule "Check the No Prior Coverage years"
 when
 AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
 then
-System.out.println(" Prior coverage is eligible");
+System.out.println("@  Prior coverage is eligible");
 end
 
 rule "Check whether have farm animals"
 when
 AmInt(FarmAnimals==true)
 then
-System.out.println(" Farm animals are eligible");
+System.out.println("@ Farm animals are eligible");
 end
 
 rule "Check whether LLC or Corporate Ownership"
 when	
 AmInt((LLC=="yes")||(LLC=="no"))	
 then
-System.out.println(" LLC eligible");
+System.out.println("@ LLC eligible");
 end
 
 rule "Check whether you have Diving Board"
 when	
 AmInt((DivingBoard=="yes")||(DivingBoard=="no"))
 then
-System.out.println(" Diving board eligible");
+System.out.println("@ Diving board eligible");
 end
 
 rule "Check whether have pool slide"
 when
 AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
 then
-System.out.println(" PoolSlide eligible");
+System.out.println("@ PoolSlide eligible");
 end
 
 rule "Check whether duplex"
 when
 AmInt((structureType=="Duplex")&&(structureType!=null))	
 then
-System.out.println("Duplex is eligible");
+System.out.println("@ Duplex is eligible");
 end
 
 rule "Check the Plumbing update year"
 when	
 AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
 then
-System.out.println(" Plumbing update is eligible");
+System.out.println("@ Plumbing update is eligible");
 end
 
 rule "Check what is the Plumbing type"
 when	
 AmInt((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"))	
 then
-System.out.println(" Plumbing type is eligible");
+System.out.println("@ Plumbing type is eligible");
 end
 
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
 then
-System.out.println("Water coverage eligible");
+System.out.println("@ Water coverage eligible");
 end
 
 rule "Check the insurance score"
 when
 AmInt(InsuranceScore=="yes")	
 then
-System.out.println(" Insurance score eligible");
+System.out.println("@ Insurance score eligible");
 end
 
 /*rule "Check whether more than 2 floors"
 when
 AmInt((structureType!=null)&&(structureType!="ThreeUnits")&&(structureType!="Duplex"))	
 then
-System.out.println(" Not more than 2 units eligible");
+System.out.println("@ Not more than 2 units eligible");
 end
 */
 rule "Check the effective year built"
 when
 AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
 then
-System.out.println(" Effective year built eligible");
+System.out.println("@ Effective year built eligible");
 end
 
 
@@ -165,12 +165,12 @@ rule "Dog Policy eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))
 then
-System.out.println(" Dog breeds are eligible");
+System.out.println("@ Dog breeds are eligible");
 end
 
 rule "Endorsement Eligibility	for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
 then
-System.out.println(" Dog breeds are eligible for endorsement");
+System.out.println("@ Dog breeds are eligible for endorsement");
 end
