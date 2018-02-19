@@ -21,8 +21,6 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String masonryFrame;
 
-   private java.lang.String dogBreeds;
-
    private java.lang.String plumbingType;
 
    private java.lang.Integer plumbingUpdate;
@@ -58,6 +56,8 @@ public class AmInt implements java.io.Serializable
    private java.lang.String effectiveYearBuilt;
 
    private java.lang.String structureType;
+
+   private java.lang.String dogBreed;
 
    public AmInt()
    {
@@ -121,16 +121,6 @@ public class AmInt implements java.io.Serializable
    public void setMasonryFrame(java.lang.String masonryFrame)
    {
       this.masonryFrame = masonryFrame;
-   }
-
-   public java.lang.String getDogBreeds()
-   {
-      return this.dogBreeds;
-   }
-
-   public void setDogBreeds(java.lang.String dogBreeds)
-   {
-      this.dogBreeds = dogBreeds;
    }
 
    public java.lang.String getPlumbingType()
@@ -313,11 +303,20 @@ public class AmInt implements java.io.Serializable
       this.structureType = structureType;
    }
 
+   public java.lang.String getDogBreed()
+   {
+      return this.dogBreed;
+   }
+
+   public void setDogBreed(java.lang.String dogBreed)
+   {
+      this.dogBreed = dogBreed;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
-         java.lang.String dogBreeds, java.lang.String plumbingType,
-         java.lang.Integer plumbingUpdate,
+         java.lang.String plumbingType, java.lang.Integer plumbingUpdate,
          java.lang.Integer otherStructureLimit,
          java.lang.String liabilityClaims, java.lang.Integer compositionShingle,
          java.lang.Integer architectualShingle, java.lang.Integer metal,
@@ -326,7 +325,7 @@ public class AmInt implements java.io.Serializable
          java.lang.String divingBoard, java.lang.String poolSlide,
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
          java.lang.String insuranceScore, java.lang.String effectiveYearBuilt,
-         java.lang.String structureType)
+         java.lang.String structureType, java.lang.String dogBreed)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -334,7 +333,6 @@ public class AmInt implements java.io.Serializable
       this.trampolinefence = trampolinefence;
       this.flatRoofPercent = flatRoofPercent;
       this.masonryFrame = masonryFrame;
-      this.dogBreeds = dogBreeds;
       this.plumbingType = plumbingType;
       this.plumbingUpdate = plumbingUpdate;
       this.otherStructureLimit = otherStructureLimit;
@@ -353,6 +351,7 @@ public class AmInt implements java.io.Serializable
       this.insuranceScore = insuranceScore;
       this.effectiveYearBuilt = effectiveYearBuilt;
       this.structureType = structureType;
+      this.dogBreed = dogBreed;
    }
 
 }
