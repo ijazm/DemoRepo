@@ -9,7 +9,7 @@ rule "Check whether have trampoline and is it fenced"
 when	
 AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
 then
-System.out.println(" @ Trampoline eligible");
+System.out.println("@ Trampoline eligible");
 end
 
 rule "Number of prior claims"
