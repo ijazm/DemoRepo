@@ -46,37 +46,37 @@ then
 System.out.println("@ Masonary frame ratio eligible");
 end
 
-rule "Check the percentage of other structures"
+/*rule "Check the percentage of other structures"
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
 System.out.println("@ Other Structure Limit is eleigible");
 end
-
+*/
 rule "Check quantity of Composition Shingle"
 when
-AmInt((CompositionShingle>-1)&&(CompositionShingle<16))	
+AmInt((RoofMaterial=="CompositionShingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
 then
 System.out.println("@ eligible Composition Shingle");
 end
 
 rule "Check quantity of Architectual Shingle"
 when
-AmInt((ArchitectualShingle>-1)&&(ArchitectualShingle<21))
+AmInt((RoofMaterial=="ArchitectualShingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<21))
 then
 System.out.println("@ eligible Architectual Shingle");
 end
 
 rule "Check quantity of Metal"
 when
-AmInt((Metal>-1)&&(Metal<41))
+AmInt((RoofMaterial=="Metal")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
 then
 System.out.println("@ eligible metal");
 end
 
 rule "Check quantity of Tile"
 when
-AmInt((Tile>-1)&&(Tile<41))
+AmInt((RoofMaterial=="Tile")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
 then
 System.out.println("@ eligible tile");
 end
