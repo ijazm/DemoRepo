@@ -62,7 +62,7 @@ end
 
 rule "Check quantity of Architectual Shingle"
 when
-AmInt((RoofMaterial=="ArchitectualShingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<21))
+AmInt((RoofMaterial=="architectural-shingles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<21))
 then
 System.out.println("@ eligible Architectual Shingle");
 end
