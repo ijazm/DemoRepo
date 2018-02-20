@@ -57,28 +57,28 @@ rule "Check quantity of Composition Shingle"
 when
 AmInt((RoofMaterial=="CompositionShingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
 then
-System.out.println("@ eligible Composition Shingle");
+System.out.println("@ Roof material: Composition Shingle eligible");
 end
 
 rule "Check quantity of Architectual Shingle"
 when
 AmInt((RoofMaterial=="architectural-shingles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<21))
 then
-System.out.println("@ eligible Architectual Shingle");
+System.out.println("@ Roof material: Architectual Shingle eligible ");
 end
 
 rule "Check quantity of Metal"
 when
 AmInt((RoofMaterial=="metal")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
 then
-System.out.println("@ eligible metal");
+System.out.println("@ Roof material: Metal eligible");
 end
 
 rule "Check quantity of Tile"
 when
 AmInt((RoofMaterial=="block_tiles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
 then
-System.out.println("@ eligible tile");
+System.out.println("@ Roof material: Tile eligible");
 end
 
 rule "Check the No Prior Coverage years"
@@ -132,7 +132,7 @@ end
 
 rule "Check what is the Plumbing type"
 when	
-AmInt((PlumbingType!=null)&&(PlumbingType!="Polybutylene")&&(PlumbingType!="PEX"))	
+AmInt((PlumbingType!="Polybutylene")&&(PlumbingType!="PEX")&&(PlumbingType!=null))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
@@ -167,7 +167,7 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-AmInt((dogBreed!=null)&&(dogBreed!="Pit_Bull")&&(dogBreed!="Staffordshire_Terrier")&&(dogBreed!="Wolf_Hybrid"))
+AmInt((dogBreed!="Pit_Bull")&&(dogBreed!="Staffordshire_Terrier")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!=null))
 then
 System.out.println("@ Dog breeds are eligible");
 end
