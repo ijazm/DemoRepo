@@ -61,6 +61,8 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String garageType;
 
+   private java.lang.String roofMaterial;
+
    public AmInt()
    {
    }
@@ -325,6 +327,16 @@ public class AmInt implements java.io.Serializable
       this.garageType = garageType;
    }
 
+   public java.lang.String getRoofMaterial()
+   {
+      return this.roofMaterial;
+   }
+
+   public void setRoofMaterial(java.lang.String roofMaterial)
+   {
+      this.roofMaterial = roofMaterial;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -338,7 +350,7 @@ public class AmInt implements java.io.Serializable
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
          java.lang.String insuranceScore, java.lang.String effectiveYearBuilt,
          java.lang.String structureType, java.lang.String dogBreed,
-         java.lang.String garageType)
+         java.lang.String garageType, java.lang.String roofMaterial)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -366,6 +378,7 @@ public class AmInt implements java.io.Serializable
       this.structureType = structureType;
       this.dogBreed = dogBreed;
       this.garageType = garageType;
+      this.roofMaterial = roofMaterial;
    }
 
 }
