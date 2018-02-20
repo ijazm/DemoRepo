@@ -3,7 +3,7 @@ rule "Check fro the garage type to get other structure eligibilty"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
-System.out.println("@ Other Structures eligible");
+System.out.println("@ Other Structure limit eligible");
 end
 rule "check age of construction"
 when
