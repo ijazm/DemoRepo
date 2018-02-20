@@ -85,7 +85,7 @@ rule "Check the No Prior Coverage years"
 when
 AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
 then
-System.out.println("@  Prior coverage is eligible");
+System.out.println("@ Prior coverage is eligible");
 end
 
 rule "Check whether have farm animals"
@@ -167,7 +167,7 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-AmInt((dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Terrier")&&(dogBreed!="Pit_Bull")&&(dogBreed!=null)&&(dogBreed!="abcd"))
+AmInt(dogBreed!="Wolf_Hybrid"&&dogBreed!="Staffordshire_Terrier"&&dogBreed!="Pit_Bull"&&dogBreed!=null)
 then
 System.out.println("@ Dog breeds are eligible");
 end
