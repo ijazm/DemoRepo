@@ -132,7 +132,7 @@ end
 
 rule "Check what is the Plumbing type"
 when	
-AmInt((PlumbingType!="Polybutylene")&&(PlumbingType!="PEX")&&(PlumbingType!=null)&&(PlumbingType!="abcd"))	
+AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="PEX")||(PlumbingType!=null))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
@@ -219,7 +219,7 @@ then
 System.out.println("# Masonary frame ratio");
 end
 
-
+/*
 rule "Check quantity of Composition Shingle not eligible"
 when
 AmInt((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)<0)||((2018-yearBuilt)>15))	
@@ -254,7 +254,7 @@ AmInt((NoPriorCoverage<0)||(NoPriorCoverage<30))
 then
 System.out.println("# Prior coverage");
 end
-
+*/
 rule "Check whether have farm animals not eligible"
 when
 AmInt(FarmAnimals==false)
@@ -299,7 +299,7 @@ end
 
 rule "Check whether is the Plumbing type not eligible"
 when	
-AmInt((PlumbingType!="Polybutylene")&&(PlumbingType!="PEX")&&(PlumbingType!=null)&&(PlumbingType!="abcd"))	
+AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="Pex")||(PlumbingType!=null)||(PlumbingType!="abcd"))	
 then
 System.out.println("# Plumbing type");
 end
@@ -308,7 +308,7 @@ end
 
 rule "Dog Policy no eligibility for dog breeds"
 when
-AmInt((dogBreed=="Wolf_Hybrid")&&(dogBreed=="Pit_Bull")&&(dogBreed=="Staffordshire_Bull_Terrier")&&(dogBreed==null))
+AmInt((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
 then
 System.out.println("# Dog breeds");
 end
