@@ -169,7 +169,9 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-AmInt((dogBreed!="Wolf_Hybrid")||(dogBreed!="Pit_Bull")||(dogBreed!="Staffordshire_Bull_Terrier")||(dogBreed!=null))
+AmInt(dogBreed!="Pit_Bull")
+//AmInt((dogBreed!="Wolf_Hybrid")&&(dogBreed!="Pit_Bull")||(dogBreed!="Staffordshire_Bull_Terrier")||(dogBreed!=null))
+
 then
 System.out.println("@ Dog breeds are eligible");
 end
