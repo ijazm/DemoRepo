@@ -25,17 +25,7 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer plumbingUpdate;
 
-   private java.lang.Integer otherStructureLimit;
-
    private java.lang.String liabilityClaims;
-
-   private java.lang.Integer compositionShingle;
-
-   private java.lang.Integer architectualShingle;
-
-   private java.lang.Integer metal;
-
-   private java.lang.Integer tile;
 
    private java.lang.Integer noPriorCoverage;
 
@@ -147,16 +137,6 @@ public class AmInt implements java.io.Serializable
       this.plumbingUpdate = plumbingUpdate;
    }
 
-   public java.lang.Integer getOtherStructureLimit()
-   {
-      return this.otherStructureLimit;
-   }
-
-   public void setOtherStructureLimit(java.lang.Integer otherStructureLimit)
-   {
-      this.otherStructureLimit = otherStructureLimit;
-   }
-
    public java.lang.String getLiabilityClaims()
    {
       return this.liabilityClaims;
@@ -165,46 +145,6 @@ public class AmInt implements java.io.Serializable
    public void setLiabilityClaims(java.lang.String liabilityClaims)
    {
       this.liabilityClaims = liabilityClaims;
-   }
-
-   public java.lang.Integer getCompositionShingle()
-   {
-      return this.compositionShingle;
-   }
-
-   public void setCompositionShingle(java.lang.Integer compositionShingle)
-   {
-      this.compositionShingle = compositionShingle;
-   }
-
-   public java.lang.Integer getArchitectualShingle()
-   {
-      return this.architectualShingle;
-   }
-
-   public void setArchitectualShingle(java.lang.Integer architectualShingle)
-   {
-      this.architectualShingle = architectualShingle;
-   }
-
-   public java.lang.Integer getMetal()
-   {
-      return this.metal;
-   }
-
-   public void setMetal(java.lang.Integer metal)
-   {
-      this.metal = metal;
-   }
-
-   public java.lang.Integer getTile()
-   {
-      return this.tile;
-   }
-
-   public void setTile(java.lang.Integer tile)
-   {
-      this.tile = tile;
    }
 
    public java.lang.Integer getNoPriorCoverage()
@@ -341,10 +281,7 @@ public class AmInt implements java.io.Serializable
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
          java.lang.String plumbingType, java.lang.Integer plumbingUpdate,
-         java.lang.Integer otherStructureLimit,
-         java.lang.String liabilityClaims, java.lang.Integer compositionShingle,
-         java.lang.Integer architectualShingle, java.lang.Integer metal,
-         java.lang.Integer tile, java.lang.Integer noPriorCoverage,
+         java.lang.String liabilityClaims, java.lang.Integer noPriorCoverage,
          java.lang.Boolean farmAnimals, java.lang.String LLC,
          java.lang.String divingBoard, java.lang.String poolSlide,
          java.lang.Boolean trampoline, java.lang.Integer waterCoverage,
@@ -360,12 +297,7 @@ public class AmInt implements java.io.Serializable
       this.masonryFrame = masonryFrame;
       this.plumbingType = plumbingType;
       this.plumbingUpdate = plumbingUpdate;
-      this.otherStructureLimit = otherStructureLimit;
       this.liabilityClaims = liabilityClaims;
-      this.compositionShingle = compositionShingle;
-      this.architectualShingle = architectualShingle;
-      this.metal = metal;
-      this.tile = tile;
       this.noPriorCoverage = noPriorCoverage;
       this.farmAnimals = farmAnimals;
       this.LLC = LLC;
