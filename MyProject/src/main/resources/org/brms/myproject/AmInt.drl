@@ -134,7 +134,7 @@ end
 
 rule "Check what is the Plumbing type"
 when	
-AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="Pex")||(PlumbingType!=null))	
+AmInt((PlumbingType!="Polybutylene")&&(PlumbingType!="Pex")&&(PlumbingType!=null))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
@@ -169,7 +169,7 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-AmInt((dogBreed!="Wolf_Hybrid")||(dogBreed!="Pit_Bull")||(dogBreed!="Staffordshire_Bull_Terrier")||(dogBreed!=null))
+AmInt((dogBreed!="Wolf_Hybrid")&&(dogBreed!="Pit_Bull")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!=null))
 then
 System.out.println("@ Dog breeds are eligible");
 end
