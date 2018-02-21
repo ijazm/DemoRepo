@@ -134,7 +134,7 @@ end
 
 rule "Check what is the Plumbing type"
 when	
-AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="PEX")||(PlumbingType!=null))	
+AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="Pex")||(PlumbingType!=null))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
