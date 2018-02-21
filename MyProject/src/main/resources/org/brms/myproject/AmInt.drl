@@ -1,10 +1,12 @@
 package org.brms.myproject;
+/*
 rule "Check fro the garage type to get other structure eligibilty"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
 System.out.println("@ Other Structure limit eligible");
 end
+*/
 rule "check age of construction"
 when
 AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
@@ -115,14 +117,14 @@ AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
 then
 System.out.println("@ PoolSlide eligible");
 end
-
+/*
 rule "Check whether duplex"
 when
 AmInt((structureType=="Duplex")&&(structureType!=null))	
 then
 System.out.println("@ Duplex is eligible");
 end
-
+*/
 rule "Check the Plumbing update year"
 when	
 AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
@@ -171,13 +173,14 @@ AmInt((dogBreed!="Wolf_Hybrid")||(dogBreed!="Pit_Bull")||(dogBreed!="Staffordshi
 then
 System.out.println("@ Dog breeds are eligible");
 end
-
+/*
 rule "Check fro the garage type to get other structure not eligible"
 when
 AmInt((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse"))
 then
 System.out.println("# Other Structure limit");
 end
+*/
 rule "check age of construction not eligible"
 when
 AmInt(((2018-yearBuilt)<1)&&((2018-yearBuilt)>75))
@@ -299,7 +302,7 @@ end
 
 rule "Check whether is the Plumbing type not eligible"
 when	
-AmInt((PlumbingType!="Polybutylene")||(PlumbingType!="Pex")||(PlumbingType!=null)||(PlumbingType!="abcd"))	
+AmInt((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null)	
 then
 System.out.println("# Plumbing type");
 end
