@@ -166,14 +166,14 @@ AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))
 then
 System.out.println("@ Effective year built eligible");
 end
-/*
+
 rule "Dog Policy eligibility for dog breeds"
 when
 AmInt((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
 then
 System.out.println("@ Dog breeds are eligible");
 end
-
+/*
 rule "Check fro the garage type to get other structure not eligible"
 when
 AmInt((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse"))
