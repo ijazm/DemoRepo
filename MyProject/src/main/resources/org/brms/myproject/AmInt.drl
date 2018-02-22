@@ -306,17 +306,17 @@ AmInt((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null
 then
 System.out.println("# Plumbing type");
 end
-
+*/
 
 
 rule "Dog Policy no eligibility for dog breeds"
 when
-AmInt((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
+p:Dog((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
 then
-System.out.println("# Dog breeds");
+System.out.println("# Dog breeds"+p.getDogBreed()+"not eligible");
 end
 
-
+/*
 
 
 rule "Endorsement Eligibility for dog breeds"
