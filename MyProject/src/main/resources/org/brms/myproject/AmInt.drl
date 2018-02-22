@@ -169,9 +169,9 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
+p:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
 then
-System.out.println("@ Dog breeds are eligible");
+System.out.println("@ Dog breed "+ p.getDogBreed() +" eligible");
 end
 /*
 rule "Check fro the garage type to get other structure not eligible"
