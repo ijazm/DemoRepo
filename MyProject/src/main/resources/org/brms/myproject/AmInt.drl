@@ -131,14 +131,14 @@ AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
 then
 System.out.println("@ Plumbing update is eligible");
 end
-
+/*
 rule "Check what is the Plumbing type"
 when	
 AmInt((PlumbingType!="SPex")&&(PlumbingType!="Polybutylene"))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
-
+*/
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
@@ -166,14 +166,14 @@ AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))
 then
 System.out.println("@ Effective year built eligible");
 end
-
+/*
 rule "Dog Policy eligibility for dog breeds"
 when
 AmInt((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
 then
 System.out.println("@ Dog breeds are eligible");
 end
-/*
+
 rule "Check fro the garage type to get other structure not eligible"
 when
 AmInt((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse"))
@@ -300,7 +300,7 @@ then
 System.out.println("# Plumbing update");
 end
 
-rule "Check whether is the Plumbing type not eligible"
+/*rule "Check whether is the Plumbing type not eligible"
 when	
 AmInt((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null))	
 then
@@ -318,7 +318,7 @@ end
 
 
 
-/*
+
 rule "Endorsement Eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
