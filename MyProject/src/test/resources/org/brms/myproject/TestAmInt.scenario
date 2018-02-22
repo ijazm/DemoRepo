@@ -1,13 +1,17 @@
 <scenario>
-  <name>testAMint</name>
+  <name>testAMint.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
-  <fixtures/>
+  <fixtures>
+    <execution-trace/>
+  </fixtures>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>org.brms.myproject</packageName>
   <imports>
     <imports/>
   </imports>
-  <ksessions/>
+  <ksessions>
+    <string>session2</string>
+  </ksessions>
 </scenario>
