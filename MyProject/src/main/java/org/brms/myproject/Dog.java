@@ -9,25 +9,25 @@ public class Dog implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.String dogBreeds;
+   private java.lang.String dogBreed;
 
    public Dog()
    {
    }
 
-   public java.lang.String getDogBreeds()
+   public java.lang.String getDogBreed()
    {
-      return this.dogBreeds;
+      return this.dogBreed;
    }
 
-   public void setDogBreeds(java.lang.String dogBreeds)
+   public void setDogBreed(java.lang.String dogBreed)
    {
-      this.dogBreeds = dogBreeds;
+      this.dogBreed = dogBreed;
    }
 
-   public Dog(java.lang.String dogBreeds)
+   public Dog(java.lang.String dogBreed)
    {
-      this.dogBreeds = dogBreeds;
+      this.dogBreed = dogBreed;
    }
 
 }
