@@ -54,7 +54,7 @@ AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
 System.out.println("@ Other Structure Limit is eleigible");
 end
-
+*/
 rule "Check quantity of Composition Shingle"
 when
 AmInt((RoofMaterial=="Comp_Shingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
@@ -82,8 +82,7 @@ AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41
 then
 System.out.println("@ Roof material: Tile eligible");
 end
-
-rule "Check the No Prior Coverage years"
+/*rule "Check the No Prior Coverage years"
 when
 AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
 then
@@ -222,7 +221,7 @@ then
 System.out.println("# Masonary frame ratio");
 end
 
-/*
+
 rule "Check quantity of Composition Shingle not eligible"
 when
 AmInt((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)<0)||((2018-yearBuilt)>15))	
@@ -250,7 +249,7 @@ AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)<0)||((2018-yearBuilt)>40)
 then
 System.out.println("# Roof material: Tile");
 end
-
+/*
 rule "Check the No Prior Coverage years not eligible"
 when
 AmInt((NoPriorCoverage<0)||(NoPriorCoverage<30))	
