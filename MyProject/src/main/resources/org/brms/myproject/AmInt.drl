@@ -116,24 +116,24 @@ AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
 then
 System.out.println("@ PoolSlide eligible");
 end
-/*
+
 rule "Check whether duplex"
 when
 AmInt((structureType=="Duplex")&&(structureType!=null))	
 then
 System.out.println("@ Duplex is eligible");
 end
-*/
+
 rule "Check the Plumbing update year"
 when	
 AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
 then
 System.out.println("@ Plumbing update is eligible");
 end
-/*
+
 rule "Check what is the Plumbing type"
 when	
-AmInt((PlumbingType!="SPex")&&(PlumbingType!="Polybutylene"))	
+Plumb((PlumbingType!="SPex")&&(PlumbingType!="Polybutylene"))	
 then
 System.out.println("@ Plumbing type is eligible");
 end
@@ -249,14 +249,7 @@ AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>40))
 then
 System.out.println("# Roof material: Tile");
 end
-/*
-rule "Check the No Prior Coverage years not eligible"
-when
-AmInt((NoPriorCoverage<0)||(NoPriorCoverage<30))	
-then
-System.out.println("# Prior coverage");
-end
-*/
+
 rule "Check whether have farm animals not eligible"
 when
 AmInt(FarmAnimals==false)
@@ -299,13 +292,13 @@ then
 System.out.println("# Plumbing update");
 end
 
-/*rule "Check whether is the Plumbing type not eligible"
+rule "Check whether is the Plumbing type not eligible"
 when	
-AmInt((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null))	
+Plumb((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null))	
 then
 System.out.println("# Plumbing type");
 end
-*/
+
 
 
 rule "Dog Policy no eligibility for dog breeds"
@@ -316,8 +309,6 @@ System.out.println("# Dog breeds "+p.getDogBreed()+" not eligible");
 end
 
 /*
-
-
 rule "Endorsement Eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
