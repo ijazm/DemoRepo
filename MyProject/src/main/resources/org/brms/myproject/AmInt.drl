@@ -133,11 +133,11 @@ end
 
 rule "Check what is the Plumbing type"
 when	
-Plumb((PlumbingType!="SPex")&&(PlumbingType!="Polybutylene"))	
+p:Plumb((PlumbingType!="Pex")&&(PlumbingType!="Polybutylene")&&(PlumbingType!="null"))	
 then
-System.out.println("@ Plumbing type is eligible");
+System.out.println("@ Plumbing type "+p.getPlumbingType()+ " is eligible");
 end
-*/
+
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
@@ -168,9 +168,9 @@ end
 
 rule "Dog Policy eligibility for dog breeds"
 when
-p:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
+d:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
 then
-System.out.println("@ Dog breed "+ p.getDogBreed() +" eligible");
+System.out.println("@ Dog breed "+ d.getDogBreed() +" eligible");
 end
 
 rule "Check fro the garage type to get other structure not eligible"
@@ -294,18 +294,16 @@ end
 
 rule "Check whether is the Plumbing type not eligible"
 when	
-Plumb((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType==null))	
+p:Plumb((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType=="null"))	
 then
-System.out.println("# Plumbing type");
+System.out.println("# Plumbing type "+p.getPlumbingType()+" not eligible");
 end
-
-
 
 rule "Dog Policy no eligibility for dog breeds"
 when
-p:Dog((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
+d:Dog((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
 then
-System.out.println("# Dog breeds "+p.getDogBreed()+" not eligible");
+System.out.println("# Dog breeds "+d.getDogBreed()+" not eligible");
 end
 
 /*
