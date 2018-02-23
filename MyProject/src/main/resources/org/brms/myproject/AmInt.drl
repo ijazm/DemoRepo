@@ -1,12 +1,12 @@
 package org.brms.myproject;
-/*
+
 rule "Check fro the garage type to get other structure eligibilty"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
 System.out.println("@ Other Structure limit eligible");
 end
-*/
+
 rule "check age of construction"
 when
 AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
@@ -116,8 +116,8 @@ AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
 then
 System.out.println("@ PoolSlide eligible");
 end
-
-rule "Check whether duplex"
+ n
+rule "Check whether duplex" 
 when
 AmInt((structureType=="Duplex")&&(structureType!=null))	
 then
