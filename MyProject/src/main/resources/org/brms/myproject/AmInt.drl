@@ -1,2 +1,315 @@
 package org.brms.myproject;
+/*
+rule "Check fro the garage type to get other structure eligibilty"
+when
+AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+then
+System.out.println("@ Other Structure limit eligible");
+end
+*/
+rule "check age of construction"
+when
+AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
+then
+System.out.println("@ Age is eligible");
+end
+rule "Check whether have trampoline and is it fenced"
+when	
+AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
+then
+System.out.println("@ Trampoline eligible");
+end
 
+rule "Number of prior claims"
+when	
+AmInt(prior_Claims<1)
+then
+System.out.println("@ Number of property claims eligible");
+end
+
+rule "Eligibilty for seasonal occupany"
+when
+AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+then
+System.out.println("@ Secondary/Seasonal Occupancy eligible");
+end
+
+rule "Check flat roof percentage"
+when
+AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
+then
+System.out.println("@ Flat roof percentage eligible");
+end
+
+rule "Check masonary to frame ratio"
+when	
+AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
+then
+System.out.println("@ Masonary frame ratio eligible");
+end
+
+/*rule "Check the percentage of other structures"
+when
+AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
+then
+System.out.println("@ Other Structure Limit is eleigible");
+end
+*/
+rule "Check quantity of Composition Shingle"
+when
+AmInt((RoofMaterial=="Comp_Shingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
+then
+System.out.println("@ Roof material: Composition Shingle eligible");
+end
+
+rule "Check quantity of Architectual Shingle"
+when
+AmInt((RoofMaterial=="architectural-shingles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<21))
+then
+System.out.println("@ Roof material: Architectual Shingle eligible ");
+end
+
+rule "Check quantity of Metal"
+when
+AmInt((RoofMaterial=="metal")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
+then
+System.out.println("@ Roof material: Metal eligible");
+end
+
+rule "Check quantity of Tile"
+when
+AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41))
+then
+System.out.println("@ Roof material: Tile eligible");
+end
+/*rule "Check the No Prior Coverage years"
+when
+AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
+then
+System.out.println("@ Prior coverage is eligible");
+end
+*/
+rule "Check whether have farm animals"
+when
+AmInt(FarmAnimals==true)
+then
+System.out.println("@ Farm animals are eligible");
+end
+
+rule "Check whether LLC or Corporate Ownership"
+when	
+AmInt((LLC=="yes")||(LLC=="no"))	
+then
+System.out.println("@ LLC eligible");
+end
+
+rule "Check whether you have Diving Board"
+when	
+AmInt((DivingBoard=="yes")||(DivingBoard=="no"))
+then
+System.out.println("@ Diving board eligible");
+end
+
+rule "Check whether have pool slide"
+when
+AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
+then
+System.out.println("@ PoolSlide eligible");
+end
+
+rule "Check whether duplex"
+when
+AmInt((structureType=="Duplex")&&(structureType!=null))	
+then
+System.out.println("@ Duplex is eligible");
+end
+
+rule "Check the Plumbing update year"
+when	
+AmInt(((2018-PlumbingUpdate)>-1)&&((2018-PlumbingUpdate)<21))
+then
+System.out.println("@ Plumbing update is eligible");
+end
+
+rule "Check what is the Plumbing type"
+when	
+p:Plumb((PlumbingType!="Pex")&&(PlumbingType!="Polybutylene")&&(PlumbingType!="null"))	
+then
+System.out.println("@ Plumbing type "+p.getPlumbingType()+ " is eligible");
+end
+
+rule "Check the water coverage"
+when
+AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
+then
+System.out.println("@ Water coverage eligible");
+end
+
+rule "Check the insurance score"
+when
+AmInt(InsuranceScore=="yes")	
+then
+System.out.println("@ Insurance score eligible");
+end
+
+/*rule "Check whether more than 2 floors"
+when
+AmInt((structureType!=null)&&(structureType!="ThreeUnits")&&(structureType!="Duplex"))	
+then
+System.out.println("@ Not more than 2 units eligible");
+end
+*/
+rule "Check the effective year built"
+when
+AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
+then
+System.out.println("@ Effective year built eligible");
+end
+
+rule "Dog Policy eligibility for dog breeds"
+when
+d:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
+then
+System.out.println("@ Dog breed "+ d.getDogBreed() +" eligible");
+end
+
+rule "Check fro the garage type to get other structure not eligible"
+when
+AmInt((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse")&&(GarageType!="null"))
+then
+System.out.println("# Other Structure limit");
+end
+
+rule "check age of construction not eligible"
+when
+AmInt((2018-yearBuilt)>75)
+then
+System.out.println("# Age");
+end
+rule "Check whether have trampoline not eligible and is not fenced"
+when	
+AmInt((Trampoline==false)||(Trampolinefence!="yes"))	
+then
+System.out.println("# Trampoline");
+end
+
+rule "Number of prior claims not eligible"
+when	
+AmInt(prior_Claims>0)
+then
+System.out.println("# Number of property claims");
+end
+
+rule "Not eligible for seasonal occupany"
+when
+AmInt((secured_community!="Gated with a guard")&&(secured_community!="Gated with an automated system"))
+then
+System.out.println("# Secondary/Seasonal Occupancy");
+end
+
+rule "Check flat roof percentage not eligible"
+when
+AmInt((flatRoofPercent!="1 - 10%")&&(flatRoofPercent!="11 - 20%"))
+then
+System.out.println("# Flat roof percentage");
+end
+
+rule "Check masonary to frame ratio not eligible"
+when	
+AmInt(masonryFrame!="Masonry 76% or more - Frame 24%")
+then
+System.out.println("# Masonary frame ratio");
+end
+
+
+rule "Check quantity of Composition Shingle not eligible"
+when
+AmInt((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)>15))	
+then
+System.out.println("# Roof material: Composition Shingle");
+end
+
+rule "Check quantity of Architectual Shingle not eligible"
+when
+AmInt((RoofMaterial=="architectural-shingles")&&((2018-yearBuilt)>20))
+then
+System.out.println("# Roof material: Architectual Shingle");
+end
+
+rule "Check quantity of Metal not eligible"
+when
+AmInt((RoofMaterial=="metal")&&((2018-yearBuilt)>40))
+then
+System.out.println("# Roof material: Metal");
+end
+
+rule "Check quantity of Tile not eligible"
+when
+AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>40))
+then
+System.out.println("# Roof material: Tile");
+end
+
+rule "Check whether have farm animals not eligible"
+when
+AmInt(FarmAnimals==false)
+then
+System.out.println("# Farm animals");
+end
+
+rule "Check whether LLC or Corporate Ownership not eligible"
+when	
+AmInt(LLC=="null")	
+then
+System.out.println("# LLC eligible");
+end
+
+rule "Check whether you have Diving Board not eligible"
+when	
+AmInt(DivingBoard=="null")
+then
+System.out.println("# Diving board");
+end
+
+rule "Check whether have pool slide not eligible"
+when
+AmInt(PoolSlide=="null")
+then
+System.out.println("# PoolSlide");
+end
+
+rule "Check whether duplex not eligible"
+when
+AmInt((structureType!="Duplex")||(structureType==null))	
+then
+System.out.println("# Duplex");
+end
+
+rule "Check the Plumbing update year not eligible"
+when	
+AmInt(((2018-PlumbingUpdate)<-1)||((2018-PlumbingUpdate)>21))
+then
+System.out.println("# Plumbing update");
+end
+
+rule "Check whether is the Plumbing type not eligible"
+when	
+p:Plumb((PlumbingType=="Polybutylene")||(PlumbingType=="Pex")||(PlumbingType=="null"))	
+then
+System.out.println("# Plumbing type "+p.getPlumbingType()+" not eligible");
+end
+
+rule "Dog Policy no eligibility for dog breeds"
+when
+d:Dog((dogBreed=="Wolf_Hybrid")||(dogBreed=="Pit_Bull")||(dogBreed=="Staffordshire_Bull_Terrier")||(dogBreed==null))
+then
+System.out.println("# Dog breeds "+d.getDogBreed()+" not eligible");
+end
+
+/*
+rule "Endorsement Eligibility for dog breeds"
+when
+AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
+then
+System.out.println("@ Dog breeds are eligible for endorsement");
+end*/
