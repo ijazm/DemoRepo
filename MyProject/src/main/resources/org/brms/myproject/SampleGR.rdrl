@@ -1,0 +1,9 @@
+package org.brms.myproject;
+
+import java.lang.Number;
+
+rule "SampleGR"
+	dialect "mvel"
+	when
+	then
+end
