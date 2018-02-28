@@ -8,6 +8,6 @@ rule "ownership"
 		ot : Ownership( too : timeOwnership < 3 )
 	then
 		modify( ot ) {
-				setPriorAddress( "display tab" )
+				setPriorAddress( "yes" )
 		}
 end
