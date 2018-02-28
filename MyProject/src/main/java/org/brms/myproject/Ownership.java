@@ -11,6 +11,8 @@ public class Ownership implements java.io.Serializable
 
    private java.lang.Integer timeOwnership;
 
+   private java.lang.String priorAddress;
+
    public Ownership()
    {
    }
@@ -25,9 +27,20 @@ public class Ownership implements java.io.Serializable
       this.timeOwnership = timeOwnership;
    }
 
-   public Ownership(java.lang.Integer timeOwnership)
+   public java.lang.String getPriorAddress()
+   {
+      return this.priorAddress;
+   }
+
+   public void setPriorAddress(java.lang.String priorAddress)
+   {
+      this.priorAddress = priorAddress;
+   }
+
+   public Ownership(java.lang.Integer timeOwnership, java.lang.String priorAddress)
    {
       this.timeOwnership = timeOwnership;
+      this.priorAddress = priorAddress;
    }
 
 }
