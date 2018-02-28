@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "BussinessInHome"
 	dialect "mvel"
 	when
+		hm : HomeBusiness( bussinessInHome == "yes" )
 	then
+		modify( hm ) {
+				setBussinessInHome( "asdsdnf" )
+		}
 end
