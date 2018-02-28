@@ -92,7 +92,7 @@
       <string>equaltozero</string>
       <list>
         <string>0</string>
-        <string>0</string>
+        <null/>
       </list>
     </entry>
     <entry>
@@ -106,13 +106,13 @@
       <string>notzero</string>
       <list>
         <string></string>
-        <string>4</string>
+        <string>0</string>
       </list>
     </entry>
     <entry>
       <string>displayaddress</string>
       <list>
-        <string>no</string>
+        <null/>
         <string></string>
       </list>
     </entry>
@@ -120,7 +120,7 @@
       <string>Displaytab</string>
       <list>
         <string>Display tab, new purchase</string>
-        <string>Display tab new purchase</string>
+        <string>Display prior addres tab</string>
       </list>
     </entry>
   </table>
