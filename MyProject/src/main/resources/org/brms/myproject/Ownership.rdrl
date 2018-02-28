@@ -4,6 +4,13 @@ import java.lang.Number;
 
 rule "Ownership"
 	dialect "mvel"
+	ruleflow-group "time"
+	no-loop true
 	when
+		ot : Ownership( )
+		exists (Ownership( timeOwnership < 3 , timeOwnership == 0 )) 
 	then
+		modify( ot ) {
+				setTimeOwnership( 3 )
+		}
 end
