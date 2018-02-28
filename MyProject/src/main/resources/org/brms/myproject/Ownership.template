@@ -6,60 +6,7 @@
   <lhs>
     <fact>
       <constraintList>
-        <constraints>
-          <fieldConstraint>
-            <value>displayaddress</value>
-            <operator>==</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>Ownership</factType>
-            <fieldName>priorAddress</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>equaltozero</value>
-            <operator>==</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>Ownership</factType>
-            <fieldName>timeOwnership</fieldName>
-            <fieldType>Integer</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>notzero</value>
-            <operator>!=</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>Ownership</factType>
-            <fieldName>timeOwnership</fieldName>
-            <fieldType>Integer</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>3</value>
-            <operator>&lt;</operator>
-            <constraintValueType>1</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>Ownership</factType>
-            <fieldName>timeOwnership</fieldName>
-            <fieldType>Integer</fieldType>
-          </fieldConstraint>
-        </constraints>
+        <constraints/>
       </constraintList>
       <factType>Ownership</factType>
       <boundName>ot</boundName>
@@ -68,6 +15,61 @@
         <parameters/>
       </window>
     </fact>
+    <compositePattern>
+      <type>exists</type>
+      <patterns>
+        <fact>
+          <constraintList>
+            <constraints>
+              <fieldConstraint>
+                <value>zero</value>
+                <operator>==</operator>
+                <constraintValueType>7</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Ownership</factType>
+                <fieldName>timeOwnership</fieldName>
+                <fieldType>Integer</fieldType>
+              </fieldConstraint>
+              <fieldConstraint>
+                <value>notzero</value>
+                <operator>!=</operator>
+                <constraintValueType>7</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Ownership</factType>
+                <fieldName>timeOwnership</fieldName>
+                <fieldType>Integer</fieldType>
+              </fieldConstraint>
+              <fieldConstraint>
+                <value>limit</value>
+                <operator>&lt;</operator>
+                <constraintValueType>7</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Ownership</factType>
+                <fieldName>timeOwnership</fieldName>
+                <fieldType>Integer</fieldType>
+              </fieldConstraint>
+            </constraints>
+          </constraintList>
+          <factType>Ownership</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </fact>
+      </patterns>
+    </compositePattern>
   </lhs>
   <rhs>
     <modify>
@@ -89,10 +91,10 @@
   <isNegated>false</isNegated>
   <table>
     <entry>
-      <string>equaltozero</string>
+      <string>zero</string>
       <list>
         <string>0</string>
-        <null/>
+        <string></string>
       </list>
     </entry>
     <entry>
@@ -110,10 +112,10 @@
       </list>
     </entry>
     <entry>
-      <string>displayaddress</string>
+      <string>limit</string>
       <list>
-        <null/>
-        <string></string>
+        <string>3</string>
+        <string>3</string>
       </list>
     </entry>
     <entry>
