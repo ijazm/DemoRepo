@@ -1,7 +1,16 @@
 <rule>
   <name>Ownership</name>
   <modelVersion>1.0</modelVersion>
-  <attributes/>
+  <attributes>
+    <attribute>
+      <attributeName>no-loop</attributeName>
+      <value>true</value>
+    </attribute>
+    <attribute>
+      <attributeName>ruleflow-group</attributeName>
+      <value>time</value>
+    </attribute>
+  </attributes>
   <metadataList/>
   <lhs>
     <fact>
