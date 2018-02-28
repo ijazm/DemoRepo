@@ -9,7 +9,7 @@
         <constraints>
           <fieldConstraint>
             <value>DivingBoard</value>
-            <operator>==</operator>
+            <operator>in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -21,7 +21,7 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <value>$default</value>
+            <value>DogBreed</value>
             <operator>not in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
@@ -32,19 +32,6 @@
             <factType>AmInt</factType>
             <fieldName>dogBreed</fieldName>
             <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>Livestock</value>
-            <operator>==</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>farmAnimals</fieldName>
-            <fieldType>Boolean</fieldType>
           </fieldConstraint>
           <fieldConstraint>
             <value>FlatRoofPercentage</value>
@@ -74,7 +61,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>LLC</value>
-            <operator>==</operator>
+            <operator>in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -100,7 +87,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>PlumbType</value>
-            <operator>==</operator>
+            <operator>not in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -113,7 +100,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>plumbingUpdate</value>
-            <operator>==</operator>
+            <operator>&lt;=</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -126,7 +113,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>poolSlide</value>
-            <operator>==</operator>
+            <operator>in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -139,7 +126,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>PriorClaims</value>
-            <operator>==</operator>
+            <operator>&lt;</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -152,7 +139,7 @@
           </fieldConstraint>
           <fieldConstraint>
             <value>Community</value>
-            <operator>==</operator>
+            <operator>in</operator>
             <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
@@ -162,6 +149,19 @@
             <factType>AmInt</factType>
             <fieldName>secured_community</fieldName>
             <fieldType>String</fieldType>
+          </fieldConstraint>
+          <fieldConstraint>
+            <value>Plumbingless</value>
+            <operator>&gt;=</operator>
+            <constraintValueType>7</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>AmInt</factType>
+            <fieldName>plumbingUpdate</fieldName>
+            <fieldType>Integer</fieldType>
           </fieldConstraint>
         </constraints>
       </constraintList>
@@ -196,6 +196,7 @@
     <entry>
       <string>$Eligible</string>
       <list>
+        <string>Eligible</string>
         <string></string>
         <string></string>
         <string></string>
@@ -216,6 +217,7 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>yes,no</string>
         <string></string>
         <string></string>
         <string></string>
@@ -236,22 +238,7 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-      </list>
-    </entry>
-    <entry>
-      <string>$default</string>
-      <list>
-        <null/>
-        <string>Pit_Bull,Wolf_Hybrid,Staffordshire_Bull_Terrier,null</string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
+        <string>yes,no</string>
         <string></string>
         <string></string>
         <string></string>
@@ -270,7 +257,42 @@
         <string>1</string>
         <string>1</string>
         <string>1</string>
-        <string>1</string>
+        <string>10</string>
+        <string>10</string>
+      </list>
+    </entry>
+    <entry>
+      <string>DogBreed</string>
+      <list>
+        <string></string>
+        <string>Pit_Bull,Wolf_Hybrid,Staffordshire_Bull_Terrier</string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+      </list>
+    </entry>
+    <entry>
+      <string>Plumbingless</string>
+      <list>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string></string>
+        <string>0</string>
       </list>
     </entry>
     <entry>
@@ -283,6 +305,7 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>20</string>
         <string></string>
         <string></string>
         <string></string>
@@ -298,6 +321,7 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>Pex,Polybutylene</string>
         <string></string>
         <string></string>
         <string></string>
@@ -311,8 +335,9 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
         <string>detachedSeperatedtructureWithoutLivingSpace,attachedToTheMainHouse</string>
+        <string></string>
+        <string></string>
         <string></string>
         <string></string>
         <string></string>
@@ -324,8 +349,9 @@
     <entry>
       <string>DivingBoard</string>
       <list>
-        <string>yes</string>
+        <string>yes,no</string>
         <null/>
+        <string></string>
         <string></string>
         <string></string>
         <string></string>
@@ -342,8 +368,9 @@
       <list>
         <string></string>
         <string></string>
-        <string></string>
         <string>1 - 10%,11 - 20%</string>
+        <string></string>
+        <string></string>
         <string></string>
         <string></string>
         <string></string>
@@ -361,28 +388,13 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>Masonry 76% or more - Frame 24%</string>
         <string></string>
         <string></string>
         <string></string>
         <string></string>
         <string></string>
         <string></string>
-      </list>
-    </entry>
-    <entry>
-      <string>Livestock</string>
-      <list>
-        <string>false</string>
-        <string>false</string>
-        <string>true</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
       </list>
     </entry>
     <entry>
@@ -397,8 +409,9 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>2</string>
         <string></string>
-        <string></string>
+        <null/>
       </list>
     </entry>
     <entry>
@@ -414,10 +427,11 @@
         <string></string>
         <string></string>
         <string></string>
+        <string>Gated with a guard,Gated with an automated system</string>
         <string></string>
       </list>
     </entry>
   </table>
   <idCol>1</idCol>
-  <rowsCount>11</rowsCount>
+  <rowsCount>12</rowsCount>
 </rule>
