@@ -7,9 +7,10 @@ rule "ownership"
 	ruleflow-group "time"
 	no-loop true
 	when
-		ot : Ownership( too : timeOwnership < 3 , pa : priorAddress == "no" )
+		ot : Ownership( )
+		exists (Ownership( timeOwnership < 3 ) and Ownership( timeOwnership != 0 )) 
 	then
 		modify( ot ) {
-				setPriorAddress( "display" )
+				setPriorAddress( "Display tab but not new purchase" )
 		}
 end
