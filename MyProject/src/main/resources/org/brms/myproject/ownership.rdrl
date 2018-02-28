@@ -4,10 +4,12 @@ import java.lang.Number;
 
 rule "ownership"
 	dialect "mvel"
+	ruleflow-group "time"
+	no-loop true
 	when
 		ot : Ownership( too : timeOwnership < 3 , pa : priorAddress == "no" )
 	then
 		modify( ot ) {
-				setPriorAddress( "yes" )
+				setPriorAddress( "display" )
 		}
 end
