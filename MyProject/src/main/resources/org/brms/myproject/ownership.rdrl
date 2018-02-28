@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "ownership"
 	dialect "mvel"
 	when
+		ot : Ownership( )
+		exists (Ownership( timeOwnership < 3 )) 
 	then
+		modify( ot ) {
+				setPriorAddress( "display tab" )
+		}
 end
