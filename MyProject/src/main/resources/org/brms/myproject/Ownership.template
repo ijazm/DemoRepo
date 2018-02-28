@@ -3,8 +3,85 @@
   <modelVersion>1.0</modelVersion>
   <attributes/>
   <metadataList/>
-  <lhs/>
-  <rhs/>
+  <lhs>
+    <fact>
+      <constraintList>
+        <constraints>
+          <fieldConstraint>
+            <value>displayaddress</value>
+            <operator>==</operator>
+            <constraintValueType>7</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>Ownership</factType>
+            <fieldName>priorAddress</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
+          <fieldConstraint>
+            <value>equaltozero</value>
+            <operator>==</operator>
+            <constraintValueType>7</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>Ownership</factType>
+            <fieldName>timeOwnership</fieldName>
+            <fieldType>Integer</fieldType>
+          </fieldConstraint>
+          <fieldConstraint>
+            <value>notzero</value>
+            <operator>!=</operator>
+            <constraintValueType>7</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>Ownership</factType>
+            <fieldName>timeOwnership</fieldName>
+            <fieldType>Integer</fieldType>
+          </fieldConstraint>
+          <fieldConstraint>
+            <value>3</value>
+            <operator>&lt;</operator>
+            <constraintValueType>1</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>Ownership</factType>
+            <fieldName>timeOwnership</fieldName>
+            <fieldType>Integer</fieldType>
+          </fieldConstraint>
+        </constraints>
+      </constraintList>
+      <factType>Ownership</factType>
+      <boundName>ot</boundName>
+      <isNegated>false</isNegated>
+      <window>
+        <parameters/>
+      </window>
+    </fact>
+  </lhs>
+  <rhs>
+    <modify>
+      <fieldValues>
+        <fieldValue>
+          <field>priorAddress</field>
+          <value>Displaytab</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+      </fieldValues>
+      <variable>ot</variable>
+    </modify>
+  </rhs>
   <imports>
     <imports/>
   </imports>
@@ -12,10 +89,41 @@
   <isNegated>false</isNegated>
   <table>
     <entry>
+      <string>equaltozero</string>
+      <list>
+        <string>0</string>
+        <string>0</string>
+      </list>
+    </entry>
+    <entry>
       <string>__ID_KOL_NAME__</string>
-      <list/>
+      <list>
+        <string>2</string>
+        <string>0</string>
+      </list>
+    </entry>
+    <entry>
+      <string>notzero</string>
+      <list>
+        <string></string>
+        <string>4</string>
+      </list>
+    </entry>
+    <entry>
+      <string>displayaddress</string>
+      <list>
+        <string>no</string>
+        <string></string>
+      </list>
+    </entry>
+    <entry>
+      <string>Displaytab</string>
+      <list>
+        <string>Display tab, new purchase</string>
+        <string>Display tab new purchase</string>
+      </list>
     </entry>
   </table>
-  <idCol>0</idCol>
-  <rowsCount>0</rowsCount>
+  <idCol>2</idCol>
+  <rowsCount>2</rowsCount>
 </rule>
