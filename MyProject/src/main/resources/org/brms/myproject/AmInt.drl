@@ -145,7 +145,7 @@ dialect "mvel"
 		am : AmInt( divingBoard in  ("yes", "no"))
 	then
 		modify( am ) {
-				setResult( "Diving board" )
+				setResult( "@ Diving board" )
 		}
 		System.out.println(am.getResult());
 end
