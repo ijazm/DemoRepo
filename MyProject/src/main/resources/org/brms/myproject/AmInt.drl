@@ -1,4 +1,5 @@
 package org.brms.myproject;
+
 /*
 rule "Check fro the garage type to get other structure eligibilty"
 when
