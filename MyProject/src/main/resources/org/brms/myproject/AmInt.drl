@@ -8,7 +8,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Other structure limit" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Other structure limit");
 end
 
 
@@ -27,7 +27,7 @@ rule "Check whether have trampoline and is it fenced"
 		modify( am ) {
 				setResult( "@ Trampoline" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Trampoline");
 end
 
 rule "Number of prior claims"
@@ -39,7 +39,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Prior claims" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Prior claims" );
 end
 
 rule "Eligibilty for seasonal occupany"
@@ -51,7 +51,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Seasonal occupancy" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Seasonal occupancy");
 end
 
 rule "Check flat roof percentage"
@@ -63,7 +63,7 @@ no-loop true
 		modify( am ) {
 				setResult( "Flat roof percentage" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Flat roof percentage");
 end
 
 rule "Check masonary to frame ratio"
@@ -75,7 +75,7 @@ rule "Check masonary to frame ratio"
 		modify( am ) {
 				setResult( "Masonary to frame ratio" )
 		}
-		System.out.println(am.getResult());
+		System.out.println(" @ Masonary to frame ratio");
 end
 
 /*
@@ -131,7 +131,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Livestock" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Livestock");
 end
 
 rule "Check whether LLC or Corporate Ownership"
@@ -143,7 +143,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ LLC" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ LLC");
 end
 
 rule "Check whether you have Diving Board"
@@ -155,7 +155,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Diving board" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Diving board");
 end
 
 rule "Check whether have pool slide"
@@ -167,7 +167,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Poolslide" )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Poolslide");
 end
 
 rule "Check whether duplex"
@@ -193,7 +193,7 @@ no-loop true
 		modify( am ) {
 				setResult( "@ Plumbing type : "+am.getPlumbingType() )
 		}
-		System.out.println(am.getResult());
+		System.out.println("@ Plumbing type : "+am.getPlumbingType() );
 end
 
 rule "Check the water coverage"
