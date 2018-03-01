@@ -1,11 +1,15 @@
 package org.brms.myproject;
 
-/*
+
 rule "Check fro the garage type to get other structure eligibilty"
-when
-AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
-then
-System.out.println("@ Other Structure limit eligible");
+dialect "mvel"
+	when
+		am : AmInt(garageType in  ("detachedSeperatedtructureWithoutLivingSpace", "attachedToTheMainHouse"))
+	then
+		modify( am ) {
+				setResult( "@ Other structure limit" )
+		}
+		System.out.println(am.getResult());
 end
 
 
@@ -16,31 +20,47 @@ then
 System.out.println("@ Age is eligible");
 end
 rule "Check whether have trampoline and is it fenced"
-when	
-AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
-then
-System.out.println("@ Trampoline eligible");
+	dialect "mvel"
+	when
+		am : AmInt( trampoline == true , trampolinefence == "yes" )
+	then
+		modify( am ) {
+				setResult( "@ Trampoline" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Number of prior claims"
-when	
-AmInt(prior_Claims<1)
-then
-System.out.println("@ Number of property claims eligible");
+dialect "mvel"
+	when
+		am : AmInt( prior_Claims < 1 )
+	then
+		modify( am ) {
+				setResult( "@ Prior claims" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Eligibilty for seasonal occupany"
-when
-AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
-then
-System.out.println("@ Secondary/Seasonal Occupancy eligible");
+dialect "mvel"
+	when
+		am : AmInt( secured_community in  ("Gated with a guard", "Gated with an automated system") )
+	then
+		modify( am ) {
+				setResult( "@ org.brms.myproject.Dog( )Seasonal occupancy" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check flat roof percentage"
-when
-AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
-then
-System.out.println("@ Flat roof percentage eligible");
+dialect "mvel"
+	when
+		am : AmInt(flatRoofPercent in  ("1 - 10%", "11 - 20%") )
+	then
+		modify( am ) {
+				setResult( "Flat roof percentage" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check masonary to frame ratio"
