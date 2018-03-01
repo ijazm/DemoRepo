@@ -1,5 +1,5 @@
 package org.brms.myproject;
-
+/*
 rule "Check fro the garage type to get other structure eligibilty"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
@@ -55,7 +55,7 @@ AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
 System.out.println("@ Other Structure Limit is eleigible");
 end
-*/
+
 
 rule "Check quantity of Composition Shingle"
 when
@@ -90,7 +90,7 @@ AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))
 then
 System.out.println("@ Prior coverage is eligible");
 end
-*/
+
 
 rule "Check whether have farm animals"
 when
@@ -309,7 +309,7 @@ then
 System.out.println("# Dog breeds "+d.getDogBreed()+" not eligible");
 end
 
-/*
+
 rule "Endorsement Eligibility for dog breeds"
 when
 AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
