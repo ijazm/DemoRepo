@@ -199,7 +199,19 @@
       </window>
     </fact>
   </lhs>
-  <rhs/>
+  <rhs>
+    <modify>
+      <fieldValues>
+        <fieldValue>
+          <field>result</field>
+          <value>Eligibility</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+      </fieldValues>
+      <variable>am</variable>
+    </modify>
+  </rhs>
   <imports>
     <imports/>
   </imports>
@@ -212,6 +224,10 @@
     </entry>
     <entry>
       <string>LLC</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>Eligibility</string>
       <list/>
     </entry>
     <entry>
