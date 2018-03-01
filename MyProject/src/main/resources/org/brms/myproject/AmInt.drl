@@ -5,9 +5,7 @@ no-loop true
 	when
 		am : AmInt(garageType in  ("detachedSeperatedtructureWithoutLivingSpace", "attachedToTheMainHouse"))
 	then
-		modify( am ) {
-				setResult( "@ Other structure limit" )
-		}
+		
 		System.out.println("@ Other structure limit");
 end
 
@@ -24,9 +22,6 @@ rule "Check whether have trampoline and is it fenced"
 	when
 		am : AmInt( trampoline == true , trampolinefence == "yes" )
 	then
-		modify( am ) {
-				setResult( "@ Trampoline" )
-		}
 		System.out.println("@ Trampoline");
 end
 
@@ -36,9 +31,6 @@ no-loop true
 	when
 		am : AmInt( prior_Claims < 1 )
 	then
-		modify( am ) {
-				setResult( "@ Prior claims" )
-		}
 		System.out.println("@ Prior claims" );
 end
 
@@ -48,9 +40,6 @@ no-loop true
 	when
 		am : AmInt( secured_community in  ("Gated with a guard", "Gated with an automated system") )
 	then
-		modify( am ) {
-				setResult( "@ Seasonal occupancy" )
-		}
 		System.out.println("@ Seasonal occupancy");
 end
 
@@ -60,9 +49,6 @@ no-loop true
 	when
 		am : AmInt(flatRoofPercent in  ("1 - 10%", "11 - 20%") )
 	then
-		modify( am ) {
-				setResult( "Flat roof percentage" )
-		}
 		System.out.println("@ Flat roof percentage");
 end
 
@@ -72,9 +58,6 @@ rule "Check masonary to frame ratio"
 	when
 		am : AmInt(masonryFrame == "Masonry 76% or more - Frame 24%" )
 	then
-		modify( am ) {
-				setResult( "Masonary to frame ratio" )
-		}
 		System.out.println(" @ Masonary to frame ratio");
 end
 
@@ -128,9 +111,6 @@ no-loop true
 	when
 		am : AmInt( farmAnimals == true )
 	then
-		modify( am ) {
-				setResult( "@ Livestock" )
-		}
 		System.out.println("@ Livestock");
 end
 
@@ -140,9 +120,6 @@ no-loop true
 	when
 		am : AmInt(LLC in  ("yes", "no") )
 	then
-		modify( am ) {
-				setResult( "@ LLC" )
-		}
 		System.out.println("@ LLC");
 end
 
@@ -152,9 +129,6 @@ no-loop true
 	when
 		am : AmInt( divingBoard in  ("yes", "no"))
 	then
-		modify( am ) {
-				setResult( "@ Diving board" )
-		}
 		System.out.println("@ Diving board");
 end
 
@@ -164,9 +138,6 @@ no-loop true
 	when
 		am : AmInt(poolSlide in  ("yes", "no") )
 	then
-		modify( am ) {
-				setResult( "@ Poolslide" )
-		}
 		System.out.println("@ Poolslide");
 end
 
@@ -190,9 +161,6 @@ no-loop true
 	when
 		am : AmInt(plumbingType not in  ("Pex", "Polybutylene"))
 	then
-		modify( am ) {
-				setResult( "@ Plumbing type : "+am.getPlumbingType() )
-		}
 		System.out.println("@ Plumbing type : "+am.getPlumbingType() );
 end
 
