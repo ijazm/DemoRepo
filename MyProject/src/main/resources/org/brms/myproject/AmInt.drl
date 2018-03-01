@@ -1,6 +1,7 @@
 package org.brms.myproject;
 rule "Check fro the garage type to get other structure eligibilty"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt(garageType in  ("detachedSeperatedtructureWithoutLivingSpace", "attachedToTheMainHouse"))
 	then
@@ -19,6 +20,7 @@ System.out.println("@ Age is eligible");
 end
 rule "Check whether have trampoline and is it fenced"
 	dialect "mvel"
+	no-loop true
 	when
 		am : AmInt( trampoline == true , trampolinefence == "yes" )
 	then
@@ -30,6 +32,7 @@ end
 
 rule "Number of prior claims"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt( prior_Claims < 1 )
 	then
@@ -41,6 +44,7 @@ end
 
 rule "Eligibilty for seasonal occupany"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt( secured_community in  ("Gated with a guard", "Gated with an automated system") )
 	then
@@ -52,6 +56,7 @@ end
 
 rule "Check flat roof percentage"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt(flatRoofPercent in  ("1 - 10%", "11 - 20%") )
 	then
@@ -63,6 +68,7 @@ end
 
 rule "Check masonary to frame ratio"
 	dialect "mvel"
+	no-loop true
 	when
 		am : AmInt(masonryFrame == "Masonry 76% or more - Frame 24%" )
 	then
@@ -118,6 +124,7 @@ end
 
 rule "Check whether have farm animals"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt( farmAnimals == true )
 	then
@@ -129,6 +136,7 @@ end
 
 rule "Check whether LLC or Corporate Ownership"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt(LLC in  ("yes", "no") )
 	then
@@ -140,6 +148,7 @@ end
 
 rule "Check whether you have Diving Board"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt( divingBoard in  ("yes", "no"))
 	then
@@ -151,6 +160,7 @@ end
 
 rule "Check whether have pool slide"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt(poolSlide in  ("yes", "no") )
 	then
@@ -176,6 +186,7 @@ end
 
 rule "Check what is the Plumbing type"
 dialect "mvel"
+no-loop true
 	when
 		am : AmInt(plumbingType not in  ("Pex", "Polybutylene"))
 	then
