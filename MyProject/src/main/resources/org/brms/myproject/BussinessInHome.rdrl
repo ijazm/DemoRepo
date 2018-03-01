@@ -4,6 +4,7 @@ import java.lang.Number;
 
 rule "BussinessInHome"
 	dialect "mvel"
+	no-loop true
 	when
 		hm : HomeBusiness( bussinessInHome == "yes" )
 	then
