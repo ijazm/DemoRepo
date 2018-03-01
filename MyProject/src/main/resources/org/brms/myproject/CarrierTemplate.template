@@ -232,69 +232,101 @@
   <table>
     <entry>
       <string>NotPlumbingType</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>LLC</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>Eligibility</string>
-      <list/>
+      <list>
+        <string>Livestock</string>
+      </list>
     </entry>
     <entry>
       <string>Trampoline</string>
-      <list/>
+      <list>
+        <string>false</string>
+      </list>
     </entry>
     <entry>
       <string>__ID_KOL_NAME__</string>
-      <list/>
+      <list>
+        <string>1</string>
+      </list>
     </entry>
     <entry>
       <string>GarageType</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>MasonaryFrameRatio</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>Trampolinefence</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>NotDogBreeds</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>StructureType</string>
-      <list/>
-    </entry>
-    <entry>
-      <string>FlatRoofPercentage</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>DivingBoard</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
+    </entry>
+    <entry>
+      <string>FlatRoofPercentage</string>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>Livestock</string>
-      <list/>
+      <list>
+        <string>true</string>
+      </list>
     </entry>
     <entry>
       <string>PriorClaims</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>SecuredCommunity</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
     <entry>
       <string>Poolslide</string>
-      <list/>
+      <list>
+        <string></string>
+      </list>
     </entry>
   </table>
-  <idCol>0</idCol>
-  <rowsCount>0</rowsCount>
+  <idCol>1</idCol>
+  <rowsCount>1</rowsCount>
 </rule>
