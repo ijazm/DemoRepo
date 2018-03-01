@@ -1,6 +1,6 @@
 package org.brms.myproject;
 
-/*
+
 rule "Check fro the garage type to get other structure eligibilty"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
@@ -8,7 +8,7 @@ then
 System.out.println("@ Other Structure limit eligible");
 end
 
-/*
+
 rule "check age of construction"
 when
 AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
@@ -85,13 +85,13 @@ AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41
 then
 System.out.println("@ Roof material: Tile eligible");
 end
-/*rule "Check the No Prior Coverage years"
+rule "Check the No Prior Coverage years"
 when
 AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
 then
 System.out.println("@ Prior coverage is eligible");
 end
-
+*/
 
 rule "Check whether have farm animals"
 when
@@ -141,7 +141,7 @@ p:Plumb((PlumbingType!="Pex")&&(PlumbingType!="Polybutylene")&&(PlumbingType!="n
 then
 System.out.println("@ Plumbing type "+p.getPlumbingType()+ " is eligible");
 end
-
+/*
 rule "Check the water coverage"
 when
 AmInt((WaterCoverage>-1)&&(WaterCoverage<41))	
@@ -169,7 +169,7 @@ AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))
 then
 System.out.println("@ Effective year built eligible");
 end
-
+*/
 rule "Dog Policy eligibility for dog breeds"
 when
 d:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
@@ -311,10 +311,4 @@ System.out.println("# Dog breeds "+d.getDogBreed()+" not eligible");
 end
 
 
-rule "Endorsement Eligibility for dog breeds"
-when
-AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
-then
-System.out.println("@ Dog breeds are eligible for endorsement");
-end
-*/
+
