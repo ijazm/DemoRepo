@@ -8,8 +8,9 @@
       <constraintList>
         <constraints>
           <fieldConstraint>
-            <operator>==</operator>
-            <constraintValueType>0</constraintValueType>
+            <value>DivingBoard</value>
+            <operator>in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -20,7 +21,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>Livestock</value>
+            <operator>==</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -31,7 +34,9 @@
             <fieldType>Boolean</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>NotDogBreeds</value>
+            <operator>not in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -42,8 +47,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>FlatRoofPercentage</value>
             <operator>in</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -54,8 +60,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>GarageType</value>
             <operator>in</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -66,7 +73,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>LLC</value>
+            <operator>in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -77,8 +86,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>MasonaryFrameRatio</value>
             <operator>==</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -89,7 +99,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>NotPlumbingType</value>
+            <operator>not in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -100,29 +112,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>plumbingUpdate</fieldName>
-            <fieldType>Integer</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>plumbingUpdate</fieldName>
-            <fieldType>Integer</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>Poolslide</value>
+            <operator>in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -133,8 +125,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>PriorClaims</value>
             <operator>&lt;</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -145,19 +138,9 @@
             <fieldType>Integer</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>roofMaterial</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
+            <value>SecuredCommunity</value>
             <operator>in</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -168,7 +151,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
+            <value>StructureType</value>
+            <operator>not in</operator>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -179,8 +164,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>Trampoline</value>
             <operator>==</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -191,8 +177,9 @@
             <fieldType>Boolean</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>Trampolinefence</value>
             <operator>==</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -201,17 +188,6 @@
             <factType>AmInt</factType>
             <fieldName>trampolinefence</fieldName>
             <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <constraintValueType>0</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>yearBuilt</fieldName>
-            <fieldType>Integer</fieldType>
           </fieldConstraint>
         </constraints>
       </constraintList>
@@ -231,7 +207,63 @@
   <isNegated>false</isNegated>
   <table>
     <entry>
+      <string>NotPlumbingType</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>LLC</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>Trampoline</string>
+      <list/>
+    </entry>
+    <entry>
       <string>__ID_KOL_NAME__</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>GarageType</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>MasonaryFrameRatio</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>Trampolinefence</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>NotDogBreeds</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>StructureType</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>FlatRoofPercentage</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>DivingBoard</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>Livestock</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>PriorClaims</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>SecuredCommunity</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>Poolslide</string>
       <list/>
     </entry>
   </table>
