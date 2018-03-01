@@ -49,7 +49,7 @@ no-loop true
 		am : AmInt( secured_community in  ("Gated with a guard", "Gated with an automated system") )
 	then
 		modify( am ) {
-				setResult( "@ org.brms.myproject.Dog( )Seasonal occupancy" )
+				setResult( "@ Seasonal occupancy" )
 		}
 		System.out.println(am.getResult());
 end
