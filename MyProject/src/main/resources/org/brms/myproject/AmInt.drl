@@ -64,10 +64,14 @@ dialect "mvel"
 end
 
 rule "Check masonary to frame ratio"
-when	
-AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
-then
-System.out.println("@ Masonary frame ratio eligible");
+	dialect "mvel"
+	when
+		am : AmInt(masonryFrame == "Masonry 76% or more - Frame 24%" )
+	then
+		modify( am ) {
+				setResult( "Masonary to frame ratio" )
+		}
+		System.out.println(am.getResult());
 end
 
 /*rule "Check the percentage of other structures"
@@ -111,27 +115,39 @@ AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))
 then
 System.out.println("@ Prior coverage is eligible");
 end
-
+*/
 
 rule "Check whether have farm animals"
-when
-AmInt(FarmAnimals==true)
-then
-System.out.println("@ Farm animals are eligible");
+dialect "mvel"
+	when
+		am : AmInt( farmAnimals == true )
+	then
+		modify( am ) {
+				setResult( "@ Livestock" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check whether LLC or Corporate Ownership"
-when	
-AmInt((LLC=="yes")||(LLC=="no"))	
-then
-System.out.println("@ LLC eligible");
+dialect "mvel"
+	when
+		am : AmInt(LLC in  ("yes", "no") )
+	then
+		modify( am ) {
+				setResult( "@ LLC" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check whether you have Diving Board"
-when	
-AmInt((DivingBoard=="yes")||(DivingBoard=="no"))
-then
-System.out.println("@ Diving board eligible");
+dialect "mvel"
+	when
+		am : AmInt( divingBoard in  ("yes", "no"))
+	then
+		modify( am ) {
+				setResult( "Diving board" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check whether have pool slide"
@@ -331,10 +347,4 @@ System.out.println("# Dog breeds "+d.getDogBreed()+" not eligible");
 end
 
 
-rule "Endorsement Eligibility for dog breeds"
-when
-AmInt((dogBreeds!=null)&&(dogBreeds!="Pit Bull")&&(dogBreeds!="Staffordshire Terrier")&&(dogBreeds!="Wolf Hybrid"))	
-then
-System.out.println("@ Dog breeds are eligible for endorsement");
-end
-*/
+
