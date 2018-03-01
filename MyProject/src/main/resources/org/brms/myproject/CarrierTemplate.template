@@ -177,8 +177,9 @@
             <fieldType>String</fieldType>
           </fieldConstraint>
           <fieldConstraint>
+            <value>No</value>
             <operator>==</operator>
-            <constraintValueType>0</constraintValueType>
+            <constraintValueType>7</constraintValueType>
             <expression>
               <parts/>
               <index>2147483647</index>
@@ -232,8 +233,23 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
+      </list>
+    </entry>
+    <entry>
+      <string>No</string>
+      <list>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
+        <string>null</string>
       </list>
     </entry>
     <entry>
@@ -251,27 +267,23 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
     <entry>
       <string>Eligibility</string>
       <list>
+        <string>Diving board</string>
         <string>Livestock</string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
+        <string>Dog breeds</string>
+        <string>Flat roof percentage</string>
+        <string>Other structure limit</string>
+        <string>LLC</string>
+        <string>Masonary to frame ratio</string>
+        <string>Plumbing type</string>
+        <string>Poolslide</string>
+        <string>Prior claims</string>
+        <string>Seasonal occupancy</string>
+        <string>Trampoline</string>
       </list>
     </entry>
     <entry>
@@ -288,17 +300,13 @@
         <string>false</string>
         <string>false</string>
         <string>false</string>
-        <string>false</string>
-        <string>false</string>
-        <string>false</string>
+        <string>true</string>
       </list>
     </entry>
     <entry>
       <string>__ID_KOL_NAME__</string>
       <list>
         <string>1</string>
-        <string>0</string>
-        <string>0</string>
         <string>0</string>
         <string>0</string>
         <string>0</string>
@@ -327,8 +335,6 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
     <entry>
@@ -341,8 +347,6 @@
         <string></string>
         <string></string>
         <string>Masonry 76% or more - Frame 24%</string>
-        <string></string>
-        <string></string>
         <string></string>
         <string></string>
         <string></string>
@@ -364,9 +368,7 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
-        <string></string>
+        <string>yes</string>
       </list>
     </entry>
     <entry>
@@ -384,16 +386,12 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
     <entry>
       <string>DivingBoard</string>
       <list>
         <string>yes,no</string>
-        <string></string>
-        <string></string>
         <string></string>
         <string></string>
         <string></string>
@@ -422,8 +420,6 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
     <entry>
@@ -431,8 +427,6 @@
       <list>
         <string>false</string>
         <string>true</string>
-        <string>false</string>
-        <string>false</string>
         <string>false</string>
         <string>false</string>
         <string>false</string>
@@ -460,8 +454,6 @@
         <string>1</string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
     <entry>
@@ -478,8 +470,6 @@
         <string></string>
         <string></string>
         <string>Gated with a guard,Gated with an automated system</string>
-        <string></string>
-        <string></string>
         <string></string>
       </list>
     </entry>
@@ -498,11 +488,9 @@
         <string></string>
         <string></string>
         <string></string>
-        <string></string>
-        <string></string>
       </list>
     </entry>
   </table>
   <idCol>1</idCol>
-  <rowsCount>14</rowsCount>
+  <rowsCount>12</rowsCount>
 </rule>
