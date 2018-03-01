@@ -211,6 +211,9 @@
       </fieldValues>
       <variable>am</variable>
     </modify>
+    <freeForm>
+      <text>System.out.println(am.getResult());</text>
+    </freeForm>
   </rhs>
   <imports>
     <imports/>
