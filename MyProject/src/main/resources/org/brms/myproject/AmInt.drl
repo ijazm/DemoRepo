@@ -1,6 +1,4 @@
 package org.brms.myproject;
-
-
 rule "Check fro the garage type to get other structure eligibilty"
 dialect "mvel"
 	when
@@ -74,7 +72,8 @@ rule "Check masonary to frame ratio"
 		System.out.println(am.getResult());
 end
 
-/*rule "Check the percentage of other structures"
+/*
+rule "Check the percentage of other structures"
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
@@ -109,7 +108,7 @@ AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<41
 then
 System.out.println("@ Roof material: Tile eligible");
 end
-/*rule "Check the No Prior Coverage years"
+rule "Check the No Prior Coverage years"
 when
 AmInt((NoPriorCoverage>-1)&&(NoPriorCoverage>31))	
 then
@@ -151,10 +150,14 @@ dialect "mvel"
 end
 
 rule "Check whether have pool slide"
-when
-AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
-then
-System.out.println("@ PoolSlide eligible");
+dialect "mvel"
+	when
+		am : AmInt(poolSlide in  ("yes", "no") )
+	then
+		modify( am ) {
+				setResult( "@ Poolslide" )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check whether duplex"
@@ -172,10 +175,14 @@ System.out.println("@ Plumbing update is eligible");
 end
 
 rule "Check what is the Plumbing type"
-when	
-p:Plumb((PlumbingType!="Pex")&&(PlumbingType!="Polybutylene")&&(PlumbingType!="null"))	
-then
-System.out.println("@ Plumbing type "+p.getPlumbingType()+ " is eligible");
+dialect "mvel"
+	when
+		am : AmInt(plumbingType not in  ("Pex", "Polybutylene"))
+	then
+		modify( am ) {
+				setResult( "@ Plumbing type : "+am.getPlumbingType() )
+		}
+		System.out.println(am.getResult());
 end
 
 rule "Check the water coverage"
@@ -200,19 +207,24 @@ System.out.println("@ Not more than 2 units eligible");
 end
 
 rule "Check the effective year built"
+dialect "mvel"
 when
-AmInt((EffectiveYearBuilt=="yes")||(EffectiveYearBuilt=="no"))	
+am:AmInt(EffectiveYearBuilt in ("yes","no"))	
 then
 System.out.println("@ Effective year built eligible");
 end
-
+/*
 rule "Dog Policy eligibility for dog breeds"
-when
-d:Dog((dogBreed!="Pit_Bull")&&(dogBreed!="Wolf_Hybrid")&&(dogBreed!="Staffordshire_Bull_Terrier")&&(dogBreed!="null"))
-then
-System.out.println("@ Dog breed "+ d.getDogBreed() +" eligible");
+dialect "mvel"
+	when
+		am : AmInt(dogBreed not in ("Pit_Bull","Wolf_Hybrid","Staffordshire_Bull_Terrier", "null") 
+	then
+		modify( am ) {
+				setResult( "@ Dog breeds: "+ am.getDogBreed())
+		}
+		System.out.println(am.getResult());
 end
-
+*/
 rule "Check fro the garage type to get other structure not eligible"
 when
 AmInt((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse")&&(GarageType!="null"))
