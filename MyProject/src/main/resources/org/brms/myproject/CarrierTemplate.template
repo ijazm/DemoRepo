@@ -189,6 +189,18 @@
             <fieldName>trampolinefence</fieldName>
             <fieldType>String</fieldType>
           </fieldConstraint>
+          <fieldConstraint>
+            <operator>==</operator>
+            <constraintValueType>0</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>AmInt</factType>
+            <fieldName>result</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
         </constraints>
       </constraintList>
       <factType>AmInt</factType>
