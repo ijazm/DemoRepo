@@ -1,7 +1,12 @@
 <rule>
   <name>CarrierTemplate</name>
   <modelVersion>1.0</modelVersion>
-  <attributes/>
+  <attributes>
+    <attribute>
+      <attributeName>ruleflow-group</attributeName>
+      <value>carrier</value>
+    </attribute>
+  </attributes>
   <metadataList/>
   <lhs>
     <fact>
