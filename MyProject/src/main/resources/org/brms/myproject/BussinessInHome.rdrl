@@ -11,4 +11,5 @@ rule "BussinessInHome"
 		modify( hm ) {
 				setBussinessInHome( "asdsdnf" )
 		}
+		System.out.println(hm.getBussinessInHome());
 end
