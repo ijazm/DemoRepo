@@ -319,7 +319,7 @@ public class AmInt implements java.io.Serializable
       this.dogBreed = dogBreed;
       this.garageType = garageType;
       this.roofMaterial = roofMaterial;
-     // this.result = result;
+      //this.result = result;
    }
 
 }
