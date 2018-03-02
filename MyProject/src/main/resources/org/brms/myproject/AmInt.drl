@@ -3,9 +3,10 @@ package org.brms.myproject;
 
 rule "Check fro the garage type to get other structure eligibilty"
 when
-AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
-System.out.println("@ Other Structure limit eligible");
+am.result.add("GarageType");
+//System.out.println("@ Other Structure limit eligible");
 end
 
 
