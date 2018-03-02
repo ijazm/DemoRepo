@@ -9,7 +9,7 @@ rule "BussinessInHome"
 		hm : HomeBusiness( bussinessInHome == "yes" )
 	then
 		modify( hm ) {
-				setBussinessInHome( "asdsdnf" )
+				setBussinessInHome( "Have business at home" )
 		}
 		System.out.println(hm.getBussinessInHome());
 end
