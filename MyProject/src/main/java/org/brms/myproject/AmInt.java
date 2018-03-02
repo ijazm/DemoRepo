@@ -53,7 +53,7 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.String roofMaterial;
 
-   public List <String> result = new ArrayList<String>();
+   //public List <String> result = new ArrayList<String>();
 
    public AmInt()
    {
@@ -279,10 +279,10 @@ public class AmInt implements java.io.Serializable
       this.roofMaterial = roofMaterial;
    }
 
-  public List<String> getResult()
-  {
-      return this.result;
-  }
+  //public List<String> getResult()
+  //{
+    //  return this.result;
+  //}
 
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
