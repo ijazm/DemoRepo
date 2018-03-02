@@ -106,7 +106,8 @@
       <list>
         <string>Polybutylene</string>
         <string>Polybutylene</string>
-        <string></string>
+        <string>Polybutylene</string>
+        <string>Pex</string>
         <string></string>
       </list>
     </entry>
@@ -117,6 +118,7 @@
         <string>0</string>
         <string>1</string>
         <string>0</string>
+        <string>3</string>
       </list>
     </entry>
     <entry>
@@ -124,7 +126,8 @@
       <list>
         <string>Masonry 76% or more - Frame 24%</string>
         <string>Masonry 76% or more - Frame 24%</string>
-        <string></string>
+        <string>Masonry 76% or more - Frame 24%</string>
+        <string>Masonry 50% - Frame 50%</string>
         <string></string>
       </list>
     </entry>
@@ -133,7 +136,8 @@
       <list>
         <string>no</string>
         <string>yes</string>
-        <string></string>
+        <string>yes</string>
+        <string>yes</string>
         <string></string>
       </list>
     </entry>
@@ -142,20 +146,22 @@
       <list>
         <string>Eligible</string>
         <string>Eligible</string>
-        <string></string>
+        <string>Eligible</string>
+        <string>Not eligible</string>
         <string></string>
       </list>
     </entry>
     <entry>
       <string>Dog</string>
       <list>
+        <string>Wolf_Hybrid</string>
+        <string>Staffordshire_Bull_Terrier</string>
+        <string>Pit_Bull</string>
         <string>German_Sheperd</string>
-        <string>German_Sheperd</string>
-        <string></string>
         <string></string>
       </list>
     </entry>
   </table>
   <idCol>1</idCol>
-  <rowsCount>4</rowsCount>
+  <rowsCount>5</rowsCount>
 </rule>
