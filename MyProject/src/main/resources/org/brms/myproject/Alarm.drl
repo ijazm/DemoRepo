@@ -5,3 +5,4 @@ Safety((securedCommunity!="yes")&&(alarm=="yes"))
 then
 System.out.println("The building has an alarm installed");
 end
+
