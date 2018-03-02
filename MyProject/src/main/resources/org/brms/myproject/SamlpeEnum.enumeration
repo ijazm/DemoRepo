@@ -1,2 +1,5 @@
 'AmInt.divingBoard' : ['yes','no']
-'AmInt.dogBreed' : ['Wolf_Hybrid','Staffordshire_Bull_Terrier','null']
+'AmInt.dogBreed' : ['Wolf_Hybrid','Staffordshire_Bull_Terrier','Pit_Bull','German_Sheperd','null']
+'AmInt.masonryFrame' : ['Masonry 76% or more - Frame 24%', 'Masonry 50% - Frame 50%']
+'AmInt.result' : ['Eligible','Not eligible']
+'AmInt.plumbingType' : ['Pex','Polybutylene']
