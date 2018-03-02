@@ -5,8 +5,8 @@ rule "Check fro the garage type to get other structure eligibilty"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
-am.result.add("GarageType");
-//System.out.println("@ Other Structure limit eligible");
+//am.result.add("GarageType");
+System.out.println("@ Other Structure limit eligible");
 end
 
 
