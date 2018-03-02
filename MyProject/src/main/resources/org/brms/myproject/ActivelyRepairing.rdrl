@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "ActivelyRepairing"
 	dialect "mvel"
 	when
+		ar : ActivelyRepairing( activelyRepairing == "yes" )
 	then
+		modify( ar ) {
+				setActivelyRepairing( "The damage is being actively repaired" )
+		}
+		System.out.println(ar.getActivelyRepairing());
 end
