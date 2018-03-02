@@ -16,101 +16,14 @@
     </attribute>
   </attributes>
   <metadataList/>
-  <lhs>
-    <fact>
-      <constraintList>
-        <constraints>
-          <fieldConstraint>
-            <value>DivingBoard</value>
-            <operator>in</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>divingBoard</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>Dog</value>
-            <operator>not in</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>dogBreed</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>PlumbingType</value>
-            <operator>not in</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>plumbingType</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-          <fieldConstraint>
-            <value>Masonaryframe</value>
-            <operator>==</operator>
-            <constraintValueType>7</constraintValueType>
-            <expression>
-              <parts/>
-              <index>2147483647</index>
-            </expression>
-            <parameters/>
-            <factType>AmInt</factType>
-            <fieldName>masonryFrame</fieldName>
-            <fieldType>String</fieldType>
-          </fieldConstraint>
-        </constraints>
-      </constraintList>
-      <factType>AmInt</factType>
-      <boundName>am</boundName>
-      <isNegated>false</isNegated>
-      <window>
-        <parameters/>
-      </window>
-    </fact>
-  </lhs>
-  <rhs>
-    <modify>
-      <fieldValues>
-        <fieldValue>
-          <field>result</field>
-          <value>Eligible</value>
-          <nature>7</nature>
-          <type>String</type>
-        </fieldValue>
-      </fieldValues>
-      <variable>am</variable>
-    </modify>
-  </rhs>
+  <lhs/>
+  <rhs/>
   <imports>
     <imports/>
   </imports>
   <packageName>org.brms.myproject</packageName>
   <isNegated>false</isNegated>
   <table>
-    <entry>
-      <string>PlumbingType</string>
-      <list>
-        <string>Polybutylene</string>
-        <string>Polybutylene</string>
-        <string>Polybutylene</string>
-        <string>Pex</string>
-        <string></string>
-      </list>
-    </entry>
     <entry>
       <string>__ID_KOL_NAME__</string>
       <list>
@@ -119,46 +32,6 @@
         <string>1</string>
         <string>0</string>
         <string>3</string>
-      </list>
-    </entry>
-    <entry>
-      <string>Masonaryframe</string>
-      <list>
-        <string>Masonry 76% or more - Frame 24%</string>
-        <string>Masonry 76% or more - Frame 24%</string>
-        <string>Masonry 76% or more - Frame 24%</string>
-        <string>Masonry 50% - Frame 50%</string>
-        <string></string>
-      </list>
-    </entry>
-    <entry>
-      <string>DivingBoard</string>
-      <list>
-        <string>no</string>
-        <string>yes</string>
-        <string>yes</string>
-        <string>yes</string>
-        <string></string>
-      </list>
-    </entry>
-    <entry>
-      <string>Eligible</string>
-      <list>
-        <string>Eligible</string>
-        <string>Eligible</string>
-        <string>Eligible</string>
-        <string>Not eligible</string>
-        <string></string>
-      </list>
-    </entry>
-    <entry>
-      <string>Dog</string>
-      <list>
-        <string>Wolf_Hybrid</string>
-        <string>Staffordshire_Bull_Terrier</string>
-        <string>Pit_Bull</string>
-        <string>German_Sheperd</string>
-        <string></string>
       </list>
     </entry>
   </table>
