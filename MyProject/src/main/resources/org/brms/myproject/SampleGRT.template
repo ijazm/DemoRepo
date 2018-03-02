@@ -105,6 +105,8 @@
       <string>PlumbingType</string>
       <list>
         <string>Polybutylene</string>
+        <string>Polybutylene</string>
+        <string></string>
         <string></string>
       </list>
     </entry>
@@ -113,37 +115,47 @@
       <list>
         <string>1</string>
         <string>0</string>
+        <string>1</string>
+        <string>0</string>
       </list>
     </entry>
     <entry>
       <string>Masonaryframe</string>
       <list>
-        <string>Masonry 50% - Frame 50%</string>
+        <string>Masonry 76% or more - Frame 24%</string>
+        <string>Masonry 76% or more - Frame 24%</string>
+        <string></string>
         <string></string>
       </list>
     </entry>
     <entry>
       <string>DivingBoard</string>
       <list>
+        <string>no</string>
         <string>yes</string>
+        <string></string>
         <string></string>
       </list>
     </entry>
     <entry>
       <string>Eligible</string>
       <list>
-        <string>Not eligible</string>
+        <string>Eligible</string>
+        <string>Eligible</string>
+        <string></string>
         <string></string>
       </list>
     </entry>
     <entry>
       <string>Dog</string>
       <list>
-        <string>Pit_Bull</string>
+        <string>German_Sheperd</string>
+        <string>German_Sheperd</string>
+        <string></string>
         <string></string>
       </list>
     </entry>
   </table>
   <idCol>1</idCol>
-  <rowsCount>2</rowsCount>
+  <rowsCount>4</rowsCount>
 </rule>
