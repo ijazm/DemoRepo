@@ -14,7 +14,7 @@ rule "check age of construction"
 when
 am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
-am.setResult("Age of building");
+am.setResult("@ Age of building");
 //System.out.println(am.getResult());
 end
 rule "Check whether have trampoline and is it fenced"
