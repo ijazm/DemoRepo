@@ -1,0 +1,9 @@
+package org.brms.myproject;
+
+import java.lang.Number;
+
+rule "Alarm"
+	dialect "mvel"
+	when
+	then
+end
