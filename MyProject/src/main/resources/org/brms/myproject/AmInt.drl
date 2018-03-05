@@ -1,6 +1,5 @@
 package org.brms.myproject;
-
-
+global String result;
 rule "Check fro the garage type to get other structure eligibilty"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
