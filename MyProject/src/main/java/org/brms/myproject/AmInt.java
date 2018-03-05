@@ -55,7 +55,7 @@ public class AmInt implements java.io.Serializable
 
    //public List <String> result = new ArrayList<String>();
 
-   private java.lang.String result;
+   public java.lang.String result;
 
    public AmInt()
    {
