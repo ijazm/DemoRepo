@@ -9,14 +9,14 @@ then
 //am.result.add("GarageType");
 System.out.println("@ Other Structure limit eligible");
 end
-
+//rule &quot;Rule 1 LoanApproval&quot;
 //rule &quot;Rule 1 AgeConstruction&quot;
 rule "check age of construction"
 when
 am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
 if (logger.isDebugEnabled()) {
-      logger.info("check age of construction");
+      logger.info("Age of construction fired");
    }
 
 //am.setResult("@ Age of building");
