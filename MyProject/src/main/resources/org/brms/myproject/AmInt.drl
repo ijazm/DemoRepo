@@ -1,11 +1,11 @@
 package org.brms.myproject;
 global java.util.List globalList;
 global org.slf4j.Logger logger;
-rule "Check fro the garage type to get other structure eligibilty"
+
+rule "Check for the garage type to get other structure eligibilty"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
-//am.result.add("GarageType");
 System.out.println("@ Other Structure limit eligible");
 end
 
@@ -21,6 +21,8 @@ logger.info("@ Age of building fired");
 globalList.add("@ Age of building");
 System.out.println("@ Age of building");
 end
+
+
 rule "Check whether have trampoline and is it fenced"
 when	
 AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
