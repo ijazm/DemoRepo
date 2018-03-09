@@ -1,6 +1,5 @@
 package org.brms.myproject;
-
-
+global java.util.List globalList;
 rule "Check fro the garage type to get other structure eligibilty"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
@@ -15,7 +14,7 @@ when
 am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
 //am.setResult("@ Age of building");
-//globalList.add("@ Age of building");
+globalList.add("@ Age of building");
 System.out.println("@ Age of building");
 end
 rule "Check whether have trampoline and is it fenced"
