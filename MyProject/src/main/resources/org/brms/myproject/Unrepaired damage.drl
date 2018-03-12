@@ -1,4 +1,5 @@
 package org.brms.myproject;
+global org.slf4j.Logger logger;
 rule "Do you have any unrepaired damage?"
 when
 UnrepairedDamage(unrepairedDamage=="yes")
