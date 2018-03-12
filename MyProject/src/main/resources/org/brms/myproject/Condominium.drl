@@ -1,4 +1,7 @@
+
 package org.brms.myproject;
+global org.slf4j.Logger logger;
+
 rule "check wether the house type is condominium"
 when
 StructureType((houseType == "Condominium")&&(houseType!="Residential")&&(houseType!="Row"))
