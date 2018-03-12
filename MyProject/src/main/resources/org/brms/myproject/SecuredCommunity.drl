@@ -1,4 +1,5 @@
 package org.brms.myproject;
+global org.slf4j.Logger logger;
 rule "Check whether you have a secured community"
 when
 Safety((securedCommunity=="yes")&&(alarm!="yes"))
