@@ -18,7 +18,7 @@ if (logger.isDebugEnabled())
 logger.info("@ Age of building fired");
 }
 //am.setResult("@ Age of building");
-globalList.add("@ Age of building");
+//globalList.add("@ Age of building");
 System.out.println("@ Age of building");
 end
 
