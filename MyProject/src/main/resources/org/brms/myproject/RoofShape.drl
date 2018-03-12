@@ -1,4 +1,5 @@
 package org.brms.myproject;
+global org.slf4j.Logger logger;
 rule "Check whether roof shape is flat"
 when
 RoofShape((roofShape=="Flat")&&(roofShape=="Hip"))
