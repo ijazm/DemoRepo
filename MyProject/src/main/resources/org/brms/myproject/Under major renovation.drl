@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "to check wether the building is under major rennovations"
 when
 UnderMajorRenovation(underRennovation=="yes")
