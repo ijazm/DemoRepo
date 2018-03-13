@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check for wind mitigation"
 when
 NewPurchase((windMitigation=="yes")&&(fourPoint!="yes"))
