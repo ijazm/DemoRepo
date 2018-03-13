@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check if he has a pool"
 when
 AdditionalStructures((pool=="yes")&&(garage!="yes")&&(trampoline!="yes"))
