@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check wether the structure is Mixed-masonary"
 when
 Construction(constructionType=="Mixed-Masonary")
