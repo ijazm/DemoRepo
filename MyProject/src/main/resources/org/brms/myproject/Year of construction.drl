@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check whether Constructed not before 30 years"
 when
 YearOfConstruction((yearOfConstruction>1987)||(yearOfConstruction==2018))
