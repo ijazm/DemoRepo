@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check whether the roof was replaced"
 when
 RoofReplacement((roofReplacement=="yes")&&(roofReplacement!="no"))
