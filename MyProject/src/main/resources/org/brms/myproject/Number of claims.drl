@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check the number of prior claims if any"
 when
 PriorClaims((numberOfClaims>0)&&(numberOfClaims<5))
