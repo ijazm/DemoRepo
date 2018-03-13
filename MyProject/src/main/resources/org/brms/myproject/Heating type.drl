@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check the heating type"
 when
 Heating(heatingType=="OilTank")
