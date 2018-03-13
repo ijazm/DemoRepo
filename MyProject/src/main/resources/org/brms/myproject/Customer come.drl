@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "To check whether customers come to house"
 when
 CustomerCome(customerInHome=="yes")
