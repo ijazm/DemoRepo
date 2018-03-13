@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check for four point"
 when
 NewPurchase((fourPoint=="yes")&&(windMitigation!="yes"))
