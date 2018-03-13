@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Check whether the type of Construction is masonary"
 when
 WallConstruction(wallConstruction=="Masonary")
