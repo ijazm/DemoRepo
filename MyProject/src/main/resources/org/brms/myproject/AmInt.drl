@@ -1,5 +1,5 @@
 package org.brms.myproject;
-global java.util.List globalList;
+//global java.util.List globalList;
 //global org.slf4j.Logger logger;
 
 rule "Check for the garage type to get other structure eligibilty"
@@ -18,7 +18,7 @@ then
 logger.info("@ Age of building fired");
 }*/
 //am.setResult("@ Age of building");
-globalList.add("@ Age of building");
+//globalList.add("@ Age of building");
 System.out.println("@ Age of building");
 end
 
