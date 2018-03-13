@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "To check whether fully replumbed"
 when
 FullyReplumb(fullyReplumb=="yes")
