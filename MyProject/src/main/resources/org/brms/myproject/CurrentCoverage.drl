@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 
 rule "check whether there is a current policy coverage"
 when
