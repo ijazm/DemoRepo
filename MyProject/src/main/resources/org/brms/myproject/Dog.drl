@@ -1,5 +1,5 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
+
 rule "check wether you have dog"
 when
 OtherDetails((livestock!="yes")&&(horse!="yes")&&(dog=="yes"))
