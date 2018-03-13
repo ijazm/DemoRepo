@@ -1,5 +1,5 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
+//global org.slf4j.Logger logger;
 rule "Had any bankruptcy"
 when
 Bankruptcy(hadBankruptcy=="yes")
