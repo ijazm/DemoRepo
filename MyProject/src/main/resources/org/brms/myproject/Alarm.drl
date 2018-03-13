@@ -1,5 +1,5 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
+//global org.slf4j.Logger logger;
 rule "Check whether you have an alarm"
 when
 Safety((securedCommunity!="yes")&&(alarm=="yes"))
