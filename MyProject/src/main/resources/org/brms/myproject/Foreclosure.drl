@@ -1,5 +1,4 @@
 package org.brms.myproject;
-global org.slf4j.Logger logger;
 rule "Had any foreclosure"
 when
 Foreclosure(hadForeclosure=="yes")
