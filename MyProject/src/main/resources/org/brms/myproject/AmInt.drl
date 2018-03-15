@@ -289,14 +289,14 @@ AmInt(PoolSlide=="null")
 then
 System.out.println("# PoolSlide");
 end
-
+/*
 rule "Check whether duplex not eligible"
 when
 AmInt((structureType!="Duplex")||(structureType==null))	
 then
 System.out.println("# Duplex");
 end
-
+*/
 rule "Check the Plumbing update year not eligible"
 when	
 AmInt(((2018-PlumbingUpdate)<-1)||((2018-PlumbingUpdate)>21))
