@@ -30,7 +30,12 @@ then
 System.out.println("@ASI: Dog breed "+ d.getDogBreed() +" eligible");
 end
 
-
+rule "ASI: Check masonary to frame ratio"
+when	
+ASI(masonryFrame=="Masonry 76% or more - Frame 24%")
+then
+System.out.println("@ASI: Masonary frame ratio eligible");
+end
 
 // Declined rules
 
@@ -63,6 +68,11 @@ then
 System.out.println("#ASI: Dog breeds "+d.getDogBreed()+" not eligible");
 end
 
-
+rule "ASI: Check masonary to frame ratio not eligible"
+when	
+ASI(masonryFrame!="Masonry 76% or more - Frame 24%")
+then
+System.out.println("#ASI: Masonary frame ratio");
+end
 
 
