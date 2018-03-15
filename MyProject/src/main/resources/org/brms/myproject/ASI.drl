@@ -1,2 +1,68 @@
 package org.brms.myproject;
 
+//Approved rules
+
+rule "ASI: Check for the garage type to get other structure eligibilty"
+when
+am:ASI((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+then
+System.out.println("@ASI: Other Structure limit eligible");
+end
+
+rule "ASI: Eligibilty for seasonal occupany"
+when
+ASI((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+then
+System.out.println("@ASI: Secondary/Seasonal Occupancy eligible");
+end
+
+rule "ASI: Check quantity of Composition Shingle"
+when
+ASI((RoofMaterial=="Comp_Shingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
+then
+System.out.println("@ASI: Roof material: Composition Shingle eligible");
+end
+
+rule "ASI: Dog Policy eligibility for dog breeds"
+when
+d:Dog((dogBreed!="Pit Bulls")&&(dogBreed!= "German Shepherd")&&(dogBreed!= "Akitas")&&(dogBreed!= "Doberman Pinschers")&&(dogBreed!= "Chows")&&(dogBreed!= "Rottweilers")&&(dogBreed!= "Great Danes")&&(dogBreed!= "Caucasian Mountain Dogs")&&(dogBreed!= "Staffordshire Terriers")&&(dogBreed!= "American Bulldogs")&&(dogBreed!= "Beaucerons")&&(dogBreed!= "Wolf Hybrids"))
+then
+System.out.println("@ASI: Dog breed "+ d.getDogBreed() +" eligible");
+end
+
+
+
+// Declined rules
+
+
+rule "ASI: Check fro the garage type to get other structure not eligible"
+when
+ASI((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse")&&(GarageType!="null"))
+then
+System.out.println("#ASI: Other Structure limit");
+end
+
+rule "ASI: Not eligible for seasonal occupany"
+when
+ASI((secured_community!="Gated with a guard")&&(secured_community!="Gated with an automated system"))
+then
+System.out.println("#ASI: Secondary/Seasonal Occupancy");
+end
+
+rule "ASI: Check quantity of Composition Shingle not eligible"
+when
+ASI((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)>15))	
+then
+System.out.println("#ASI: Roof material: Composition Shingle");
+end
+
+rule "ASI: Dog Policy no eligibility for dog breeds"
+when
+d:Dog((dogBreed=="Pit Bulls")||(dogBreed== "German Shepherd")||(dogBreed== "Akitas")||(dogBreed== "Doberman Pinschers")||(dogBreed== "Chows")||(dogBreed== "Rottweilers")||(dogBreed== "Great Danes")||(dogBreed== "Caucasian Mountain Dogs")||(dogBreed== "Staffordshire Terriers")||(dogBreed== "American Bulldogs")||(dogBreed== "Beaucerons")||(dogBreed== "Wolf Hybrids"))
+then
+System.out.println("#ASI: Dog breeds "+d.getDogBreed()+" not eligible");
+end
+
+
+
+
