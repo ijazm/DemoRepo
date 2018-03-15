@@ -1,2 +1,68 @@
 package org.brms.myproject;
 
+//Approved rules
+
+rule "ArkRoyal: Check for the garage type to get other structure eligibilty"
+when
+am:ArkRoyal((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+then
+System.out.println("@ArkRoyal: Other Structure limit eligible");
+end
+
+rule "ArkRoyal: Eligibilty for seasonal occupany"
+when
+ArkRoyal((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+then
+System.out.println("@ArkRoyal: Secondary/Seasonal Occupancy eligible");
+end
+
+rule "ArkRoyal: Check quantity of Composition Shingle"
+when
+ArkRoyal((RoofMaterial=="Comp_Shingle")&&((2018-yearBuilt)>-1)&&((2018-yearBuilt)<16))	
+then
+System.out.println("@ArkRoyal: Roof material: Composition Shingle eligible");
+end
+
+rule "ArkRoyal: Dog Policy eligibility for dog breeds"
+when
+d:Dog((dogBreed!="Pit Bulls")&&(dogBreed!= "German Shepherd")&&(dogBreed!= "Akitas")&&(dogBreed!= "Doberman Pinschers")&&(dogBreed!= "Chows")&&(dogBreed!= "Rottweilers")&&(dogBreed!= "Great Danes")&&(dogBreed!= "Caucasian Mountain Dogs")&&(dogBreed!= "Staffordshire Terriers")&&(dogBreed!= "American Bulldogs")&&(dogBreed!= "Beaucerons")&&(dogBreed!= "Wolf Hybrids"))
+then
+System.out.println("@ArkRoyal: Dog breed "+ d.getDogBreed() +" eligible");
+end
+
+
+
+// Declined rules
+
+
+rule "ArkRoyal: Check fro the garage type to get other structure not eligible"
+when
+ArkRoyal((GarageType!="detachedSeperatedtructureWithoutLivingSpace")&&(GarageType!="attachedToTheMainHouse")&&(GarageType!="null"))
+then
+System.out.println("#ArkRoyal: Other Structure limit");
+end
+
+rule "ArkRoyal: Not eligible for seasonal occupany"
+when
+ArkRoyal((secured_community!="Gated with a guard")&&(secured_community!="Gated with an automated system"))
+then
+System.out.println("#ArkRoyal: Secondary/Seasonal Occupancy");
+end
+
+rule "ArkRoyal: Check quantity of Composition Shingle not eligible"
+when
+ArkRoyal((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)>15))	
+then
+System.out.println("#ArkRoyal: Roof material: Composition Shingle");
+end
+
+rule "ArkRoyal: Dog Policy no eligibility for dog breeds"
+when
+d:Dog((dogBreed=="Pit Bulls")||(dogBreed== "German Shepherd")||(dogBreed== "Akitas")||(dogBreed== "Doberman Pinschers")||(dogBreed== "Chows")||(dogBreed== "Rottweilers")||(dogBreed== "Great Danes")||(dogBreed== "Caucasian Mountain Dogs")||(dogBreed== "Staffordshire Terriers")||(dogBreed== "American Bulldogs")||(dogBreed== "Beaucerons")||(dogBreed== "Wolf Hybrids"))
+then
+System.out.println("#ArkRoyal: Dog breeds "+d.getDogBreed()+" not eligible");
+end
+
+
+
+
