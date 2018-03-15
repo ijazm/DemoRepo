@@ -15,6 +15,8 @@ public class ArkRoyal implements java.io.Serializable
    private java.lang.String dogBreed;
    private java.lang.Integer yearBuilt;
 
+   private java.lang.String masonryFrame;
+
    public ArkRoyal()
    {
    }
@@ -69,15 +71,27 @@ public class ArkRoyal implements java.io.Serializable
       this.yearBuilt = yearBuilt;
    }
 
+   public java.lang.String getMasonryFrame()
+   {
+      return this.masonryFrame;
+   }
+
+   public void setMasonryFrame(java.lang.String masonryFrame)
+   {
+      this.masonryFrame = masonryFrame;
+   }
+
    public ArkRoyal(java.lang.String garageType,
          java.lang.String secured_community, java.lang.String roofMaterial,
-         java.lang.String dogBreed, java.lang.Integer yearBuilt)
+         java.lang.String dogBreed, java.lang.Integer yearBuilt,
+         java.lang.String masonryFrame)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
       this.roofMaterial = roofMaterial;
       this.dogBreed = dogBreed;
       this.yearBuilt = yearBuilt;
+      this.masonryFrame = masonryFrame;
    }
 
 }
