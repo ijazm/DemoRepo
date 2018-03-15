@@ -4,7 +4,7 @@ package org.brms.myproject;
 
 rule "ArkRoyal: Check for the garage type to get other structure eligibilty"
 when
-am:ArkRoyal((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+ArkRoyal((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
 System.out.println("@ArkRoyal: Other Structure limit eligible");
 end
@@ -14,6 +14,13 @@ when
 ArkRoyal((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
 then
 System.out.println("@ArkRoyal: Secondary/Seasonal Occupancy eligible");
+end
+
+rule "ArkRoyal: Check masonary to frame ratio"
+when	
+ArkRoyal(masonryFrame=="Masonry 76% or more - Frame 24%")
+then
+System.out.println("@ArkRoyal: Masonary frame ratio eligible");
 end
 
 rule "ArkRoyal: Check quantity of Composition Shingle"
@@ -47,6 +54,13 @@ when
 ArkRoyal((secured_community!="Gated with a guard")&&(secured_community!="Gated with an automated system"))
 then
 System.out.println("#ArkRoyal: Secondary/Seasonal Occupancy");
+end
+
+rule "ArkRoyal: Check masonary to frame ratio not eligible"
+when	
+ArkRoyal(masonryFrame!="Masonry 76% or more - Frame 24%")
+then
+System.out.println("#ArkRoyal: Masonary frame ratio");
 end
 
 rule "ArkRoyal: Check quantity of Composition Shingle not eligible"
