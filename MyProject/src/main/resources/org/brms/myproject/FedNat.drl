@@ -137,7 +137,7 @@ end
 
 //Approve == yes
 //Submit and decline NA
-rule "Approve diving board"
+rule "FedNat: Approve diving board"
 when	
 FedNat(DivingBoard=="yes")
 then
@@ -146,7 +146,7 @@ end
 
 //Approve == yes
 //Submit and decline NA
-rule "Approve pool slide"
+rule "FedNat: Approve pool slide"
 when
 FedNat(PoolSlide=="yes")
 then
