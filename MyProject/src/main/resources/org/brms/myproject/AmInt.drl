@@ -237,28 +237,28 @@ end
 
 rule "Check quantity of Composition Shingle not eligible"
 when
-AmInt((RoofMaterial=="Comp-Shingle")&&((2018-yearBuilt)>15))	
+AmInt((RoofMaterial=="Comp-Shingle")&&((2018-roofUpdateYear)>15))	
 then
 System.out.println("# Roof material: Composition Shingle");
 end
 
 rule "Check quantity of Architectual Shingle not eligible"
 when
-AmInt((RoofMaterial=="architectural-shingles")&&((2018-yearBuilt)>20))
+AmInt((RoofMaterial=="architectural-shingles")&&((2018-roofUpdateYear)>20))
 then
 System.out.println("# Roof material: Architectual Shingle");
 end
 
 rule "Check quantity of Metal not eligible"
 when
-AmInt((RoofMaterial=="metal")&&((2018-yearBuilt)>40))
+AmInt((RoofMaterial=="metal")&&((2018-roofUpdateYear)>40))
 then
 System.out.println("# Roof material: Metal");
 end
 
 rule "Check quantity of Tile not eligible"
 when
-AmInt((RoofMaterial=="block-tiles")&&((2018-yearBuilt)>40))
+AmInt((RoofMaterial=="block-tiles")&&((2018-roofUpdateYear)>40))
 then
 System.out.println("# Roof material: Tile");
 end
