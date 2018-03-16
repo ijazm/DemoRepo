@@ -56,7 +56,8 @@ public class AmInt implements java.io.Serializable
    //public List <String> result = new ArrayList<String>();
 
    public java.lang.String result;
-   
+
+   private java.lang.Integer roofUpdateYear;
 
    public AmInt()
    {
@@ -297,6 +298,16 @@ public class AmInt implements java.io.Serializable
       this.result = result;
    }
 
+   public java.lang.Integer getRoofUpdateYear()
+   {
+      return this.roofUpdateYear;
+   }
+
+   public void setRoofUpdateYear(java.lang.Integer roofUpdateYear)
+   {
+      this.roofUpdateYear = roofUpdateYear;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -308,7 +319,7 @@ public class AmInt implements java.io.Serializable
          java.lang.String insuranceScore, java.lang.String effectiveYearBuilt,
          java.lang.String structureType, java.lang.String dogBreed,
          java.lang.String garageType, java.lang.String roofMaterial,
-         java.lang.String result)
+         java.lang.String result, java.lang.Integer roofUpdateYear)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -333,6 +344,7 @@ public class AmInt implements java.io.Serializable
       this.garageType = garageType;
       this.roofMaterial = roofMaterial;
       this.result = result;
+      this.roofUpdateYear = roofUpdateYear;
    }
 
 }
