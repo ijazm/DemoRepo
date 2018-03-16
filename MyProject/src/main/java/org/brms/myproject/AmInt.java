@@ -59,6 +59,8 @@ public class AmInt implements java.io.Serializable
 
    private java.lang.Integer roofUpdateYear;
 
+   private java.lang.Boolean alarm;
+
    public AmInt()
    {
    }
@@ -308,6 +310,16 @@ public class AmInt implements java.io.Serializable
       this.roofUpdateYear = roofUpdateYear;
    }
 
+   public java.lang.Boolean getAlarm()
+   {
+      return this.alarm;
+   }
+
+   public void setAlarm(java.lang.Boolean alarm)
+   {
+      this.alarm = alarm;
+   }
+
    public AmInt(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -319,7 +331,8 @@ public class AmInt implements java.io.Serializable
          java.lang.String insuranceScore, java.lang.String effectiveYearBuilt,
          java.lang.String structureType, java.lang.String dogBreed,
          java.lang.String garageType, java.lang.String roofMaterial,
-         java.lang.String result, java.lang.Integer roofUpdateYear)
+         java.lang.String result, java.lang.Integer roofUpdateYear,
+         java.lang.Boolean alarm)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -345,6 +358,7 @@ public class AmInt implements java.io.Serializable
       this.roofMaterial = roofMaterial;
       this.result = result;
       this.roofUpdateYear = roofUpdateYear;
+      this.alarm = alarm;
    }
 
 }
