@@ -15,10 +15,19 @@ System.out.println("!FedNat: Age of building");
 end
 //Decline not applicable
 
+//Approve other structures
+//Submit and decline NA
+rule "FedNat: Check for the garage type to get other structure eligibilty"
+when
+FedNat((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+then
+System.out.println("@FedNat: Other Structure limit eligible");
+end
+
 //approve alarm true
 rule "FedNat: Approve seasonal occupany"
 when
-FedNat((alarm==true)||(securedCommunity=="Single Entry into the community"))
+FedNat((alarm==true)||(secured_community=="Single Entry into the community"))
 then
 System.out.println("@FedNat: Secondary/Seasonal Occupancy");
 end
@@ -26,7 +35,7 @@ end
 //decline alarm false
 rule "FedNat: Decline seasonal occupany"
 when
-FedNat((alarm!=true)&&(securedCommunity!="Single Entry into the community"))
+FedNat((alarm!=true)&&(secured_community!="Single Entry into the community"))
 then
 System.out.println("#FedNat: Secondary/Seasonal Occupancy");
 end
@@ -155,7 +164,7 @@ end
 //Approve duplex
 rule "FedNat: Approve duplex structure"
 when
-FedNat(structureType=="Duplex"))	
+FedNat(structureType=="Duplex")	
 then
 System.out.println("@FedNat: Duplex structure");
 end
