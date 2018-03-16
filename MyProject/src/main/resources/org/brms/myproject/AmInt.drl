@@ -259,7 +259,6 @@ System.out.println("#AmInt: Roof material: Tile");
 end
 
 
-
 rule "AmInt:Decline LLC or Corporate Ownership"
 when	
 AmInt(LLC=="yes")	
