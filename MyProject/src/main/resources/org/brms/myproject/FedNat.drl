@@ -46,6 +46,7 @@ FedNat((RoofMaterial=="Comp_Shingle")&&((2018-roofUpdateYear)>16))
 then
 System.out.println("#FedNat: Roof material: Composition Shingle");
 end
+
 // approve 0-20
 rule "FedNat: Approve Architectual Shingle roof"
 when
@@ -109,7 +110,7 @@ end
 //approve NA
 //submit NA
 //decline if in list
-rule "FedNat: Decline dog breeds
+rule "FedNat: Decline dog breeds"
 when
 d:Dog((dogBreed=="Akita")||(dogBreed=="American Bull Dog")||(dogBreed=="Beauceron")||(dogBreed=="Caucasian Mountain Dog")||(dogBreed=="Chows Chows")||(dogBreed=="Doberman Pinschers")||(dogBreed=="German Shepherd")||(dogBreed=="Great Dane")||(dogBreed=="Keeshonds")||(dogBreed=="Pit Bulls")||(dogBreed=="Prea Canarios")||(dogBreed=="Rottweilers")||(dogBreed=="Staffordshire Terriers"))
 then
@@ -177,3 +178,5 @@ then
 System.out.println("@FedNat: Rented living space detached");
 end
 //Submit and decline NA
+ 
+
