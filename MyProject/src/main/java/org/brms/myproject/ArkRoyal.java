@@ -19,6 +19,10 @@ public class ArkRoyal implements java.io.Serializable
 
    private java.lang.Boolean trampoline;
 
+   private java.lang.String divingBoard;
+
+   private java.lang.String poolSlide;
+
    public ArkRoyal()
    {
    }
@@ -93,10 +97,31 @@ public class ArkRoyal implements java.io.Serializable
       this.trampoline = trampoline;
    }
 
+   public java.lang.String getDivingBoard()
+   {
+      return this.divingBoard;
+   }
+
+   public void setDivingBoard(java.lang.String divingBoard)
+   {
+      this.divingBoard = divingBoard;
+   }
+
+   public java.lang.String getPoolSlide()
+   {
+      return this.poolSlide;
+   }
+
+   public void setPoolSlide(java.lang.String poolSlide)
+   {
+      this.poolSlide = poolSlide;
+   }
+
    public ArkRoyal(java.lang.String garageType,
          java.lang.String secured_community, java.lang.String roofMaterial,
          java.lang.String dogBreed, java.lang.Integer yearBuilt,
-         java.lang.String masonryFrame, java.lang.Boolean trampoline)
+         java.lang.String masonryFrame, java.lang.Boolean trampoline,
+         java.lang.String divingBoard, java.lang.String poolSlide)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
@@ -105,6 +130,8 @@ public class ArkRoyal implements java.io.Serializable
       this.yearBuilt = yearBuilt;
       this.masonryFrame = masonryFrame;
       this.trampoline = trampoline;
+      this.divingBoard = divingBoard;
+      this.poolSlide = poolSlide;
    }
 
 }
