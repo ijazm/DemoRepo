@@ -109,22 +109,6 @@ then
 System.out.println("!AmInt: Farm Animals");
 end
 
-
-
-rule "AmInt: Check whether you have Diving Board"
-when	
-AmInt((DivingBoard=="yes")||(DivingBoard=="no"))
-then
-System.out.println("@AmInt: Diving board eligible");
-end
-
-rule "AmInt: Check whether have pool slide"
-when
-AmInt((PoolSlide=="yes")||(PoolSlide=="no"))
-then
-System.out.println("@AmInt: PoolSlide eligible");
-end
-
 rule "AmInt: Check whether duplex"
 when
 AmInt((structureType=="Duplex")&&(structureType!=null))	
@@ -266,16 +250,16 @@ then
 System.out.println("#AmInt: LLC or Corporate ownership");
 end
 
-rule "AmInt: Check whether you have Diving Board not eligible"
+rule "AmInt:Decline Diving Board"
 when	
-AmInt(DivingBoard=="null")
+AmInt(DivingBoard=="yes")
 then
 System.out.println("#AmInt: Diving board");
 end
 
-rule "AmInt: Check whether have pool slide not eligible"
+rule "AmInt: Decline pool slide"
 when
-AmInt(PoolSlide=="null")
+AmInt(PoolSlide=="yes")
 then
 System.out.println("#AmInt: PoolSlide");
 end
