@@ -109,11 +109,11 @@ then
 System.out.println("!AmInt: Farm Animals");
 end
 
-rule "AmInt: Check whether duplex"
+rule "AmInt: Approve duplex structure"
 when
-AmInt((structureType=="Duplex")&&(structureType!=null))	
+AmInt(structureType=="Duplex")	
 then
-System.out.println("@AmInt: Duplex is eligible");
+System.out.println("@AmInt: Duplex structure");
 end
 
 rule "AmInt: Check the Plumbing update year"
@@ -263,14 +263,7 @@ AmInt(PoolSlide=="yes")
 then
 System.out.println("#AmInt: PoolSlide");
 end
-/*
-rule "AmInt: Check whether duplex not eligible"
-when
-AmInt((structureType!="Duplex")||(structureType==null))	
-then
-System.out.println("#AmInt: Duplex");
-end
-*/
+
 rule "AmInt: Check the Plumbing update year not eligible"
 when	
 AmInt(((2018-PlumbingUpdate)<-1)||((2018-PlumbingUpdate)>21))
