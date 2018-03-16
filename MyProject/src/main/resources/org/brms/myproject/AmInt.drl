@@ -2,14 +2,14 @@ package org.brms.myproject;
 //global java.util.List globalList;
 //global org.slf4j.Logger logger;
 
-rule "Check for the garage type to get other structure eligibilty"
+rule "AmInt: Check for the garage type to get other structure eligibilty"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
-System.out.println("@ Other Structure limit eligible");
+System.out.println("@AmInt: Other Structure limit eligible");
 end
 
-rule "check age of construction"
+rule "AmInt: Check age of construction"
 when
 am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
@@ -19,39 +19,39 @@ logger.info("@ Age of building fired");
 }*/
 //am.setResult("@ Age of building");
 //globalList.add("@ Age of building");
-System.out.println("@ Age of building");
+System.out.println("@AmInt: Age of building");
 end
 
 
-rule "Check whether have trampoline and is it fenced"
+rule "AmInt: Check whether have trampoline and is it fenced"
 when	
 AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
 then
-System.out.println("@ Trampoline eligible");
+System.out.println("@AmInt: Trampoline eligible");
 end
 
-rule "Number of prior claims"
+rule "AmInt: Number of prior claims"
 when	
 AmInt(prior_Claims<1)
 then
-System.out.println("@ Number of property claims eligible");
+System.out.println("@AmInt: Number of property claims eligible");
 end
 
-rule "Eligibilty for seasonal occupany"
+rule "AmInt: Eligibilty for seasonal occupany"
 when
 AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
 then
-System.out.println("@ Secondary/Seasonal Occupancy eligible");
+System.out.println("@AmInt: Secondary/Seasonal Occupancy eligible");
 end
 
-rule "Check flat roof percentage"
+rule "AmInt: Check flat roof percentage"
 when
 AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
 then
-System.out.println("@ Flat roof percentage eligible");
+System.out.println("@AmInt: Flat roof percentage eligible");
 end
 
-rule "Check masonary to frame ratio"
+rule "AmInt: Check masonary to frame ratio"
 when	
 AmInt(masonryFrame=="Masonry 76% or more - Frame 24%")
 then
@@ -62,22 +62,22 @@ end
 when
 AmInt((OtherStructureLimit>1)&&(OtherStructureLimit<21))
 then
-System.out.println("@ Other Structure Limit is eleigible");
+SystemAmInt: .out.println("@ Other Structure Limit is eleigible");
 end
 */
 
-rule "Check quantity of Composition Shingle"
+rule "AmInt: Check quantity of Composition Shingle"
 when
 AmInt((RoofMaterial=="Comp_Shingle")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<16))	
 then
-System.out.println("@ Roof material: Composition Shingle eligible");
+System.out.println("@AmInt: Roof material: Composition Shingle eligible");
 end
 
-rule "Check quantity of Architectual Shingle"
+rule "AmInt: Check quantity of Architectual Shingle"
 when
 AmInt((RoofMaterial=="architectural-shingles")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<21))
 then
-System.out.println("@ Roof material: Architectual Shingle eligible ");
+System.out.println("@AmInt: Roof material: Architectual Shingle eligible ");
 end
 
 rule "Check quantity of Metal"
