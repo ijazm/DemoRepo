@@ -39,6 +39,8 @@ public class FedNat implements java.io.Serializable
 
    private java.lang.String rentedStructure;
 
+   private java.lang.String alarm;
+
    public FedNat()
    {
    }
@@ -188,13 +190,24 @@ public class FedNat implements java.io.Serializable
       this.rentedStructure = rentedStructure;
    }
 
+   public java.lang.String getAlarm()
+   {
+      return this.alarm;
+   }
+
+   public void setAlarm(java.lang.String alarm)
+   {
+      this.alarm = alarm;
+   }
+
    public FedNat(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.String trampolinefence, java.lang.String flatRoofPercent,
          java.lang.String masonryFrame, java.lang.String divingBoard,
          java.lang.String poolSlide, java.lang.Boolean trampoline,
          java.lang.String structureType, java.lang.String dogBreed,
          java.lang.String garageType, java.lang.String roofMaterial,
-         java.lang.Integer roofUpdateYear, java.lang.String rentedStructure)
+         java.lang.Integer roofUpdateYear, java.lang.String rentedStructure,
+         java.lang.String alarm)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -210,6 +223,7 @@ public class FedNat implements java.io.Serializable
       this.roofMaterial = roofMaterial;
       this.roofUpdateYear = roofUpdateYear;
       this.rentedStructure = rentedStructure;
+      this.alarm = alarm;
    }
 
 }
