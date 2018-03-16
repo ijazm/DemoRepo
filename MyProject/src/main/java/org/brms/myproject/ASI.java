@@ -17,6 +17,8 @@ public class ASI implements java.io.Serializable
 
    private java.lang.String masonryFrame;
 
+   private java.lang.Integer roofUpdateYear;
+
    public ASI()
    {
    }
@@ -81,9 +83,20 @@ public class ASI implements java.io.Serializable
       this.masonryFrame = masonryFrame;
    }
 
+   public java.lang.Integer getRoofUpdateYear()
+   {
+      return this.roofUpdateYear;
+   }
+
+   public void setRoofUpdateYear(java.lang.Integer roofUpdateYear)
+   {
+      this.roofUpdateYear = roofUpdateYear;
+   }
+
    public ASI(java.lang.String garageType, java.lang.String secured_community,
          java.lang.String roofMaterial, java.lang.String dogBreed,
-         java.lang.Integer yearBuilt, java.lang.String masonryFrame)
+         java.lang.Integer yearBuilt, java.lang.String masonryFrame,
+         java.lang.Integer roofUpdateYear)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
@@ -91,6 +104,7 @@ public class ASI implements java.io.Serializable
       this.dogBreed = dogBreed;
       this.yearBuilt = yearBuilt;
       this.masonryFrame = masonryFrame;
+      this.roofUpdateYear = roofUpdateYear;
    }
 
 }
