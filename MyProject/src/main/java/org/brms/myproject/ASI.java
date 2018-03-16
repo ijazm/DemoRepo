@@ -23,6 +23,8 @@ public class ASI implements java.io.Serializable
 
    private java.lang.String poolSlide;
 
+   private java.lang.Boolean trampoline;
+
    public ASI()
    {
    }
@@ -117,11 +119,21 @@ public class ASI implements java.io.Serializable
       this.poolSlide = poolSlide;
    }
 
+   public java.lang.Boolean getTrampoline()
+   {
+      return this.trampoline;
+   }
+
+   public void setTrampoline(java.lang.Boolean trampoline)
+   {
+      this.trampoline = trampoline;
+   }
+
    public ASI(java.lang.String garageType, java.lang.String secured_community,
          java.lang.String roofMaterial, java.lang.String dogBreed,
          java.lang.Integer yearBuilt, java.lang.String masonryFrame,
          java.lang.Integer roofUpdateYear, java.lang.String divingBoard,
-         java.lang.String poolSlide)
+         java.lang.String poolSlide, java.lang.Boolean trampoline)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
@@ -132,6 +144,7 @@ public class ASI implements java.io.Serializable
       this.roofUpdateYear = roofUpdateYear;
       this.divingBoard = divingBoard;
       this.poolSlide = poolSlide;
+      this.trampoline = trampoline;
    }
 
 }
