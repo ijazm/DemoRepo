@@ -19,6 +19,10 @@ public class ASI implements java.io.Serializable
 
    private java.lang.Integer roofUpdateYear;
 
+   private java.lang.String divingBoard;
+
+   private java.lang.String poolSlide;
+
    public ASI()
    {
    }
@@ -93,10 +97,31 @@ public class ASI implements java.io.Serializable
       this.roofUpdateYear = roofUpdateYear;
    }
 
+   public java.lang.String getDivingBoard()
+   {
+      return this.divingBoard;
+   }
+
+   public void setDivingBoard(java.lang.String divingBoard)
+   {
+      this.divingBoard = divingBoard;
+   }
+
+   public java.lang.String getPoolSlide()
+   {
+      return this.poolSlide;
+   }
+
+   public void setPoolSlide(java.lang.String poolSlide)
+   {
+      this.poolSlide = poolSlide;
+   }
+
    public ASI(java.lang.String garageType, java.lang.String secured_community,
          java.lang.String roofMaterial, java.lang.String dogBreed,
          java.lang.Integer yearBuilt, java.lang.String masonryFrame,
-         java.lang.Integer roofUpdateYear)
+         java.lang.Integer roofUpdateYear, java.lang.String divingBoard,
+         java.lang.String poolSlide)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
@@ -105,6 +130,8 @@ public class ASI implements java.io.Serializable
       this.yearBuilt = yearBuilt;
       this.masonryFrame = masonryFrame;
       this.roofUpdateYear = roofUpdateYear;
+      this.divingBoard = divingBoard;
+      this.poolSlide = poolSlide;
    }
 
 }
