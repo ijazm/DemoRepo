@@ -19,8 +19,6 @@ public class ArkRoyal implements java.io.Serializable
 
    private java.lang.Boolean trampoline;
 
-   private java.lang.Boolean alarm;
-
    public ArkRoyal()
    {
    }
@@ -95,21 +93,10 @@ public class ArkRoyal implements java.io.Serializable
       this.trampoline = trampoline;
    }
 
-   public java.lang.Boolean getAlarm()
-   {
-      return this.alarm;
-   }
-
-   public void setAlarm(java.lang.Boolean alarm)
-   {
-      this.alarm = alarm;
-   }
-
    public ArkRoyal(java.lang.String garageType,
          java.lang.String secured_community, java.lang.String roofMaterial,
          java.lang.String dogBreed, java.lang.Integer yearBuilt,
-         java.lang.String masonryFrame, java.lang.Boolean trampoline,
-         java.lang.Boolean alarm)
+         java.lang.String masonryFrame, java.lang.Boolean trampoline)
    {
       this.garageType = garageType;
       this.secured_community = secured_community;
@@ -118,7 +105,6 @@ public class ArkRoyal implements java.io.Serializable
       this.yearBuilt = yearBuilt;
       this.masonryFrame = masonryFrame;
       this.trampoline = trampoline;
-      this.alarm = alarm;
    }
 
 }
