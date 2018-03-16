@@ -15,6 +15,15 @@ System.out.println("!FedNat: Age of building");
 end
 //Decline not applicable
 
+//Approve and submit NA
+//Decline if LLC 
+rule "FedNat: Check whether LLC or Corporate Ownership"
+when	
+FedNat(LLC=="yes")	
+then
+System.out.println("#FedNat: LLC or Corporate ownership");
+end
+
 //Approve other structures
 //Submit and decline NA
 rule "FedNat: Check for the garage type to get other structure eligibilty"
