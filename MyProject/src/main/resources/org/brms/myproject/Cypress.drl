@@ -9,7 +9,7 @@ end
 //Submit >30
 rule "Cypress: Submit age of construction"
 when
-Cypress(((2018-yearBuilt)>30)
+Cypress((2018-yearBuilt)>30)
 then
 System.out.println("!Cypress: Age of building");
 end
