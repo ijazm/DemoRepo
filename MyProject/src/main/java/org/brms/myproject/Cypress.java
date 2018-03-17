@@ -61,6 +61,8 @@ public class Cypress implements java.io.Serializable
 
    private java.lang.Boolean alarm;
 
+   private java.lang.String rentedStructure;
+
    public Cypress()
    {
    }
@@ -320,6 +322,16 @@ public class Cypress implements java.io.Serializable
       this.alarm = alarm;
    }
 
+   public java.lang.String getRentedStructure()
+   {
+      return this.rentedStructure;
+   }
+
+   public void setRentedStructure(java.lang.String rentedStructure)
+   {
+      this.rentedStructure = rentedStructure;
+   }
+
    public Cypress(java.lang.Integer yearBuilt, java.lang.String secured_community,
          java.lang.Integer prior_Claims, java.lang.String trampolinefence,
          java.lang.String flatRoofPercent, java.lang.String masonryFrame,
@@ -332,7 +344,7 @@ public class Cypress implements java.io.Serializable
          java.lang.String structureType, java.lang.String dogBreed,
          java.lang.String garageType, java.lang.String roofMaterial,
          java.lang.String result, java.lang.Integer roofUpdateYear,
-         java.lang.Boolean alarm)
+         java.lang.Boolean alarm, java.lang.String rentedStructure)
    {
       this.yearBuilt = yearBuilt;
       this.secured_community = secured_community;
@@ -359,6 +371,7 @@ public class Cypress implements java.io.Serializable
       this.result = result;
       this.roofUpdateYear = roofUpdateYear;
       this.alarm = alarm;
+      this.rentedStructure = rentedStructure;
    }
 
 }
