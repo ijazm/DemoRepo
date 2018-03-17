@@ -1,2 +1,190 @@
 package org.brms.myproject;
+//Approve 0-30
+rule "Cypress: Approve age of construction"
+when
+Cypress(((2018-yearBuilt)>-1)&&((2018-yearBuilt)<31))
+then
+System.out.println("@Cypress: Age of building");
+end
+//Submit >30
+rule "Cypress: Submit age of construction"
+when
+Cypress(((2018-yearBuilt)>30)
+then
+System.out.println("!Cypress: Age of building");
+end
+//decline NA
 
+//Approve
+rule "Cypress: Approve other structure limit"
+when
+Cypress((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+then
+System.out.println("@Cypress: Other Structure limit eligible");
+end
+//submit and decline NA
+
+//Approve
+rule "Approve Composition Shingle roof"
+when
+Cypress((RoofMaterial=="Comp_Shingle")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<16))	
+then
+System.out.println("@ Roof material: Composition Shingle eligible");
+end
+//submit NA 
+//Decline >15
+rule "Decline Composition Shingle roof"
+when
+Cypress((RoofMaterial=="Comp_Shingle")&&((2018-roofUpdateYear)>15))	
+then
+System.out.println("#Cypress: Composition Shingle roof");
+end
+//Approve 0-15
+rule "Approve Architectual Shingle roof"
+when
+Cypress((RoofMaterial=="architectural-shingles")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<16))
+then
+System.out.println("@Cypress: Architectual Shingle roof");
+end
+//submit NA
+//Decline >15
+rule "Decline Architectual Shingle roof"
+when
+Cypress((RoofMaterial=="architectural-shingles")&&((2018-roofUpdateYear)>15))
+then
+System.out.println("#Cypress: Architectual Shingle roof");
+end
+
+//Approve 0-30
+rule "Approve Metal roof"
+when
+Cypress((RoofMaterial=="metal")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<31))
+then
+System.out.println("@Cypress: Metal roof");
+end
+//submit NA
+//decline >30
+rule "Decline Metal roof"
+when
+Cypress((RoofMaterial=="metal")&&((2018-roofUpdateYear)>30))
+then
+System.out.println("#Cypress: Metal roof");
+end
+
+//Approve 0-30
+rule "Cypress: Approve Tile roof"
+when
+Cypress((RoofMaterial=="block-tiles")&&((2018-roofUpdateYear)>-1)&&((2018-roofUpdateYear)<31))
+then
+System.out.println("@Cypress: Tile roof");
+end
+//submit NA
+//decline >30
+rule "Cypress: Decline Tile roof"
+when
+Cypress((RoofMaterial=="block-tiles")&&((2018-roofUpdateYear)>30))
+then
+System.out.println("#Cypress: Tile roof");
+end
+
+//Approve 0%
+rule "Cypress: Approve flat roof percentage"
+when
+Cypress(flatRoofPercent=="0%")
+then
+System.out.println("@Cypress: Flat roof percentage");
+end
+//submit NA
+//decline
+rule "Cypress: Decline flat roof percentage"
+when
+Cypress((flatRoofPercent!="0%")&&(flatRoofPercent!=null))
+then
+System.out.println("#Cypress: Flat roof percentage");
+end
+
+//Approve !=Polybutylene and Galvanized
+rule "Cypress: Approve plumbing type"
+when	
+p:Plumb((PlumbingType!="Galvanized")&&(PlumbingType!="Polybutylene")&&(PlumbingType!="null"))	
+then
+System.out.println("@Cypress: Plumbing type "+p.getPlumbingType());
+end
+//submit NA
+//decline = Polybutylene and Galvanized
+rule "Cypress: Decline plumbing type"
+when	
+p:Plumb((PlumbingType=="Galvanized")||(PlumbingType=="Polybutylene"))	
+then
+System.out.println("#Cypress: Plumbing type "+p.getPlumbingType());
+end
+
+//Approve not in list
+rule "Cypress: Approve Dog Policy"
+when
+d:Dog((dogBreed!="Akita")&&(dogBreed!="American Pit Bull")&&(dogBreed!="American Staffordshire")&&(dogBreed!="Beauceron")&&(dogBreed!="Bullmastiff")&&(dogBreed!="Ca de Bou")&&(dogBreed!="Cane Corso")&&(dogBreed!="Catahoula Leopard")&&(dogBreed!= "Caucasian Shepherd")&&(dogBreed!="Chow")&&(dogBreed!="Doberman Pinscher")&&(dogBreed!="Dogo Argentino")&&(dogBreed!="German Shepherd")&&(dogBreed!="Presa Canario")&&(dogBreed!="Pit Bull")&&(dogBreed!="Rottweiler")&&(dogBreed!="Staffordshire Bull Terrier")&&(dogBreed!="Tosa Inu")&&(dogBreed!="Wolf"))
+then
+System.out.println("@Cypress: Dog breeds policy "+d.getDogBreed());
+end
+//submit NA
+//decline in list
+rule "Cypress: Decline Dog Policy"
+when
+d:Dog((dogBreed=="Akita")||(dogBreed=="American Pit Bull")||(dogBreed=="American Staffordshire")||(dogBreed=="Beauceron")||(dogBreed=="Bullmastiff")||(dogBreed=="Ca de Bou")||(dogBreed=="Cane Corso")||(dogBreed=="Catahoula Leopard")||(dogBreed== "Caucasian Shepherd")||(dogBreed=="Chow")||(dogBreed=="Doberman Pinscher")||(dogBreed=="Dogo Argentino")||(dogBreed=="German Shepherd")||(dogBreed=="Presa Canario")||(dogBreed=="Pit Bull")||(dogBreed=="Rottweiler")||(dogBreed=="Staffordshire Bull Terrier")||(dogBreed=="Tosa Inu")||(dogBreed=="Wolf"))
+then
+System.out.println("#Cypress: Dog breeds policy "+d.getDogBreed());
+end
+
+//Approve and submit NA
+//decline if true
+rule "Cypress: Decline farm animals"
+when
+Cypress(FarmAnimals==true)
+then
+System.out.println("#Cypress: Farm animals");
+end
+
+//Approve and submit NA
+//decline yes
+rule "Approve diving board"
+when	
+Cypress(DivingBoard=="yes")
+then
+System.out.println("#Cypress: Diving board");
+end
+
+//Approve == yes
+//Submit and decline NA
+rule "Approve pool slide"
+when
+Cypress(PoolSlide=="yes")
+then
+System.out.println("#Cypress: PoolSlide");
+end
+
+//Approve and Submit NA
+//decline trampoline = true
+rule "Cypress: Decline trampoline is not fenced" 
+when	
+Cypress(Trampoline==true)	
+then
+System.out.println("#Cypress: Trampoline");
+end
+
+//Approve Masonry to Frame Ratio  : 33 1/3% classified as masonry
+rule "Cypress: Approve masonary to frame ratio"
+when	
+Cypress(masonryFrame=="Masonry 76% or more - Frame 24%")
+then
+System.out.println("@Cypress: Masonary frame ratio");
+end
+//submit and decline NA
+
+//Approve rented living structure
+rule "Cypress:Approve rented living structure" 
+when
+Cypress(rentedStructure=="yes")
+then
+System.out.println("@Cypress: Rented living space detached");
+end
+//Submit and decline NA
