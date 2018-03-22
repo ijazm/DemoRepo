@@ -3,6 +3,6 @@
     <ksession name="session2" type="stateful" default="false" clockType="realtime"/>
   </kbase>
   <kbase name="myBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="*">
-    <ksession name="mySession" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="mySession" type="stateful" default="true" clockType="realtime"/>
   </kbase>
 </kmodule>
