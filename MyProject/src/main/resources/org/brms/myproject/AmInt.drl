@@ -1,7 +1,7 @@
 package org.brms.myproject;
 global java.util.List eligible;
 global java.util.List ineligible;
-
+global java.util.List submit;
 rule "AmInt: Approve Other structures"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
