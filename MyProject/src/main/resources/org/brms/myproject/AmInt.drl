@@ -1,6 +1,6 @@
 package org.brms.myproject;
 global java.util.List list;
-global org.slf4j.Logger logger;
+//global org.slf4j.Logger logger;
 rule "AmInt: Approve Other structures"
     when
         AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
