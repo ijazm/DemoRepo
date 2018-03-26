@@ -1,4 +1,5 @@
 package org.brms.myproject;
+global org.slf4j.Logger logger;
 global java.util.List eligible;
 global java.util.List ineligible;
 global java.util.List submit;
@@ -6,6 +7,9 @@ rule "AmInt: Approve Other structures"
 when
 am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
+ if (logger.isDebugEnabled()) {
+      logger.info("Other Structure limit eligible");
+   }
 eligible.add(" Other Structure limit eligible");
 end
 
