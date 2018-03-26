@@ -3,7 +3,7 @@ global java.util.List list;
 global org.slf4j.Logger logger;
 rule "AmInt: Approve Other structures"
 when
-am:AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
+AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
 list.add("Other Structure limit");
 System.out.println("@AmInt: Other Structure limit eligible");
@@ -11,7 +11,7 @@ end
 
 rule "check age of construction"
 when
-am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
+AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
 
 //am.setResult("@ Age of building");
