@@ -13,13 +13,10 @@ rule "check age of construction"
 when
 am:AmInt(((2018-yearBuilt)>0)&&((2018-yearBuilt)<76))
 then
-if (logger.isDebugEnabled()) 
- { 
-logger.info("@ Age of building fired");
+
 //am.setResult("@ Age of building");
 list.add("@ Age of building");
 System.out.println("@ Age of building");
-}
 end
 
 rule "AmInt:Approve fenced trampoline"
