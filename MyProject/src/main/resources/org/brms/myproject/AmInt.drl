@@ -5,6 +5,9 @@ rule "AmInt: Approve Other structures"
 when
 AmInt((GarageType=="detachedSeperatedtructureWithoutLivingSpace")||(GarageType=="attachedToTheMainHouse"))
 then
+ if (logger.isDebugEnabled()) {
+      logger.info("Rule 1 fired");
+   }
 list.add("Other Structure limit");
 System.out.println("@AmInt: Other Structure limit eligible");
 end
