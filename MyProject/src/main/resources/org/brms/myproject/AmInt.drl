@@ -18,31 +18,31 @@ rule "check age of construction"
     end
 
 rule "AmInt:Approve fenced trampoline"
-when	
-AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
-then
-System.out.println("@AmInt: Trampoline eligible");
+    when	
+        AmInt((Trampoline==true)&&(Trampolinefence=="yes"))	
+    then
+        System.out.println("@AmInt: Trampoline eligible");
 end
 
 rule "AmInt:Approve number of prior claims"
-when	
-AmInt(prior_Claims<1)
-then
-System.out.println("@AmInt: Number of property claims");
+    when	
+        AmInt(prior_Claims<1)
+    then
+        System.out.println("@AmInt: Number of property claims");
 end
 
 rule "AmInt: Approve Seasonal or secondary occupany"
-when
-AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
-then
-System.out.println("@AmInt: Secondary/Seasonal Occupancy");
+    when
+        AmInt((secured_community=="Gated with a guard")||(secured_community=="Gated with an automated system"))
+    then
+        System.out.println("@AmInt: Secondary/Seasonal Occupancy");
 end
 
 rule "AmInt: Approve flat roof percentage"
-when
-AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
-then
-System.out.println("@AmInt: Flat roof percentage eligible");
+    when
+        AmInt((flatRoofPercent=="1 - 10%")||(flatRoofPercent=="11 - 20%"))
+    then
+        System.out.println("@AmInt: Flat roof percentage eligible");
 end
 
 rule "AmInt: Approve masonary to frame ratio"
