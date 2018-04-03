@@ -1,4 +1,6 @@
 package org.brms.myproject;
+agenda-group "Time"
+
 rule "Time of Ownership"
 when
 Ownership(TimeOwnership<3)
